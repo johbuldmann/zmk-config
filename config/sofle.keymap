@@ -40,6 +40,11 @@
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
         };
+
+        combo_CTRL+X {
+            bindings = <&kp LC(X)>;
+            key-positions = <38 39>;
+        };
     };
 
     keymap {

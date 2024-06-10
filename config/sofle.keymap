@@ -75,7 +75,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty {
+        Default_Layer {
             display-name = "default";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@
                 <&inc_dec_kp C_NEXT C_PREV>;
         };
 
-        raise {
+        Raise_Layer {
             display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -119,7 +119,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        lower {
+        Lower_Layer {
             display-name = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -141,7 +141,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        adjust {
+        Adjust_Layer {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -157,6 +157,10 @@
 &none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };

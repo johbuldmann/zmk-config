@@ -70,6 +70,51 @@
             key-positions = <20 21>;
             layers = <0>;
         };
+
+        combo_Printscreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <10 11>;
+        };
+
+        combo_Guillemets_open {
+            bindings = <&macro_Guillemets_open>;
+            key-positions = <1 2>;
+        };
+
+        combo_Guillemets_close {
+            bindings = <&macro_Guillemets_close>;
+            key-positions = <2 3>;
+        };
+    };
+
+    macros {
+        macro_Guillemets_open: macro_Guillemets_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MACRO_GUILLEMETS_OPEN";
+        };
+
+        macro_Guillemets_close: macro_Guillemets_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_NUMBER_7 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MACRO_GUILLEMETS_CLOSE";
+        };
     };
 
     keymap {

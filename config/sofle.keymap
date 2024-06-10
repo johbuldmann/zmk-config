@@ -74,16 +74,19 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
+            layers = <0>;
         };
 
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
+            layers = <0>;
         };
     };
 

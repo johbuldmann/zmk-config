@@ -18,7 +18,14 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust_layer {
+            if-layers = <1 4>;
+            then-layer = <4>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -28,54 +35,12 @@
             key-positions = <37 0>;
             layers = <0>;
         };
-
-        combo_CTRL+Z {
-            bindings = <&kp LC(Z)>;
-            key-positions = <37 38>;
-            layers = <0>;
-        };
-
-        combo_CTRL+X {
-            bindings = <&kp LC(X)>;
-            key-positions = <38 39>;
-            layers = <0>;
-        };
-
-        combo_CTRL+C {
-            bindings = <&kp LC(C)>;
-            key-positions = <39 40>;
-            layers = <0>;
-        };
-
-        combo_CTRL+V {
-            bindings = <&kp LC(V)>;
-            key-positions = <40 41>;
-            layers = <0>;
-        };
-
-        combo_CTRL+Y {
-            bindings = <&kp LC(Y)>;
-            key-positions = <25 26>;
-            layers = <0>;
-        };
-
-        combo_Backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
-            layers = <0>;
-        };
-
-        combo_Delete {
-            bindings = <&kp DELETE>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Default_Layer {
+        default_layer {
             display-name = "default";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -98,7 +63,7 @@
                 <&inc_dec_kp C_NEXT C_PREV>;
         };
 
-        Raise_Layer {
+        raise_layer {
             display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -119,7 +84,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        Lower_Layer {
+        lower_layer {
             display-name = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -141,7 +106,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        Adjust_Layer {
+        adjust_layer {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -157,10 +122,6 @@
 &none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };

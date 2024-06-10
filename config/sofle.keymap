@@ -35,6 +35,11 @@
             key-positions = <37 0>;
             layers = <0>;
         };
+
+        combo_CTRL+Z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <37 38>;
+        };
     };
 
     keymap {

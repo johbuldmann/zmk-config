@@ -98,7 +98,7 @@
             layers = <0>;
         };
 
-        Numword {
+        combo_Numword {
             bindings = <&caps_word>;
             key-positions = <24 35>;
             layers = <0>;
@@ -149,11 +149,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                             &kp N6  &kp N7         &kp N8   &kp N9     &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W     &kp F     &kp P   &kp B                              &kp J   &kp L          &kp U    &kp Y      &kp SEMI  &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &kp A   &kp R     &kp S     &kp T   &kp G                              &kp M   &kp N          &kp E    &kp I      &kp O     &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp Z   &kp X     &kp C     &kp D   &kp V   &kp C_MUTE    &kp C_PP     &kp LT  &kp K          &kp H    &kp COMMA  &kp DOT   &kp RSHFT
-                        &kp LGUI  &kp LALT  &mo 3   &mo 1   &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL  &kp RALT
+&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                             &kp N6  &kp N7         &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W     &kp F     &kp P   &kp B                              &kp J   &kp L          &kp U      &kp Y     &kp SEMI  &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &kp A   &kp R     &kp S     &kp T   &kp G                              &kp M   &kp N          &kp E      &kp I     &kp O     &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp Z   &kp X     &kp C     &kp D   &kp V   &kp C_MUTE    &kp C_PP     &kp K   &kp H          &kp COMMA  &kp DOT   &kp DOT   &kp MINUS
+                        &kp LGUI  &kp LALT  &mo 3   &mo 1   &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL    &kp RALT
             >;
 
             sensor-bindings =

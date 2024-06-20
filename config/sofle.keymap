@@ -153,7 +153,7 @@
 &kp TAB         &kp Q   &kp W     &kp F     &kp P   &kp B                              &kp J   &kp L          &kp U      &kp Y     &kp SEMI  &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &kp A   &kp R     &kp S     &kp T   &kp G                              &kp M   &kp N          &kp E      &kp I     &kp O     &mt RIGHT_SHIFT APOS
 &kp LCTRL       &kp Z   &kp X     &kp C     &kp D   &kp V   &kp C_MUTE    &kp C_PP     &kp K   &kp H          &kp COMMA  &kp DOT   &kp DOT   &kp NUBS
-                        &kp LGUI  &kp LALT  &mo 3   &mo 1   &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL    &kp RALT
+                        &kp LGUI  &kp LALT  &mo 5   &mo 3   &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL    &kp RALT
             >;
 
             sensor-bindings =
@@ -161,8 +161,38 @@
                 <&inc_dec_kp C_NEXT C_PREV>;
         };
 
-        Raise_Layer {
-            display-name = "raise";
+        QWERTZ_Layer {
+            display-name = "qwertz";
+            bindings = <
+&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                             &kp N6  &kp N7         &kp N8     &kp N9    &kp N0     &kp MINUS
+&kp TAB         &kp Q   &kp W     &kp E     &kp R   &kp T                              &kp Z   &kp U          &kp I      &kp O     &kp P      &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F   &kp G                              &kp H   &kp J          &kp K      &kp L     &kp SEMI   &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp Y   &kp X     &kp C     &kp V   &kp B   &kp C_MUTE    &kp C_PP     &kp N   &kp M          &kp COMMA  &kp DOT   &kp MINUS  &kp NUBS
+                        &kp LGUI  &kp LALT  &mo 5   &mo 3   &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL    &kp RALT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_NEXT C_PREV>;
+        };
+
+        Game_Layer {
+            display-name = "Game";
+            bindings = <
+&kp ESC         &kp N1     &kp N2  &kp N3    &kp N4        &kp N5                                &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
+&kp TAB         &kp NUBS   &kp Q   &kp W     &kp E         &kp R                                 &kp T   &kp Z          &kp U    &kp I      &kp O    &kp P
+&kp LEFT_SHIFT  &kp LSHFT  &kp A   &kp S     &kp D         &kp F                                 &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp LCTRL  &kp Y   &kp X     &kp C         &kp V      &kp C_MUTE    &kp C_PP     &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
+                           &none   &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL  &kp RALT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_NEXT C_PREV>;
+        };
+
+        Navigation_Layer {
+            display-name = "navigation";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -182,8 +212,8 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        Lower_Layer {
-            display-name = "lower";
+        SymbolFunction_Layer {
+            display-name = "symbolfunction";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------

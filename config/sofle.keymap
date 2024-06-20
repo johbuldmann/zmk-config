@@ -133,6 +133,18 @@
 
             label = "MACRO_GUILLEMETS_CLOSE";
         };
+
+        macro_select_word: select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW &kp LS(RIGHT_ARROW)>;
+
+            label = "SELECT_WORD";
+        };
     };
 
     keymap {
@@ -153,37 +165,7 @@
 &kp TAB         &kp Q   &kp W     &kp F     &kp P   &kp B                              &kp J   &kp L          &kp U      &kp Y     &kp SEMI  &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &kp A   &kp R     &kp S     &kp T   &kp G                              &kp M   &kp N          &kp E      &kp I     &kp O     &mt RIGHT_SHIFT APOS
 &kp LCTRL       &kp Z   &kp X     &kp C     &kp D   &kp V   &kp C_MUTE    &kp C_PP     &kp K   &kp H          &kp COMMA  &kp DOT   &kp DOT   &kp NUBS
-                        &kp LGUI  &kp LALT  &mo 5   &mo 3   &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL    &kp RALT
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
-        };
-
-        QWERTZ_Layer {
-            display-name = "qwertz";
-            bindings = <
-&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                             &kp N6  &kp N7         &kp N8     &kp N9    &kp N0     &kp MINUS
-&kp TAB         &kp Q   &kp W     &kp E     &kp R   &kp T                              &kp Z   &kp U          &kp I      &kp O     &kp P      &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F   &kp G                              &kp H   &kp J          &kp K      &kp L     &kp SEMI   &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp Y   &kp X     &kp C     &kp V   &kp B   &kp C_MUTE    &kp C_PP     &kp N   &kp M          &kp COMMA  &kp DOT   &kp MINUS  &kp NUBS
-                        &kp LGUI  &kp LALT  &mo 5   &mo 3   &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL    &kp RALT
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
-        };
-
-        Game_Layer {
-            display-name = "Game";
-            bindings = <
-&kp ESC         &kp N1     &kp N2  &kp N3    &kp N4        &kp N5                                &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
-&kp TAB         &kp NUBS   &kp Q   &kp W     &kp E         &kp R                                 &kp T   &kp Z          &kp U    &kp I      &kp O    &kp P
-&kp LEFT_SHIFT  &kp LSHFT  &kp A   &kp S     &kp D         &kp F                                 &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp LCTRL  &kp Y   &kp X     &kp C         &kp V      &kp C_MUTE    &kp C_PP     &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
-                           &none   &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE     &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL  &kp RALT
+                        &kp LGUI  &kp LALT  &mo 3   &mo 1   &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL    &kp RALT
             >;
 
             sensor-bindings =
@@ -202,11 +184,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans        &trans    &trans         &trans     &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp PG_UP  &trans
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp PG_DN  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &kp HOME      &trans    &kp END        &trans     &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans        &trans    &trans
+&trans  &trans      &trans     &trans       &trans       &trans                      &trans     &trans            &trans              &trans             &trans     &trans
+&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &trans                      &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &trans
+&trans  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CLCK                    &kp PG_DN  &kp LEFT          &kp DOWN            &kp RIGHT          &kp PG_DN  &kp BSPC
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans     &kp HOME          &macro_select_word  &kp END            &trans     &trans
+                    &trans     &trans       &trans       &trans    &trans    &trans  &trans     &trans            &trans              &trans
             >;
 
             sensor-bindings =
@@ -226,11 +208,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans     &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9     &kp F10   &kp F11
-&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp F12
-&trans     &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp PIPE
-&trans     &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI   &kp COLON  &kp BSLH  &trans
-                      &trans     &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans
+&trans  &kp F1       &kp F2      &kp F3                &kp F4                 &kp F5                              &kp F6           &kp F7           &kp F8           &kp F9           &kp F10       &kp F11
+&trans  &kp AT_SIGN  &kp PIPE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp F12
+&trans  &kp HASH     &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE                    &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
+&trans  &kp PERCENT  &kp CARET   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE         &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans
+                     &trans      &trans                &trans                 &trans            &trans    &trans  &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings =
@@ -257,6 +239,51 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
+        QWERTZ_Layer {
+            display-name = "qwertz";
+            bindings = <
+&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                             &kp N6  &kp N7         &kp N8     &kp N9    &kp N0     &kp MINUS
+&kp TAB         &kp Q   &kp W     &kp E     &kp R   &kp T                              &kp Z   &kp U          &kp I      &kp O     &kp P      &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F   &kp G                              &kp H   &kp J          &kp K      &kp L     &kp SEMI   &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp Y   &kp X     &kp C     &kp V   &kp B   &kp C_MUTE    &kp C_PP     &kp N   &kp M          &kp COMMA  &kp DOT   &kp MINUS  &kp NUBS
+                        &kp LGUI  &kp LALT  &mo 3   &mo 1   &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL    &kp RALT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
+        Game_Layer {
+            display-name = "Game";
+            bindings = <
+&kp ESC         &kp N1     &kp N2  &kp N3    &kp N4        &kp N5                                &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
+&kp TAB         &kp NUBS   &kp Q   &kp W     &kp E         &kp R                                 &kp T   &kp Z          &kp U    &kp I      &kp O    &kp P
+&kp LEFT_SHIFT  &kp LSHFT  &kp A   &kp S     &kp D         &kp F                                 &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp LCTRL  &kp Y   &kp X     &kp C         &kp V      &kp C_MUTE    &kp C_PP     &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
+                           &none   &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE     &lt 1 ENTER  &mo 2   &kp BACKSPACE  &kp DEL  &kp RALT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
+        old_symbol_layer {
+            display-name = "symbolfunction";
+            bindings = <
+&trans     &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9     &kp F10   &kp F11
+&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp F12
+&trans     &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp PIPE
+&trans     &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI   &kp COLON  &kp BSLH  &trans
+                      &trans     &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };

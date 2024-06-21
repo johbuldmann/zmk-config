@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
-
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
 / {
@@ -60,12 +59,16 @@
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Delete {
             bindings = <&kp DELETE>;
             key-positions = <20 21>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Printscreen {

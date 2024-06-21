@@ -18,7 +18,7 @@
 #define ADJ 5
 #define OLD 6
 
-#include <behaviors/mouse.dtsi>
+// #include <behaviors/mouse.dtsi>
 
 /* Global settings */
 

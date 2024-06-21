@@ -18,6 +18,8 @@
 #define ADJ 5
 #define OLD 6
 
+#include "mouse.dtsi"
+
 /* Global settings */
 
 #define QUICK_TAP_MS 175

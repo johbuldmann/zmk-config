@@ -29,30 +29,40 @@
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_CTRL_X {
             bindings = <&kp LC(X)>;
             key-positions = <38 39>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_CTRL_C {
             bindings = <&kp LC(C)>;
             key-positions = <39 40>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <40 41>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_CTRL_Y {
             bindings = <&kp LC(Y)>;
             key-positions = <25 26>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Backspace {
@@ -75,18 +85,24 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
             layers = <0 1>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Numword {

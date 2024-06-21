@@ -9,6 +9,22 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
+
+#define DEF 0
+#define QWER 1
+#define GAME 2
+#define NAV 3
+#define SYMB 4
+#define ADJ 5
+#define OLD 6
+
+/* Global settings */
+
+#define QUICK_TAP_MS 175
+
+
+
+
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
 / {

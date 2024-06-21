@@ -33,7 +33,7 @@
 
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
-            key-positions = <37 0>;
+            key-positions = <0 1>;
             layers = <0 2 1>;
         };
 
@@ -68,7 +68,7 @@
         };
 
         combo_Backspace {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
             layers = <0 1>;
         };
@@ -213,11 +213,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans    &trans      &trans     &trans      &trans       &trans                    &trans     &trans            &trans              &trans             &trans     &trans
-&kp CLCK  &kp BSPC    &kp DEL    &trans      &trans       &trans                    &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &trans
-&trans    &kp BSPC    &kp DEL    &trans      &trans       &trans                    &kp PG_DN  &kp LEFT          &kp DOWN            &kp RIGHT          &kp PG_DN  &kp BSPC
-&trans    &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans  &trans    &trans  &trans     &kp HOME          &macro_select_word  &kp END            &trans     &trans
-                      &trans     &trans      &trans       &trans  &trans    &trans  &trans     &trans            &trans              &trans
+&trans    &trans      &trans     &trans         &trans             &trans                    &trans     &trans            &trans              &trans             &trans     &trans
+&kp CLCK  &trans      &trans     &trans         &trans             &trans                    &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &trans
+&trans    &trans      &trans     &kp BACKSPACE  &kp LC(BACKSPACE)  &trans                    &kp PG_DN  &kp LEFT          &kp DOWN            &kp RIGHT          &kp PG_DN  &kp BSPC
+&trans    &kp K_UNDO  &kp K_CUT  &kp K_COPY     &kp K_PASTE        &trans  &trans    &trans  &trans     &kp HOME          &macro_select_word  &kp END            &trans     &trans
+                      &trans     &trans         &trans             &trans  &trans    &trans  &trans     &trans            &trans              &trans
             >;
 
             sensor-bindings =

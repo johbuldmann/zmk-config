@@ -14,14 +14,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-&lt {
-};
-
-&caps_word {
-};
-
-&mt {
-};
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -140,7 +133,9 @@
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_tap>,
-                <&kp LEFT_ARROW &kp LS(RIGHT_ARROW)>;
+                <&kp LEFT_ARROW &kp LS(RIGHT_ARROW)>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "SELECT_WORD";
         };
@@ -188,7 +183,7 @@
         };
 
         Game_Layer {
-            display-name = "Game";
+            display-name = "game";
             bindings = <
 &kp ESC         &kp N1     &kp N2  &kp N3    &kp N4        &kp N5                               &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
 &kp TAB         &kp NUBS   &kp Q   &kp W     &kp E         &kp R                                &kp T   &kp Z          &kp U    &kp I      &kp O    &kp P

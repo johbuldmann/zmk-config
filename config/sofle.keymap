@@ -135,11 +135,13 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
+            layers = <0 1>;
         };
 
         combo_question {
             bindings = <&kp QUESTION>;
             key-positions = <46 47>;
+            layers = <0 1>;
         };
     };
 

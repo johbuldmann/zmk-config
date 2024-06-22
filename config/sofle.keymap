@@ -131,6 +131,16 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
+
+        combo_exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <46 45>;
+        };
+
+        combo_question {
+            bindings = <&kp QUESTION>;
+            key-positions = <46 47>;
+        };
     };
 
     macros {

@@ -155,6 +155,8 @@
             bindings = <&kp LA(SPACE)>;
             key-positions = <27 28>;
             layers = <0 1 8>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
     };
 

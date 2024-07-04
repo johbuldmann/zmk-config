@@ -241,9 +241,9 @@
             display-name = "siggboy";
             bindings = <
 &kp ESC         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                                 &kp N6    &kp N7         &kp N8   &kp N9      &kp N0  &kp MINUS
-&kp TAB         &kp V   &kp G     &kp L     &kp P   &kp MINUS                              &kp BSPC  &kp U          &kp O    &kp COMMA   &kp Z   &kp LEFT_BRACKET
+&kp TAB         &kp V   &kp G     &kp L     &kp P   &kp MINUS                              &kp BSPC  &kp U          &kp O    &kp COMMA   &kp Y   &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &kp C   &kp S     &kp N     &kp T   &kp M                                  &kp K     &kp I          &kp E    &kp A       &kp H   &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp Q   &kp F     &kp W     &kp D   &kp B      &lt 5 C_MUTE    &lt 5 C_PP  &kp J     &kp Y          &kp SQT  &kp PERIOD  &kp X   &kp NUBS
+&kp LCTRL       &kp Q   &kp F     &kp W     &kp D   &kp B      &lt 5 C_MUTE    &lt 5 C_PP  &kp J     &kp Z          &kp SQT  &kp PERIOD  &kp X   &kp NUBS
                         &kp LGUI  &kp LALT  &mo 4   &kp SPACE  &mo 3           &kp ENTER   &lt 3 R   &kp BACKSPACE  &kp DEL  &kp RALT
             >;
 

@@ -77,7 +77,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_Backspace {
+        combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
             layers = <8 1 0>;
@@ -140,6 +140,14 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
+            layers = <8 1 0>;
+        };
+
+        combo_Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <31 32>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
             layers = <8 1 0>;
         };
     };
@@ -249,7 +257,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_NEXT C_PREVIOUS>;
+                <&inc_dec_kp F21 F20>;
         };
 
         QWERTZ_Layer {
@@ -264,7 +272,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_NEXT C_PREVIOUS>;
+                <&inc_dec_kp F21 F20>;
         };
 
         Game_Layer {

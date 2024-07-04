@@ -34,13 +34,13 @@
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <7 2 1>;
+            layers = <7 2 1 0>;
         };
 
         combo_CTRL_Z {
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -48,7 +48,7 @@
         combo_CTRL_X {
             bindings = <&kp LC(X)>;
             key-positions = <38 39>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -56,7 +56,7 @@
         combo_CTRL_C {
             bindings = <&kp LC(C)>;
             key-positions = <39 40>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -64,7 +64,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <40 41>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -72,7 +72,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(Y)>;
             key-positions = <25 26>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -80,7 +80,7 @@
         combo_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -88,7 +88,7 @@
         combo_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -96,7 +96,7 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -104,7 +104,7 @@
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -112,7 +112,7 @@
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
-            layers = <7 1>;
+            layers = <0 7 1>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -120,13 +120,13 @@
         combo_Numword {
             bindings = <&caps_word>;
             key-positions = <24 35>;
-            layers = <7 1>;
+            layers = <7 1 0>;
         };
 
         combo_en_dash {
             bindings = <&macro_en_dash>;
             key-positions = <48 49>;
-            layers = <7 1>;
+            layers = <7 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -134,13 +134,13 @@
         combo_question {
             bindings = <&kp QUESTION>;
             key-positions = <46 47>;
-            layers = <7 1>;
+            layers = <7 1 0>;
         };
 
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <7 1>;
+            layers = <7 1 0>;
         };
     };
 

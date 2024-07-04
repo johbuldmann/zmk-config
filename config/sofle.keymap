@@ -221,6 +221,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-key-positions = <18 19 6 7 8 9 10 11 23 22 21 20 30 31 32 33 34 35 45 44 46 47 48 49 59 58 57 56 55>;
+            require-prior-idle-ms = <120>;
         };
 
         hmr: hmr {
@@ -233,6 +234,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-key-positions = <54 53 52 51 50 36 37 38 39 40 41 29 4 5 16 28 27 15 3 2 14 26 25 24 12 13 0 1 17>;
+            require-prior-idle-ms = <120>;
         };
     };
 
@@ -301,11 +303,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp LCTRL  &kp F1      &kp F2     &kp F3                  &kp F4             &kp F5                    &kp F6     &kp F7            &kp F8              &kp F9             &kp F10    &kp F11
-&kp CLCK   &trans      &trans     &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &trans                    &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &kp F12
-&trans     &trans      &trans     &kp BACKSPACE           &kp LC(BACKSPACE)  &trans                    &kp PG_DN  &kp LEFT          &kp DOWN            &kp RIGHT          &kp PG_DN  &kp BSPC
-&trans     &kp K_UNDO  &kp K_CUT  &kp K_COPY              &kp K_PASTE        &trans  &trans    &trans  &trans     &kp HOME          &macro_select_word  &kp END            &trans     &trans
-                       &trans     &trans                  &trans             &trans  &trans    &trans  &trans     &trans            &trans              &trans
+&kp LCTRL  &kp F1      &kp F2     &kp F3                  &kp F4             &kp F5                            &kp F6     &kp F7        &kp F8              &kp F9         &kp F10    &kp F11
+&kp CLCK   &trans      &trans     &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &kp C_NEXT                        &kp PG_UP  &kp LC(LEFT)  &kp UP              &kp LC(RIGHT)  &kp PG_UP  &kp F12
+&trans     &trans      &trans     &kp BACKSPACE           &kp LC(BACKSPACE)  &kp C_PAUSE                       &kp PG_DN  &kp LEFT      &kp DOWN            &kp RIGHT      &kp PG_DN  &kp BSPC
+&trans     &kp K_UNDO  &kp K_CUT  &kp K_COPY              &kp K_PASTE        &kp C_PREVIOUS  &trans    &trans  &trans     &kp HOME      &macro_select_word  &kp END        &trans     &trans
+                       &trans     &trans                  &trans             &trans          &trans    &trans  &trans     &trans        &trans              &trans
             >;
 
             sensor-bindings =

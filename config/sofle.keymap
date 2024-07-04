@@ -34,13 +34,13 @@
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <7 2 1 0>;
+            layers = <8 2 1 0>;
         };
 
         combo_CTRL_Z {
             bindings = <&kp LC(Z)>;
             key-positions = <37 38>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -48,7 +48,7 @@
         combo_CTRL_X {
             bindings = <&kp LC(X)>;
             key-positions = <38 39>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -56,7 +56,7 @@
         combo_CTRL_C {
             bindings = <&kp LC(C)>;
             key-positions = <39 40>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -64,7 +64,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <40 41>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -72,7 +72,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(Y)>;
             key-positions = <25 26>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -80,7 +80,7 @@
         combo_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -88,7 +88,7 @@
         combo_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -96,7 +96,7 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -104,7 +104,7 @@
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -112,7 +112,7 @@
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
-            layers = <0 7 1>;
+            layers = <0 8 1>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -120,13 +120,13 @@
         combo_Numword {
             bindings = <&caps_word>;
             key-positions = <24 35>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
         };
 
         combo_en_dash {
             bindings = <&macro_en_dash>;
             key-positions = <48 49>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -134,13 +134,13 @@
         combo_question {
             bindings = <&kp QUESTION>;
             key-positions = <46 47>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
         };
 
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <7 1 0>;
+            layers = <8 1 0>;
         };
     };
 
@@ -305,8 +305,8 @@
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
-        SymbolFunction_Layer {
-            display-name = "symbolfunction";
+        SymbolNumpad_Layer {
+            display-name = "symbolnumpad";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -318,8 +318,8 @@
 
             bindings = <
 &trans  &trans       &trans          &kp LESS_THAN         &kp GREATER_THAN       &trans                              &kp KP_NUMLOCK   &trans           &kp KP_DIVIDE    &kp KP_MULTIPLY  &trans        &trans
-&trans  &kp AT_SIGN  &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
-&trans  &kp HASH     &macro_en_dash  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE                    &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
+&trans  &kp AT_SIGN  &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH                       &kp KP_DOT       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
+&trans  &kp HASH     &macro_en_dash  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE                    &kp KP_COMMA     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
 &trans  &kp PERCENT  &kp CARET       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE         &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans
                      &trans          &trans                &trans                 &trans            &trans    &trans  &trans           &trans           &trans           &trans
             >;
@@ -348,6 +348,21 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
+        old_sym_layer_us_layout {
+            display-name = "symbolfunction";
+            bindings = <
+&trans  &trans       &trans          &kp LESS_THAN         &kp GREATER_THAN       &trans                              &kp KP_NUMLOCK   &trans           &kp KP_DIVIDE    &kp KP_MULTIPLY  &trans        &trans
+&trans  &kp AT_SIGN  &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH                       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &trans
+&trans  &kp HASH     &macro_en_dash  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE                    &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
+&trans  &kp PERCENT  &kp CARET       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE         &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans        &trans
+                     &trans          &trans                &trans                 &trans            &trans    &trans  &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 

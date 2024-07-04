@@ -38,7 +38,7 @@
         };
 
         combo_CTRL_Z {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LC(Y)>;
             key-positions = <37 38>;
             layers = <8 1 0>;
             timeout-ms = <30>;
@@ -70,7 +70,7 @@
         };
 
         combo_CTRL_Y {
-            bindings = <&kp LC(Y)>;
+            bindings = <&kp LC(Z)>;
             key-positions = <25 26>;
             layers = <8 1 0>;
             timeout-ms = <30>;
@@ -132,7 +132,7 @@
         };
 
         combo_question {
-            bindings = <&kp QUESTION>;
+            bindings = <&kp LS(MINUS)>;
             key-positions = <46 47>;
             layers = <8 1 0>;
         };
@@ -302,7 +302,7 @@
 
             bindings = <
 &kp LCTRL  &kp F1      &kp F2     &kp F3                  &kp F4             &kp F5                    &kp F6     &kp F7            &kp F8              &kp F9             &kp F10    &kp F11
-&kp CLCK   &trans      &trans     &kp LS(LG(LEFT_ARROW))  &kp LC(LG(RIGHT))  &trans                    &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &kp F12
+&kp CLCK   &trans      &trans     &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &trans                    &kp PG_UP  &kp LC(LS(LEFT))  &kp UP              &kp LC(LS(RIGHT))  &kp PG_UP  &kp F12
 &trans     &trans      &trans     &kp BACKSPACE           &kp LC(BACKSPACE)  &trans                    &kp PG_DN  &kp LEFT          &kp DOWN            &kp RIGHT          &kp PG_DN  &kp BSPC
 &trans     &kp K_UNDO  &kp K_CUT  &kp K_COPY              &kp K_PASTE        &trans  &trans    &trans  &trans     &kp HOME          &macro_select_word  &kp END            &trans     &trans
                        &trans     &trans                  &trans             &trans  &trans    &trans  &trans     &trans            &trans              &trans

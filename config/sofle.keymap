@@ -105,7 +105,7 @@
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
             layers = <8 1 0>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
 
@@ -113,7 +113,7 @@
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
             layers = <0 8 1>;
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
 
@@ -166,6 +166,22 @@
         combo_SelectAll {
             bindings = <&kp LC(A)>;
             key-positions = <25 26>;
+        };
+
+        combo_en_dash2 {
+            bindings = <&macro_en_dash>;
+            key-positions = <16 17>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <100>;
+            layers = <8 1 0>;
+        };
+
+        combo_em_dash {
+            bindings = <&macro_en_dash>;
+            key-positions = <16 17 15>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <100>;
+            layers = <8 1 0>;
         };
     };
 
@@ -224,6 +240,20 @@
                 <&kp LEFT_ALT>;
 
             label = "MACRO_EN_DASH";
+        };
+
+        macro_em_dash: macro_em_dash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MACRO_EM_DASH";
         };
     };
 

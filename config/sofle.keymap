@@ -23,6 +23,9 @@
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
+&left_encoder { resolution = <1>; };
+&right_encoder { resolution = <1>; };
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 

@@ -71,7 +71,7 @@
 
         combo_CTRL_Y {
             bindings = <&kp LC(Z)>;
-            key-positions = <25 26>;
+            key-positions = <37 39>;
             layers = <8 1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -135,12 +135,16 @@
             bindings = <&kp LS(MINUS)>;
             key-positions = <46 47>;
             layers = <8 1 0>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
             layers = <8 1 0>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_Backspace {
@@ -157,6 +161,11 @@
             layers = <0 1 8>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
+        };
+
+        combo_SelectAll {
+            bindings = <&kp LC(A)>;
+            key-positions = <25 26>;
         };
     };
 
@@ -335,10 +344,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &none            &none              &kp NUBS    &kp LS(NUBS)      &none                                    &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none         &none
+&trans  &kp GRAVE        &none              &kp NUBS    &kp LS(NUBS)      &none                                    &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none         &none
 &trans  &kp RA(Q)        &kp RA(BACKSLASH)  &kp RA(N8)  &kp RA(N9)        &kp RA(MINUS)                            &kp PERIOD       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none
 &trans  &kp NON_US_HASH  &macro_en_dash     &kp LS(N8)  &kp LS(N9)        &kp LS(NON_US_HASH)                      &kp COMMA        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
-&trans  &kp PERCENT      &kp GRAVE          &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA     &none
+&trans  &kp PERCENT      &kp LS(NUMBER_6)   &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA     &none
                          &trans             &trans      &trans            &trans                 &trans    &trans  &trans           &trans           &trans           &kp PERIOD
             >;
 

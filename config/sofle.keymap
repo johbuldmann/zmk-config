@@ -24,7 +24,7 @@
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
 &left_encoder { steps = <60>; };
-&right_encoder { steps = <60>; };
+&right_encoder { steps = <45>; };
 
 / {
     // Activate ADJUST layer by pressing raise and lower

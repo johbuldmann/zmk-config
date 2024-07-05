@@ -23,8 +23,8 @@
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
-&left_encoder { resolution = <4>; };
-&right_encoder { resolution = <4>; };
+&left_encoder { steps = <60>; };
+&right_encoder { steps = <60>; };
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -288,11 +288,11 @@
         };
     };
 
-//    sensors: sensors {
-//        compatible = "zmk,keymap-sensors";
-//        sensors = <&left_encoder &right_encoder>;
-//        triggers-per-rotation = <30>;
-//    };
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <30>;
+    };
 
     keymap {
         compatible = "zmk,keymap";

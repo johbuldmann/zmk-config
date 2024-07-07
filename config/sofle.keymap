@@ -198,6 +198,30 @@
             require-prior-idle-ms = <100>;
             layers = <1 0>;
         };
+
+        combo_new_tab {
+            bindings = <&kp LC(T)>;
+            key-positions = <16 15>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0>;
+        };
+
+        combo_close_tab {
+            bindings = <&kp LC(W)>;
+            key-positions = <15 14>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0>;
+        };
+
+        combo_win_paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <41 39>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0 3 4>;
+        };
     };
 
     macros {

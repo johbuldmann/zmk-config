@@ -127,7 +127,7 @@
             layers = <1 0>;
         };
 
-        combo_en_dash {
+        combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 49>;
             layers = <1 0>;
@@ -175,7 +175,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_en_dash2 {
+        combo_en_dash {
             bindings = <&macro_en_dash>;
             key-positions = <16 17>;
             timeout-ms = <35>;
@@ -186,6 +186,14 @@
         combo_em_dash {
             bindings = <&macro_em_dash>;
             key-positions = <16 17 15>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0>;
+        };
+
+        combo_em_dash2 {
+            bindings = <&macro_em_dash>;
+            key-positions = <47 48 49>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
             layers = <1 0>;
@@ -357,11 +365,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp LCTRL              &kp F1          &kp F2     &kp F3                  &kp F4             &kp F5                                 &kp F6     &kp F7        &kp F8              &kp F9         &kp F10    &kp F11
-&mt LS(CLCK) CAPSLOCK  &none           &none      &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &kp C_NEXT                             &kp PG_UP  &kp HOME      &kp UP              &kp END        &kp PG_UP  &kp F12
-&trans                 &kp LEFT_SHIFT  &none      &kp BACKSPACE           &kp LC(BACKSPACE)  &kp C_PLAY_PAUSE                       &kp PG_DN  &kp LEFT      &kp DOWN            &kp RIGHT      &kp PG_DN  &none
-&trans                 &kp LC(Y)       &kp LC(X)  &kp LC(C)               &kp LC(V)          &kp C_PREVIOUS    &trans       &trans  &none      &kp LC(LEFT)  &macro_select_word  &kp LC(RIGHT)  &none      &none
-                                       &trans     &trans                  &trans             &trans            &kp ENTER    &trans  &kp SPACE  &trans        &trans              &trans
+&kp LCTRL              &kp F1          &kp F2       &kp F3                  &kp F4             &kp F5                                 &kp F6     &kp F7        &kp F8              &kp F9         &kp F10    &kp F11
+&mt LS(CLCK) CAPSLOCK  &kp LA(TAB)     &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &kp C_NEXT                             &kp PG_UP  &kp HOME      &kp UP              &kp END        &kp PG_UP  &kp F12
+&trans                 &kp LEFT_SHIFT  &none        &kp BACKSPACE           &kp LC(BACKSPACE)  &kp C_PLAY_PAUSE                       &kp PG_DN  &kp LEFT      &kp DOWN            &kp RIGHT      &kp PG_DN  &none
+&trans                 &kp LC(Y)       &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp C_PREVIOUS    &trans       &trans  &none      &kp LC(LEFT)  &macro_select_word  &kp LC(RIGHT)  &none      &none
+                                       &trans       &trans                  &trans             &trans            &kp ENTER    &trans  &kp SPACE  &trans        &trans              &trans
             >;
 
             sensor-bindings =
@@ -381,8 +389,8 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &kp GRAVE        &none             &kp NUBS    &kp LS(NUBS)      &none                                    &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none         &none
-&trans  &kp RA(Q)        &kp RA(NUBS)      &kp RA(N8)  &kp RA(N9)        &kp RA(MINUS)                            &kp PERIOD       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none
+&trans  &kp GRAVE        &none             &kp NUBS    &kp LS(NUBS)      &kp RA(MINUS)                            &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none         &none
+&trans  &kp RA(Q)        &kp RA(NUBS)      &kp RA(N8)  &kp RA(N9)        &kp LS(N7)                               &kp PERIOD       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none
 &trans  &kp NON_US_HASH  &macro_en_dash    &kp LS(N8)  &kp LS(N9)        &kp LS(NON_US_HASH)                      &kp COMMA        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
 &trans  &kp PERCENT      &kp LS(NUMBER_6)  &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA     &none
                          &trans            &trans      &trans            &trans                 &trans    &trans  &kp SPACE        &trans           &trans           &kp PERIOD
@@ -404,7 +412,7 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &bootloader  &none  &none  &none  &none       &none
-&none        &to 0         &to 1         &to 2         &to 3         &to 4                           &none        &none  &none  &none  &none       &none
+&none        &to 0         &to 1         &to 2         &to 3         &to 4                           &none        &none  &none  &none  &none       &kp LS(LA(LC(F12)))
 &none        &none         &none         &none         &none         &none                           &none        &none  &none  &none  &none       &none
 &bootloader  &sys_reset    &none         &none         &none         &none         &trans    &trans  &none        &none  &none  &none  &sys_reset  &bootloader
                            &none         &none         &none         &none         &none     &none   &none        &none  &none  &none

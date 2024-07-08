@@ -19,7 +19,7 @@
 // #include <behaviors/mouse.dtsi>
 /* Global settings */
 
-#define QUICK_TAP_MS 175
+// #define QUICK_TAP_MS 175
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 

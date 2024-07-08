@@ -433,23 +433,14 @@
 
         SymbolNumpad_Layer {
             display-name = "symbolnumpad";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
             bindings = <
-&trans  &kp GRAVE        &none             &kp NUBS    &kp LS(NUBS)      &kp RA(MINUS)                            &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none         &none
-&trans  &kp RA(Q)        &kp RA(NUBS)      &kp RA(N8)  &kp RA(N9)        &kp LS(N7)                               &kp PERIOD       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none
-&trans  &kp NON_US_HASH  &macro_en_dash    &kp LS(N8)  &kp LS(N9)        &kp LS(NON_US_HASH)                      &kp COMMA        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none
-&trans  &kp PERCENT      &kp LS(NUMBER_6)  &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA     &none
-                         &trans            &trans      &trans            &trans                 &trans    &trans  &kp SPACE        &trans           &trans           &kp PERIOD
+&trans  &kp GRAVE                     &none                &kp NUBS    &kp LS(NUBS)      &kp RA(MINUS)                            &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none                            &kp EQUAL
+&trans  &kp RA(Q)                     &kp RA(NUBS)         &kp RA(N8)  &kp RA(N9)        &kp LS(N7)                               &kp PERIOD       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                     &kp NON_US_HASH
+&trans  &shml LEFT_SHIFT NON_US_HASH  &kp LS(NON_US_HASH)  &kp LS(N8)  &kp LS(N9)        &kp LS(NON_US_HASH)                      &kp COMMA        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)
+&trans  &kp PERCENT                   &kp LS(NUMBER_6)     &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA                        &none
+                                      &trans               &trans      &trans            &trans                 &trans    &trans  &kp SPACE        &trans           &trans           &kp PERIOD
             >;
-
+    
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;

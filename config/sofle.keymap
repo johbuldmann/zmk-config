@@ -238,6 +238,14 @@
             require-prior-idle-ms = <100>;
             layers = <1 0>;
         };
+
+        combo_Paste_withouta_formatting {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <41 39 40>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0 3 4>;
+        };
     };
 
     macros {

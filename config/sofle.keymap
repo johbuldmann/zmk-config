@@ -175,17 +175,9 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_en_dash {
-            bindings = <&macro_en_dash>;
+        combo_new_window {
+            bindings = <&kp LC(N)>;
             key-positions = <16 17>;
-            timeout-ms = <35>;
-            require-prior-idle-ms = <100>;
-            layers = <1 0>;
-        };
-
-        combo_em_dash {
-            bindings = <&macro_em_dash>;
-            key-positions = <16 17 15>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
             layers = <1 0>;

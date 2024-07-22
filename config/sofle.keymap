@@ -49,17 +49,9 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_CTRL_X {
-            bindings = <&kp LC(X)>;
+        combo_copy_cut {
+            bindings = <&mt LC(X) LC(C)>;
             key-positions = <38 39>;
-            layers = <1 0 3 4>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-        };
-
-        combo_CTRL_C {
-            bindings = <&kp LC(C)>;
-            key-positions = <39 40>;
             layers = <1 0 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -67,6 +59,14 @@
 
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
+            key-positions = <39 40>;
+            layers = <1 0 3 4>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+        };
+
+        combo_clipboard {
+            bindings = <&kp LG(V)>;
             key-positions = <40 41>;
             layers = <1 0 3 4>;
             timeout-ms = <30>;

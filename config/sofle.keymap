@@ -61,7 +61,7 @@
             bindings = <&kp LC(V)>;
             key-positions = <39 40>;
             layers = <1 0 3 4>;
-            timeout-ms = <30>;
+            timeout-ms = <22>;
             require-prior-idle-ms = <100>;
         };
 

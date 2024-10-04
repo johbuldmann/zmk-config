@@ -199,13 +199,6 @@
             layers = <1 0>;
         };
 
-        deactivated_combo_close_tab {
-            bindings = <&kp LC(W)>;
-            key-positions = <15 14>;
-            timeout-ms = <15>;
-            require-prior-idle-ms = <100>;
-        };
-
         combo_win_paste {
             bindings = <&kp LG(V)>;
             key-positions = <41 39>;

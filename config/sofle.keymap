@@ -456,11 +456,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none       &kp KP_NUMLOCK
-&none        &to 0         &to 1         &to 2         &to 3         &to 4                           &none  &none  &none  &none  &none       &kp LS(LA(LC(F12)))
-&none        &none         &none         &none         &none         &none                           &none  &none  &none  &none  &none       &none
-&bootloader  &sys_reset    &none         &none         &none         &none         &trans    &trans  &none  &none  &none  &none  &sys_reset  &bootloader
-                           &none         &none         &none         &none         &none     &none   &none  &none  &none  &none
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none       &kp KP_NUMLOCK
+&bt BT_CLR_ALL  &to 0         &to 1         &to 2         &to 3         &to 4                           &none  &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&none           &none         &none         &none         &none         &none                           &none  &none  &none  &none  &none       &none
+&bootloader     &sys_reset    &none         &none         &none         &none         &trans    &trans  &none  &none  &none  &none  &sys_reset  &bootloader
+                              &none         &none         &none         &none         &none     &none   &none  &none  &none  &none
             >;
 
             sensor-bindings =

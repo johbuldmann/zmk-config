@@ -436,8 +436,8 @@
             display-name = "symbolnumpad";
             bindings = <
 &kp ESCAPE        &kp LS(NON_US_HASH)           &kp LS(NUMBER_2)     &kp NUBS    &kp LS(NUBS)      &kp RA(MINUS)                            &kp KP_NUMLOCK   &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &none                            &kp EQUAL
-&kp TAB           &kp RA(Q)                     &kp RA(NUBS)         &kp RA(N8)  &kp RA(N9)        &kp LS(N7)                               &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                     &kp NON_US_HASH
-&kp LSHFT         &shml LEFT_SHIFT NON_US_HASH  &kp LS(NON_US_HASH)  &kp LS(N8)  &kp LS(N9)        &kp LS(NUMBER_2)                         &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)
+&kp TAB           &kp RA(Q)                     &kp RA(NUBS)         &kp RA(N8)  &kp RA(N9)        &kp LS(N7)                               &kp LS(PERIOD)   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                     &kp NON_US_HASH
+&kp LSHFT         &shml LEFT_SHIFT NON_US_HASH  &kp LS(NON_US_HASH)  &kp LS(N8)  &kp LS(N9)        &kp LS(NUMBER_0)                         &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)
 &kp LEFT_CONTROL  &shml LEFT_ALT PERCENT        &kp LS(NUMBER_6)     &kp RA(N7)  &kp RA(NUMBER_0)  &kp RA(RIGHT_BRACKET)  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &shmr LEFT_ALT COMMA             &kp RIGHT_CONTROL
                                                 &trans               &trans      &trans            &trans                 &trans    &trans  &kp SPACE        &trans           &trans           &trans
             >;

@@ -39,13 +39,13 @@
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <2 1 0 3 4>;
+            layers = <2 0 1 3 4>;
         };
 
         combo_CTRL_Z {
             bindings = <&kp LC(Y)>;
             key-positions = <37 38>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -53,7 +53,7 @@
         combo_copy_cut {
             bindings = <&mt LC(X) LC(C)>;
             key-positions = <38 39>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -61,7 +61,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <39 40>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <22>;
             require-prior-idle-ms = <100>;
         };
@@ -69,7 +69,7 @@
         combo_clipboard {
             bindings = <&kp LG(V)>;
             key-positions = <40 41>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -77,7 +77,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(Z)>;
             key-positions = <37 39>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -85,7 +85,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -93,7 +93,7 @@
         combo_Ctrl_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -101,7 +101,7 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -109,7 +109,7 @@
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
-            layers = <1 0>;
+            layers = <0 1>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -117,7 +117,7 @@
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
-            layers = <0 1>;
+            layers = <1 0>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -125,13 +125,13 @@
         combo_Numword {
             bindings = <&caps_word>;
             key-positions = <24 35>;
-            layers = <1 0>;
+            layers = <0 1>;
         };
 
         combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 47>;
-            layers = <1 0>;
+            layers = <0 1>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -139,7 +139,7 @@
         combo_question {
             bindings = <&kp LS(MINUS)>;
             key-positions = <46 47>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -147,7 +147,7 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -157,13 +157,13 @@
             key-positions = <31 32>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
         };
 
         combo_Listary {
             bindings = <&kp LA(SPACE)>;
             key-positions = <27 28>;
-            layers = <0 1>;
+            layers = <1 0>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -171,7 +171,7 @@
         combo_SelectAll {
             bindings = <&kp LC(A)>;
             key-positions = <25 26>;
-            layers = <0 1 3 4>;
+            layers = <1 0 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -181,7 +181,7 @@
             key-positions = <16 17>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <1 0>;
+            layers = <0 1>;
         };
 
         combo_em_dash2 {
@@ -189,7 +189,7 @@
             key-positions = <47 48 46>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <1 0>;
+            layers = <0 1>;
         };
 
         combo_new_tab {
@@ -197,7 +197,7 @@
             key-positions = <16 15>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 0>;
+            layers = <0 1>;
         };
 
         combo_win_paste {
@@ -205,7 +205,7 @@
             key-positions = <41 39>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
         };
 
         combo_delete {
@@ -213,7 +213,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
         };
 
         combo_arrowa_right {
@@ -221,7 +221,7 @@
             key-positions = <48 49>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 0>;
+            layers = <0 1>;
         };
 
         combo_Paste_withouta_formatting {
@@ -229,7 +229,7 @@
             key-positions = <41 39 40>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <1 0 3 4>;
+            layers = <0 1 3 4>;
         };
 
         combo_alt_D {
@@ -237,7 +237,7 @@
             key-positions = <27 26>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
     };
 
@@ -364,6 +364,21 @@
     keymap {
         compatible = "zmk,keymap";
 
+        QWERTZ_Layer {
+            display-name = "qwertz";
+            bindings = <
+&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4  &kp N5                                         &kp N6  &kp N7  &kp N8        &kp N9      &kp N0                  &kp MINUS
+&kp TAB         &kp Q               &kp W     &kp E     &kp R   &kp T                                          &kp Y   &kp U   &kp I         &kp O       &kp P                   &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &kp S     &kp D     &kp F   &kp G                                          &kp H   &kp J   &kp K         &kp L       &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
+&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V   &kp B      &lt 5 C_MUTE    &lt 5 C_PLAY_PAUSE  &kp N   &kp M   &kp COMMA     &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL NUBS
+                                    &kp LGUI  &kp LALT  &mo 4   &kp SPACE  &mo 3           &lt 3 ENTER         &trans  &mo 4   &kp LEFT_ALT  &kp RALT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp F21 F20>;
+        };
+
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
@@ -372,21 +387,6 @@
 &kp LEFT_SHIFT  &shml LEFT_SHIFT C  &kp S     &kp N     &kp T   &kp M                                   &kp K     &kp I   &kp E         &kp A                       &shmr RIGHT_SHIFT H  &shmr RIGHT_SHIFT SEMI
 &kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D   &kp B      &lt 5 C_MUTE    &lt 5 C_PP   &kp J     &kp Z   &kp SQT       &shmr RIGHT_CONTROL PERIOD  &shmr LEFT_ALT X     &shmr RIGHT_CONTROL NUBS
                                     &kp LGUI  &kp LALT  &mo 4   &kp SPACE  &mo 3           &lt 3 ENTER  &kp R     &mo 4   &kp LEFT_ALT  &kp RALT
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp F21 F20>;
-        };
-
-        QWERTZ_Layer {
-            display-name = "qwertz";
-            bindings = <
-&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8     &kp N9      &kp N0                  &kp MINUS
-&kp TAB         &kp Q               &kp W     &kp E     &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O       &kp P                   &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &kp S     &kp D     &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L       &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
-&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL NUBS
-                                    &kp LGUI  &kp LALT  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &kp RALT
             >;
 
             sensor-bindings =
@@ -458,7 +458,7 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none       &kp KP_NUMLOCK
-&bt BT_CLR_ALL  &to 0         &to 1         &to 2         &to 3         &to 4                           &none  &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&bt BT_CLR_ALL  &to 1         &to 0         &to 2         &to 3         &to 4                           &none  &none  &none  &none  &none       &kp LS(LA(LC(F12)))
 &none           &none         &none         &out OUT_BLE  &out OUT_TOG  &out OUT_USB                    &none  &none  &none  &none  &none       &none
 &bootloader     &sys_reset    &none         &none         &none         &none         &trans    &trans  &none  &none  &none  &none  &sys_reset  &bootloader
                               &none         &none         &none         &none         &none     &none   &none  &none  &none  &none

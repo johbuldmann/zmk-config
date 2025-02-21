@@ -85,7 +85,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 1 3 4>;
+            layers = <0 1 3 4 5>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -93,7 +93,7 @@
         combo_Ctrl_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 1 3 4>;
+            layers = <0 1 3 4 5>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -157,7 +157,7 @@
             key-positions = <31 32>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4>;
+            layers = <0 1 3 4 5>;
         };
 
         combo_Listary {
@@ -213,7 +213,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4>;
+            layers = <0 1 3 4 5>;
         };
 
         combo_arrowa_right {

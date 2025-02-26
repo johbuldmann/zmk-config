@@ -246,6 +246,14 @@
             timeout-ms = <40>;
             layers = <0>;
         };
+
+        combo_Printscreen2 {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <4 5>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1 6 3>;
+        };
     };
 
     macros {

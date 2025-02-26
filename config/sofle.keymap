@@ -39,13 +39,13 @@
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <2 0 1 3 4>;
+            layers = <2 0 1 6 3>;
         };
 
         combo_CTRL_Z {
             bindings = <&kp LC(Y)>;
             key-positions = <37 38>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -53,7 +53,7 @@
         combo_copy_cut {
             bindings = <&mt LC(X) LC(C)>;
             key-positions = <38 39>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -61,7 +61,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <39 40>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <22>;
             require-prior-idle-ms = <100>;
         };
@@ -69,7 +69,7 @@
         combo_clipboard {
             bindings = <&kp LG(V)>;
             key-positions = <40 41>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -77,7 +77,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(Z)>;
             key-positions = <37 39>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -85,7 +85,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 1 3 4 5>;
+            layers = <0 1 6 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -93,7 +93,7 @@
         combo_Ctrl_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 1 3 4 5>;
+            layers = <0 1 6 3 4>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -101,7 +101,7 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -139,7 +139,7 @@
         combo_question {
             bindings = <&kp LS(MINUS)>;
             key-positions = <46 47>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -147,7 +147,7 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -157,7 +157,7 @@
             key-positions = <31 32>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5>;
+            layers = <0 1 6 3 4>;
         };
 
         combo_Listary {
@@ -171,7 +171,7 @@
         combo_SelectAll {
             bindings = <&kp LC(A)>;
             key-positions = <25 26>;
-            layers = <1 0 3 4>;
+            layers = <1 0 6 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -205,7 +205,7 @@
             key-positions = <41 39>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
         };
 
         combo_delete {
@@ -213,7 +213,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5>;
+            layers = <0 1 6 3 4>;
         };
 
         combo_arrowa_right {
@@ -229,7 +229,7 @@
             key-positions = <41 39 40>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4>;
+            layers = <0 1 6 3>;
         };
 
         combo_alt_D {
@@ -377,8 +377,8 @@
 &kp ESC         &kp N1              &kp N2    &kp N3    &kp N4  &kp N5                                         &kp N6       &kp N7  &kp N8        &kp N9      &kp N0                  &kp MINUS
 &kp TAB         &kp Q               &kp W     &kp E     &kp R   &kp T                                          &mt MINUS Y  &kp U   &kp I         &kp O       &kp P                   &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &shml LEFT_SHIFT A  &kp S     &kp D     &kp F   &kp G                                          &kp H        &kp J   &kp K         &kp L       &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
-&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V   &kp B      &lt 6 C_MUTE    &lt 6 C_PLAY_PAUSE  &kp N        &kp M   &kp COMMA     &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
-                                    &kp LGUI  &kp LALT  &mo 4   &kp SPACE  &mo 3           &lt 3 ENTER         &mo 5        &mo 4   &kp LEFT_ALT  &kp RALT
+&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V   &kp B      &lt 7 C_MUTE    &lt 7 C_PLAY_PAUSE  &kp N        &kp M   &kp COMMA     &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
+                                    &kp LGUI  &kp LALT  &mo 3   &kp SPACE  &mo 6           &lt 6 ENTER         &mo 4        &mo 3   &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -392,8 +392,8 @@
 &kp ESC         &kp N1              &kp N2    &kp N3    &kp N4  &kp N5                                  &kp N6    &kp N7  &kp N8        &kp N9                      &kp N0               &kp MINUS
 &kp TAB         &kp V               &kp G     &kp L     &kp P   &kp SLASH                               &kp BSPC  &kp U   &kp O         &kp COMMA                   &kp Y                &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &shml LEFT_SHIFT C  &kp S     &kp N     &kp T   &kp M                                   &kp K     &kp I   &kp E         &kp A                       &shmr RIGHT_SHIFT H  &shmr RIGHT_SHIFT SEMI
-&kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D   &kp B      &lt 6 C_MUTE    &lt 6 C_PP   &kp J     &kp Z   &kp SQT       &shmr RIGHT_CONTROL PERIOD  &shmr LEFT_ALT X     &shmr RIGHT_CONTROL NUBS
-                                    &kp LGUI  &kp LALT  &mo 4   &kp SPACE  &mo 3           &lt 3 ENTER  &kp R     &mo 4   &kp LEFT_ALT  &kp RALT
+&kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D   &kp B      &lt 7 C_MUTE    &lt 7 C_PP   &kp J     &kp Z   &kp SQT       &shmr RIGHT_CONTROL PERIOD  &shmr LEFT_ALT X     &shmr RIGHT_CONTROL NUBS
+                                    &kp LGUI  &kp LALT  &mo 3   &kp SPACE  &mo 6           &lt 6 ENTER  &kp R     &mo 3   &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -408,35 +408,12 @@
 &kp TAB         &kp NUBS   &kp Q         &kp W     &kp E         &kp R                                &kp T   &kp Y          &kp U    &kp I      &kp O    &kp P
 &kp LEFT_SHIFT  &kp LSHFT  &kp A         &kp S     &kp D         &kp F                                &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
 &kp LCTRL       &kp LCTRL  &kp Z         &kp X     &kp C         &kp V      &trans       &trans       &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
-                           &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE    &lt 3 ENTER  &mo 4   &kp BACKSPACE  &kp DEL  &kp RALT
+                           &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE    &lt 6 ENTER  &mo 3   &kp BACKSPACE  &kp DEL  &kp RALT
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp F21 F20>;
-        };
-
-        Navigation_Layer {
-            display-name = "navigation";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |       |      |
-
-            bindings = <
-&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4             &kp F5                                  &kp F6     &kp F7          &kp F8              &kp F9         &kp F10       &kp F11
-&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &mt C_PREV C_NEXT                       &kp PG_UP  &kp HOME        &kp UP              &kp END        &none         &kp F12
-&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL            &kp C_PLAY_PAUSE                        &kp PG_DN  &kp LEFT        &kp DOWN            &kp RIGHT      &none         &none
-&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp LG(V)          &trans       &trans  &kp LC(Z)  &kp LC(LEFT)    &macro_select_word  &kp LC(RIGHT)  &kp LEFT_ALT  &kp RIGHT_CONTROL
-                                      &trans       &trans                  &trans             &trans             &kp ENTER    &trans  &kp SPACE  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         Numpad_Layer {
@@ -469,6 +446,29 @@
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
+        Navigation_Layer {
+            display-name = "navigation";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
+            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
+            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
+            //                |      |       |       |      |      |  |      |      |      |       |      |
+
+            bindings = <
+&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4             &kp F5                                  &kp F6     &kp F7          &kp F8              &kp F9         &kp F10       &kp F11
+&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &mt C_PREV C_NEXT                       &kp PG_UP  &kp HOME        &kp UP              &kp END        &none         &kp F12
+&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL            &kp C_PLAY_PAUSE                        &kp PG_DN  &kp LEFT        &kp DOWN            &kp RIGHT      &none         &none
+&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp LG(V)          &trans       &trans  &kp LC(Z)  &kp LC(LEFT)    &macro_select_word  &kp LC(RIGHT)  &kp LEFT_ALT  &kp RIGHT_CONTROL
+                                      &trans       &trans                  &trans             &trans             &kp ENTER    &trans  &kp SPACE  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+        };
+
         Adjust_Layer {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
@@ -480,7 +480,7 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp LC(LS(LA(F14)))  &none  &none  &none  &none       &kp KP_NUMLOCK
-&bt BT_CLR_ALL  &to 1         &to 0         &to 2         &to 3         &to 4                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&bt BT_CLR_ALL  &to 1         &to 0         &to 2         &to 6         &to 3                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
 &none           &none         &none         &out OUT_BLE  &out OUT_TOG  &out OUT_USB                    &none                &none  &none  &none  &none       &none
 &bootloader     &sys_reset    &none         &none         &none         &none         &trans    &trans  &none                &none  &none  &none  &sys_reset  &bootloader
                               &none         &none         &none         &none         &none     &none   &none                &none  &none  &none

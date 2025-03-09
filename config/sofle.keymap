@@ -254,6 +254,14 @@
             require-prior-idle-ms = <100>;
             layers = <0 1 6 3>;
         };
+
+        combo_CTRL_Z_2 {
+            bindings = <&kp LC(Y)>;
+            key-positions = <18 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1 6 3>;
+        };
     };
 
     macros {

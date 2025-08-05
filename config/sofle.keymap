@@ -352,7 +352,7 @@
         macro_single_backtick: macro_single_backtick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp SPACE>;
+            bindings = <&macro_tap>, <&kp LS(EQUAL) &kp SPACE>;
 
             label = "MACRO_SINGLE_BACKTICK";
         };
@@ -362,7 +362,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp EQUAL &kp SPACE &kp EQUAL &kp SPACE &kp EQUAL &kp SPACE>;
+                <&kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE>;
 
             label = "MACRO_TRIPPLE_BACKTICK";
         };

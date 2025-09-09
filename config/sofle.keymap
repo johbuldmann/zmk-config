@@ -523,11 +523,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4             &kp F5                                  &kp F6     &kp F7          &kp F8              &kp F9         &kp F10       &kp F11
-&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &mt C_PREV C_NEXT                       &kp PG_UP  &kp HOME        &kp UP              &kp END        &none         &kp F12
-&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL            &kp C_PLAY_PAUSE                        &kp PG_DN  &kp LEFT        &kp DOWN            &kp RIGHT      &none         &none
-&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp LG(V)          &trans       &trans  &kp LC(Z)  &kp LC(LEFT)    &macro_select_word  &kp LC(RIGHT)  &kp LEFT_ALT  &kp RIGHT_CONTROL
-                                      &trans       &trans                  &trans             &trans             &kp ENTER    &trans  &kp SPACE  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
+&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4             &kp F5                                  &kp F6         &kp F7          &kp F8              &kp F9         &kp F10        &kp F11
+&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &mt C_PREV C_NEXT                       &kp PG_UP      &kp HOME        &none               &kp END        &kp PAGE_UP    &kp F12
+&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL            &kp C_PLAY_PAUSE                        &kp LEFT       &kp DOWN        &kp UP_ARROW        &kp RIGHT      &kp PAGE_DOWN  &none
+&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp LG(V)          &trans       &trans  &kp PAGE_DOWN  &kp LC(LEFT)    &macro_select_word  &kp LC(RIGHT)  &kp LEFT_ALT   &kp RIGHT_CONTROL
+                                      &trans       &trans                  &trans             &trans             &kp ENTER    &trans  &kp SPACE      &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
 
             sensor-bindings =

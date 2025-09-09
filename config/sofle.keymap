@@ -233,7 +233,7 @@
         };
 
         combo_alt_D {
-            bindings = <&kp LA(D)>;
+            bindings = <&none>;
             key-positions = <27 26>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
@@ -261,6 +261,14 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <0 1 6 3>;
+        };
+
+        combo_ESC_2 {
+            bindings = <&kp ESCAPE>;
+            key-positions = <27 26>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0>;
         };
     };
 

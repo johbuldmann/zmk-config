@@ -83,7 +83,7 @@
         };
 
         combo_CTRL_Backspace {
-            bindings = <&kp LC(BACKSPACE)>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
             layers = <0 1 6 3 4>;
             timeout-ms = <30>;
@@ -91,7 +91,7 @@
         };
 
         combo_Ctrl_Delete {
-            bindings = <&kp LC(DELETE)>;
+            bindings = <&kp DELETE>;
             key-positions = <20 21>;
             layers = <0 1 6 3 4>;
             timeout-ms = <25>;
@@ -152,8 +152,8 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_Backspace {
-            bindings = <&kp BACKSPACE>;
+        combo_ESC {
+            bindings = <&kp ESCAPE>;
             key-positions = <31 32>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
@@ -209,7 +209,7 @@
         };
 
         combo_delete {
-            bindings = <&kp DELETE>;
+            bindings = <&none>;
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;

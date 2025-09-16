@@ -22,7 +22,7 @@
 
 #define QUICK_TAP_MS 175
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS LSHIFT>; };
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS SLASH QUESTION LSHIFT>; };
 
 &left_encoder { steps = <60>; };
 

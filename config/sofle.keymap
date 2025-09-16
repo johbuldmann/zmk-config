@@ -90,8 +90,8 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_Delete {
-            bindings = <&kp DELETE>;
+        combo_CTRL_Delete {
+            bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
             layers = <0 1 6 3 4>;
             timeout-ms = <25>;
@@ -208,8 +208,8 @@
             layers = <0 1 6 3>;
         };
 
-        combo_ESC {
-            bindings = <&kp ESCAPE>;
+        combo_Delete {
+            bindings = <&kp DELETE>;
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;

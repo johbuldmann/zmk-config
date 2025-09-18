@@ -270,6 +270,14 @@
             require-prior-idle-ms = <100>;
             layers = <1 0>;
         };
+
+        combo_Menuekey {
+            bindings = <&kp K_CONTEXT_MENU>;
+            key-positions = <50 51>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <0 1 6 3>;
+        };
     };
 
     macros {

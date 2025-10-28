@@ -469,11 +469,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4             &kp N5                                         &kp N6                     &kp N7  &kp N8        &kp N9      &kp N0                  &kp MINUS
-&kp TAB         &kp Q               &kp W     &kp E     &kp R              &kp T                                          &mod_taptap MINUS Y        &kp U   &kp I         &kp O       &kp P                   &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &kp S     &kp D     &smhlayertapL 4 F  &kp G                                          &kp H                      &kp J   &kp K         &kp L       &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
-&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V              &kp B      &lt 6 C_MUTE    &lt 6 C_PLAY_PAUSE  &kp N                      &kp M   &kp COMMA     &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
-                                    &kp LGUI  &kp LALT  &mo 3              &kp SPACE  &mo 5           &lt 5 ENTER         &smhlayertapFull 4 ESCAPE  &mo 3   &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4             &kp N5                                                      &kp N6                     &kp N7  &kp N8        &kp N9      &kp N0                  &kp MINUS
+&kp TAB         &kp Q               &kp W     &kp E     &kp R              &kp T                                                       &mod_taptap MINUS Y        &kp U   &kp I         &kp O       &kp P                   &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &kp S     &kp D     &smhlayertapL 4 F  &kp G                                                       &kp H                      &kp J   &kp K         &kp L       &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
+&kp LCTRL       &shml LEFT_ALT Z    &kp X     &kp C     &kp V              &kp B      &lt 6 C_MUTE                 &lt 6 C_PLAY_PAUSE  &kp N                      &kp M   &kp COMMA     &kp PERIOD  &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
+                                    &kp LGUI  &kp LALT  &mo 3              &kp SPACE  &smhlayertapFull 5 ESCAPE    &lt 5 ENTER         &smhlayertapFull 4 ESCAPE  &mo 3   &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -484,11 +484,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4  &kp N5                       &kp N6    &kp N7  &kp N8        &kp N9                      &kp N0               &kp MINUS
-&kp TAB         &kp V               &kp G     &kp L     &kp P   &kp SLASH                    &kp BSPC  &kp U   &kp O         &kp COMMA                   &kp Y                &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &shml LEFT_SHIFT C  &kp S     &kp N     &kp T   &kp M                        &kp K     &kp I   &kp E         &kp A                       &shmr RIGHT_SHIFT H  &shmr RIGHT_SHIFT SEMI
-&kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D   &kp B      &trans    &trans  &kp J     &kp Z   &kp SQT       &shmr RIGHT_CONTROL PERIOD  &shmr LEFT_ALT X     &shmr RIGHT_CONTROL NUBS
-                                    &kp LGUI  &kp LALT  &mo 3   &kp SPACE  &trans    &trans  &lt 4 R   &mo 3   &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4             &kp N5                       &kp N6    &kp N7  &kp N8        &kp N9                      &kp N0               &kp MINUS
+&kp TAB         &kp V               &kp G     &kp L     &kp P              &kp SLASH                    &kp BSPC  &kp U   &kp O         &kp COMMA                   &kp Y                &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &shml LEFT_SHIFT C  &kp S     &kp N     &smhlayertapL 4 T  &kp M                        &kp K     &kp I   &kp E         &kp A                       &shmr RIGHT_SHIFT H  &shmr RIGHT_SHIFT SEMI
+&kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D              &kp B      &trans    &trans  &kp J     &kp Z   &kp SQT       &shmr RIGHT_CONTROL PERIOD  &shmr LEFT_ALT X     &shmr RIGHT_CONTROL NUBS
+                                    &kp LGUI  &kp LALT  &mo 3              &kp SPACE  &trans    &trans  &lt 4 R   &mo 3   &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -499,11 +499,11 @@
         Game_Layer {
             display-name = "game";
             bindings = <
-&kp ESC         &kp N1     &kp N2        &kp N3    &kp N4        &kp N5                          &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
-&kp TAB         &kp NUBS   &kp Q         &kp W     &kp E         &kp R                           &kp T   &kp Y          &kp U    &kp I      &kp O    &kp P
-&kp LEFT_SHIFT  &kp LSHFT  &kp A         &kp S     &kp D         &kp F                           &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp LCTRL  &kp Z         &kp X     &kp C         &kp V      &trans       &trans  &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
-                           &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &kp SPACE    &trans  &mo 3   &kp BACKSPACE  &kp DEL  &kp RALT
+&kp ESC         &kp N1     &kp N2        &kp N3    &kp N4        &kp N5                       &kp N6  &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
+&kp TAB         &kp NUBS   &kp Q         &kp W     &kp E         &kp R                        &kp T   &kp Y          &kp U    &kp I      &kp O    &kp P
+&kp LEFT_SHIFT  &kp LSHFT  &kp A         &kp S     &kp D         &kp F                        &kp G   &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
+&kp LCTRL       &kp LCTRL  &kp Z         &kp X     &kp C         &kp V      &trans    &trans  &kp B   &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
+                           &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 3   &kp BACKSPACE  &kp DEL  &kp RALT
             >;
 
             sensor-bindings =

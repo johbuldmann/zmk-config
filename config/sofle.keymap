@@ -39,7 +39,7 @@
         combo_GRV_Zirkumflex {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <2 0 1 6 3>;
+            layers = <2 0 1 6 3 4>;
         };
 
         combo_CTRL_Z {
@@ -260,7 +260,7 @@
             key-positions = <27 26>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
-            layers = <1 0>;
+            layers = <1 0 4 3 5>;
         };
 
         combo_Menuekey {

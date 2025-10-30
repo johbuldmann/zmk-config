@@ -232,13 +232,6 @@
             layers = <0 1 6 3>;
         };
 
-        combo_alt_D {
-            bindings = <&kp LA(D)>;
-            key-positions = <27 26>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-        };
-
         combo_change_audiodevice {
             bindings = <&kp LA(LS(LC(F14)))>;
             key-positions = <5 6>;

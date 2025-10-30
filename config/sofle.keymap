@@ -440,11 +440,10 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <18 19 6 7 8 9 10 11 23 22 21 20 30 31 32 33 34 35 45 44 46 47 48 49 1 0 12 12 24 24 36 36 37 25 37 2 3 4 5 14 15 16 17 26 27 28 29 38 39 40 41 13>;
-            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
         };
 
         mod_tapBackticSingle: mod_tapBackticSingle {
@@ -506,11 +505,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&kp ESC         &kp N1              &kp N2           &kp N3    &kp N4             &kp N5                                         &kp N6               &kp N7        &kp N8        &kp N9           &kp N0                  &kp MINUS
-&kp TAB         &kp Q               &kp W            &kp E     &kp R              &kp T                                          &mod_taptap MINUS Y  &kp U         &kp I         &kp O            &kp P                   &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &ctrlml LCTRL S  &kp D     &smhlayertapL 4 F  &kp G                                          &kp H                &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
-&kp LCTRL       &shml LEFT_ALT Z    &kp X            &kp C     &kp V              &kp B      &lt 6 C_MUTE    &lt 6 C_PLAY_PAUSE  &kp N                &kp M         &kp COMMA     &kp PERIOD       &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
-                                    &kp LGUI         &kp LALT  &lt 3 ESCAPE       &kp SPACE  &lt 5 ESCAPE    &lt 5 ENTER         &mo 4                &lt 3 ESCAPE  &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1              &kp N2           &kp N3    &kp N4             &kp N5                                                    &kp N6                &kp N7        &kp N8        &kp N9           &kp N0                  &kp MINUS
+&kp TAB         &kp Q               &kp W            &kp E     &kp R              &kp T                                                     &mod_taptap MINUS Y   &kp U         &kp I         &kp O            &kp P                   &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &shml LEFT_SHIFT A  &ctrlml LCTRL S  &kp D     &smhlayertapL 4 F  &kp G                                                     &kp H                 &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT SEMI  &shmr RIGHT_SHIFT APOS
+&kp LCTRL       &shml LEFT_ALT Z    &kp X            &kp C     &kp V              &smhlayertapFull 6 B  &lt 6 C_MUTE    &lt 6 C_PLAY_PAUSE  &smhlayertapFull 6 N  &kp M         &kp COMMA     &kp PERIOD       &shmr LEFT_ALT SLASH    &shmr RIGHT_CONTROL LS(SLASH)
+                                    &kp LGUI         &kp LALT  &lt 3 ESCAPE       &kp SPACE             &lt 5 ESCAPE    &lt 5 ENTER         &mo 4                 &lt 3 ESCAPE  &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =

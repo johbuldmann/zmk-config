@@ -42,10 +42,12 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_GRV_Zirkumflex {
-            bindings = <&kp GRAVE>;
+        combo_F24_minimize_Window {
+            bindings = <&kp F24>;
             key-positions = <0 1>;
             layers = <2 0 1 6 3 4>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <90>;
         };
 
         combo_CTRL_Z {

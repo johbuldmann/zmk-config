@@ -278,6 +278,12 @@
             require-prior-idle-ms = <100>;
             layers = <0 1 6 3>;
         };
+
+        combo_p {
+            bindings = <&macro_p>;
+            key-positions = <41 40>;
+            layers = <6>;
+        };
     };
 
     macros {
@@ -409,6 +415,13 @@
                 <&kp DE_EQUAL &kp SPACE &kp N1 &kp DE_SEMICOLON>;
 
             label = "MACRO_EQUALS_1";
+        };
+
+        macro_p: macro_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(L) &kp A &kp L &kp E &kp F &kp A &kp R &kp N &kp DE_PLUS &kp S &kp D &kp F &kp S &kp D &kp F>;
+            label = "MACRO_P";
         };
     };
 

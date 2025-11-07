@@ -487,7 +487,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <145>;
+            tapping-term-ms = <160>;
         };
 
         smhlayertapL: smhlayertapL {

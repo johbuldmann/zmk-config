@@ -487,7 +487,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <125>;
+            tapping-term-ms = <145>;
         };
 
         smhlayertapL: smhlayertapL {
@@ -522,7 +522,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <155>;
         };
 
         mod_tapBackticTrippe: mod_tapBackticTrippe {
@@ -532,7 +532,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <155>;
         };
 
         ctrlml: ctrlml {
@@ -599,7 +599,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
         };
 
         mod_d_and: mod_d_and {
@@ -609,7 +609,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <130>;
+            tapping-term-ms = <160>;
         };
 
         mod_y_you: mod_y_you {
@@ -619,7 +619,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <130>;
+            tapping-term-ms = <160>;
         };
     };
 

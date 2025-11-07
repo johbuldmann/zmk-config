@@ -423,6 +423,34 @@
             bindings = <&kp LS(L) &kp A &kp L &kp E &kp F &kp A &kp R &kp N &kp DE_PLUS &kp S &kp D &kp F &kp S &kp D &kp F>;
             label = "MACRO_P";
         };
+
+        macro_c_h: macro_thorn_key {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp H>;
+            label = "MACRO_THORN_KEY";
+        };
+
+        macro_s_c_h: macro_thorn_key_held {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp C &kp H>;
+            label = "MACRO_THORN_KEY_HELD";
+        };
+
+        macro_and: macro_and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp D>;
+            label = "MACRO_AND";
+        };
+
+        macro_you: macro_you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_Y &kp O &kp U>;
+            label = "MACRO_YOU";
+        };
     };
 
     behaviors {
@@ -459,7 +487,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <125>;
         };
 
         smhlayertapL: smhlayertapL {
@@ -494,7 +522,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <150>;
         };
 
         mod_tapBackticTrippe: mod_tapBackticTrippe {
@@ -504,7 +532,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <150>;
         };
 
         ctrlml: ctrlml {
@@ -563,6 +591,36 @@
             ignore-modifiers;
             lazy;
         };
+
+        mod_thorn_key: mod_thorn_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_THORN_KEY";
+            bindings = <&macro_s_c_h>, <&macro_c_h>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <130>;
+        };
+
+        mod_d_and: mod_d_and {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_D_AND";
+            bindings = <&macro_and>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <130>;
+        };
+
+        mod_y_you: mod_y_you {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_Y_YOU";
+            bindings = <&macro_you>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <130>;
+        };
     };
 
     sensors: sensors {
@@ -592,11 +650,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1              &kp N2    &kp N3    &kp N4             &kp N5                                  &kp N6                &kp N7    &kp N8        &kp N9           &kp N0               &kp MINUS
-&kp TAB         &kp V               &kp G     &kp L     &kp P              &kp DE_MINUS                            &kp DE_U_UMLAUT       &kp U     &kp O         &kp DE_A_UMLAUT  &kp DE_Z             &kp DE_SZ
-&kp LEFT_SHIFT  &shml LEFT_SHIFT C  &kp S     &kp N     &smhlayertapL 4 T  &kp M                                   &kp K                 &kp I     &kp E         &kp A            &shmr RIGHT_SHIFT H  &shmr RIGHT_SHIFT DE_O_UMLAUT
-&kp LCTRL       &shml LEFT_ALT Q    &kp F     &kp W     &kp D              &smhlayertapFull 6 B  &trans    &trans  &smhlayertapFull 6 J  &kp DE_Y  &kp COMMA     &kp DOT          &shmr LEFT_ALT X     &shmr RIGHT_CONTROL DE_UNDERSCORE
-                                    &kp LGUI  &kp LALT  &trans             &trans                &trans    &trans  &lt 4 R               &trans    &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1               &kp N2    &kp N3    &kp N4              &kp N5                                  &kp N6                &kp N7                     &kp N8                     &kp N9                     &kp N0                 &kp MINUS
+&kp TAB         &kp V                &kp G     &kp L     &mod_thorn_key 0 0  &kp DE_MINUS                            &kp DE_U_UMLAUT       &mod_taptap DE_U_UMLAUT U  &mod_taptap DE_O_UMLAUT O  &kp P                      &mod_taptap DE_Q DE_Z  &kp DE_SZ
+&kp LEFT_SHIFT  &shml LEFT_SHIFT C   &kp S     &kp N     &smhlayertapL 4 T   &kp M                                   &kp K                 &kp I                      &kp E                      &mod_taptap DE_A_UMLAUT A  &shmr RIGHT_SHIFT H    &shmr RIGHT_SHIFT DE_O_UMLAUT
+&kp LCTRL       &shml LEFT_ALT DE_X  &kp F     &kp W     &mod_d_and 0 DE_D   &smhlayertapFull 6 B  &trans    &trans  &smhlayertapFull 6 J  &mod_y_you 0 DE_Y          &kp COMMA                  &kp DOT                    &shmr LEFT_ALT DE_SZ   &shmr RIGHT_CONTROL DE_UNDERSCORE
+                                     &kp LGUI  &kp LALT  &trans              &trans                &trans    &trans  &lt 4 R               &trans                     &kp LEFT_ALT               &kp RALT
             >;
 
             sensor-bindings =

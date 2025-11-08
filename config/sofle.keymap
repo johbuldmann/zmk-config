@@ -438,6 +438,8 @@
         macro_p: macro_p {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings = <&kp LS(L) &kp A &kp L &kp E &kp F &kp A &kp R &kp N &kp DE_PLUS &kp S &kp D &kp F &kp S &kp D &kp F>;
             label = "MACRO_P";
         };
@@ -445,6 +447,8 @@
         macro_c_h: macro_thorn_key {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings = <&kp C &kp H>;
             label = "MACRO_THORN_KEY";
         };
@@ -452,6 +456,8 @@
         macro_s_c_h: macro_thorn_key_held {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings = <&kp S &kp C &kp H>;
             label = "MACRO_THORN_KEY_HELD";
         };

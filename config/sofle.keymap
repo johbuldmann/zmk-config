@@ -284,6 +284,30 @@
             key-positions = <41 40>;
             layers = <6>;
         };
+
+        combo_u_umlaut {
+            bindings = <&kp DE_U_UMLAUT>;
+            key-positions = <19 31>;
+            layers = <1>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <15>;
+        };
+
+        combo_o_umlaut {
+            bindings = <&kp DE_O_UMLAUT>;
+            key-positions = <32 20>;
+            layers = <1>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <15>;
+        };
+
+        combo_a_umlaut {
+            bindings = <&kp DE_A_UMLAUT>;
+            key-positions = <33 21>;
+            layers = <1>;
+            timeout-ms = <45>;
+            require-prior-idle-ms = <15>;
+        };
     };
 
     macros {

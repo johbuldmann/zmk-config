@@ -165,8 +165,8 @@
         combo_Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
-            timeout-ms = <35>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <70>;
             layers = <0 1 6 3 4>;
         };
 

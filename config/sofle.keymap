@@ -51,7 +51,7 @@
         };
 
         combo_CTRL_Z {
-            bindings = <&kp LC(Y)>;
+            bindings = <&kp LC(DE_Z)>;
             key-positions = <37 38>;
             layers = <0 1 6 3>;
             timeout-ms = <30>;
@@ -74,7 +74,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_clipboard {
+        combo_win_paste {
             bindings = <&kp LG(V)>;
             key-positions = <40 41>;
             layers = <0 1 3>;
@@ -83,7 +83,7 @@
         };
 
         combo_CTRL_Y {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LC(DE_Y)>;
             key-positions = <37 39>;
             layers = <0 1 6 3>;
             timeout-ms = <30>;
@@ -202,8 +202,8 @@
             layers = <0 1>;
         };
 
-        combo_win_paste {
-            bindings = <&kp LG(V)>;
+        combo_ctrl_shift_v {
+            bindings = <&kp LS(LC(V))>;
             key-positions = <41 39>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -553,9 +553,9 @@
             require-prior-idle-ms = <50>;
         };
 
-        mod_taptap: mod_taptap {
+        mod_taptap_150: mod_taptap_150 {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAPTAP";
+            label = "MOD_TAPTAP_150";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -708,11 +708,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&kp ESC         &kp N1               &kp N2           &kp N3    &kp N4             &kp N5                                             &kp N6                  &kp N7        &kp N8        &kp N9           &kp N0                         &kp DE_SZ
-&kp TAB         &kp Q                &kp W            &kp E     &kp R              &kp T                                              &mod_taptap MINUS DE_Z  &kp U         &kp I         &kp O            &kp P                          &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &shml LEFT_SHIFT A   &ctrlml LCTRL S  &kp D     &smhlayertapL 4 F  &kp G                                              &kp H                   &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT DE_O_UMLAUT  &shmr RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &shml LEFT_ALT DE_Y  &kp X            &kp C     &kp V              &smhlayertapFull 6 B  &none           &none        &smhlayertapFull 6 N    &kp M         &kp COMMA     &kp PERIOD       &shmr LEFT_ALT DE_MINUS        &shmr RIGHT_CONTROL DE_UNDERSCORE
-                                     &kp LGUI         &kp LALT  &lt 3 ESCAPE       &kp SPACE             &lt 5 ESCAPE    &lt 5 ENTER  &mo 4                   &lt 3 ESCAPE  &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1               &kp N2           &kp N3    &kp N4             &kp N5                                             &kp N6                      &kp N7        &kp N8        &kp N9           &kp N0                         &kp DE_SZ
+&kp TAB         &kp Q                &kp W            &kp E     &kp R              &kp T                                              &mod_taptap_150 MINUS DE_Z  &kp U         &kp I         &kp O            &kp P                          &kp DE_U_UMLAUT
+&kp LEFT_SHIFT  &shml LEFT_SHIFT A   &ctrlml LCTRL S  &kp D     &smhlayertapL 4 F  &kp G                                              &kp H                       &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT DE_O_UMLAUT  &shmr RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &shml LEFT_ALT DE_Y  &kp X            &kp C     &kp V              &smhlayertapFull 6 B  &none           &none        &smhlayertapFull 6 N        &kp M         &kp COMMA     &kp PERIOD       &shmr LEFT_ALT DE_MINUS        &shmr RIGHT_CONTROL DE_UNDERSCORE
+                                     &kp LGUI         &kp LALT  &lt 3 ESCAPE       &kp SPACE             &lt 5 ESCAPE    &lt 5 ENTER  &mo 4                       &lt 3 ESCAPE  &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -753,11 +753,11 @@
         Numpad_Layer {
             display-name = "numpad";
             bindings = <
-&kp ESCAPE        &none                    &none                    &none                    &none                    &none                            &kp KP_NUMLOCK    &none                        &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE               &kp DE_ACUTE
-&kp TAB           &kp F13                  &kp F14                  &kp F15                  &kp F16                  &kp F17                          &kp DE_COLON      &kp KP_NUMBER_7              &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DE_MINUS               &kp DE_HASH
-&kp LSHFT         &mod_taptap LS(F18) F18  &mod_taptap LS(F19) F19  &mod_taptap LS(F20) F20  &mod_taptap LS(F21) F21  &kp F22                          &kp DE_SEMICOLON  &kp KP_NUMBER_4              &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT DE_PLUS  &kp LS(RIGHT_BRACKET)
-&kp LEFT_CONTROL  &none                    &none                    &none                    &none                    &none    &trans    &trans        &kp KP_NUMBER_0   &tap_isEqual1 0 KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DE_EQUAL               &trans
-                                           &trans                   &trans                   &trans                   &trans   &trans    &kp KP_ENTER  &kp SPACE         &tap_isEqual0 0 KP_NUMBER_0  &kp COMMA        &kp PERIOD
+&kp ESCAPE        &none                        &none                        &none                        &none                        &none                            &kp KP_NUMLOCK    &none                        &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE               &kp DE_ACUTE
+&kp TAB           &kp F13                      &kp F14                      &kp F15                      &kp F16                      &kp F17                          &kp DE_COLON      &kp KP_NUMBER_7              &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DE_MINUS               &kp DE_HASH
+&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                          &kp DE_SEMICOLON  &kp KP_NUMBER_4              &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT DE_PLUS  &kp LS(RIGHT_BRACKET)
+&kp LEFT_CONTROL  &none                        &none                        &none                        &none                        &none    &trans    &trans        &kp KP_NUMBER_0   &tap_isEqual1 0 KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DE_EQUAL               &trans
+                                               &trans                       &trans                       &trans                       &trans   &trans    &kp KP_ENTER  &kp SPACE         &tap_isEqual0 0 KP_NUMBER_0  &kp COMMA        &kp PERIOD
             >;
 
             sensor-bindings =
@@ -791,11 +791,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4             &kp F5                                  &kp F6              &kp F7          &kp F8              &kp F9         &kp F10        &kp F11
-&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))  &mt C_PREV C_NEXT                       &kp HOME            &none           &macro_select_word  &kp END        &none          &kp F12
-&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL            &kp C_PLAY_PAUSE                        &kp LEFT            &kp DOWN        &kp UP_ARROW        &kp RIGHT      &kp LS(ENTER)  &none
-&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &kp LC(V)          &kp LG(V)          &trans       &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN   &kp PAGE_UP         &kp LC(RIGHT)  &kp LEFT_ALT   &kp RIGHT_CONTROL
-                                      &trans       &trans                  &trans             &trans             &kp ENTER    &trans  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
+&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4                           &kp F5                                  &kp F6              &kp F7          &kp F8              &kp F9         &kp F10        &kp F11
+&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))                &mt C_PREV C_NEXT                       &kp HOME            &none           &macro_select_word  &kp END        &none          &kp F12
+&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL                          &kp C_PLAY_PAUSE                        &kp LEFT            &kp DOWN        &kp UP_ARROW        &kp RIGHT      &kp LS(ENTER)  &none
+&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &mod_taptap_150 LC(LS(V)) LC(V)  &kp LG(V)          &trans       &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN   &kp PAGE_UP         &kp LC(RIGHT)  &kp LEFT_ALT   &kp RIGHT_CONTROL
+                                      &trans       &trans                  &trans                           &trans             &kp ENTER    &trans  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
 
             sensor-bindings =

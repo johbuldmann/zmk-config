@@ -257,14 +257,6 @@
             layers = <0 1 6 3>;
         };
 
-        combo_ESC_2 {
-            bindings = <&kp ESCAPE>;
-            key-positions = <27 26>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-            layers = <1 0 4 3 5>;
-        };
-
         combo_Menuekey {
             bindings = <&kp K_CONTEXT_MENU>;
             key-positions = <50 51>;
@@ -309,6 +301,14 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
             layers = <0 1 3 4>;
+        };
+
+        combo_flowWindowChanger {
+            bindings = <&kp LA(W)>;
+            key-positions = <27 26>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <100>;
+            layers = <1 0>;
         };
     };
 
@@ -791,11 +791,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESCAPE    &kp F1                  &kp F2       &kp F3                  &kp F4                           &kp F5                                  &kp F6              &kp F7          &kp F8              &kp F9         &kp F10        &kp F11
-&kp LS(CLCK)  &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))                &mt C_PREV C_NEXT                       &kp HOME            &none           &macro_select_word  &kp END        &none          &kp F12
-&kp CLCK      &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL                          &kp C_PLAY_PAUSE                        &kp LEFT            &kp DOWN        &kp UP_ARROW        &kp RIGHT      &kp LS(ENTER)  &none
-&trans        &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &mod_taptap_150 LC(LS(V)) LC(V)  &kp LG(V)          &trans       &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN   &kp PAGE_UP         &kp LC(RIGHT)  &kp LEFT_ALT   &kp RIGHT_CONTROL
-                                      &trans       &trans                  &trans                           &trans             &kp ENTER    &trans  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
+&kp ESCAPE        &kp F1                  &kp F2       &kp F3                  &kp F4                           &kp F5                                  &kp F6              &kp F7          &kp F8              &kp F9         &kp F10        &kp F11
+&kp TAB           &kp LA(TAB)             &kp LG(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LC(LG(RIGHT))                &mt C_PREV C_NEXT                       &kp HOME            &none           &macro_select_word  &kp END        &none          &kp F12
+&kp LEFT_SHIFT    &shml LEFT_SHIFT LC(A)  &kp ESCAPE   &kp BACKSPACE           &kp DEL                          &kp C_PLAY_PAUSE                        &kp LEFT            &kp DOWN        &kp UP_ARROW        &kp RIGHT      &kp LS(ENTER)  &none
+&kp LEFT_CONTROL  &shml LEFT_ALT LC(Y)    &kp LC(X)    &kp LC(C)               &mod_taptap_150 LC(LS(V)) LC(V)  &kp LG(V)          &trans       &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN   &kp PAGE_UP         &kp LC(RIGHT)  &kp LEFT_ALT   &kp RIGHT_CONTROL
+                                          &trans       &trans                  &trans                           &trans             &kp ENTER    &trans  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
 
             sensor-bindings =
@@ -813,11 +813,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp LC(LS(LA(F14)))  &none  &none  &none  &none       &kp KP_NUMLOCK
-&bt BT_CLR_ALL  &to 0         &to 1         &to 2         &to 6         &to 3                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
-&none           &none         &none         &out OUT_BLE  &none         &out OUT_USB                    &none                &none  &none  &none  &none       &none
-&bootloader     &sys_reset    &none         &none         &none         &none         &trans    &trans  &none                &none  &none  &none  &sys_reset  &bootloader
-                              &none         &none         &none         &none         &none     &none   &none                &none  &none  &none
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp LC(LS(LA(F14)))  &none  &none  &none  &none       &kp KP_NUMLOCK
+&bt BT_CLR_ALL    &to 0         &to 1         &to 2         &to 6         &to 3                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&kp LA(CAPSLOCK)  &none         &none         &out OUT_BLE  &none         &out OUT_USB                    &none                &none  &none  &none  &none       &none
+&bootloader       &sys_reset    &none         &none         &none         &none         &trans    &trans  &none                &none  &none  &none  &sys_reset  &bootloader
+                                &none         &none         &none         &none         &none     &none   &none                &none  &none  &none
             >;
 
             sensor-bindings =

@@ -754,9 +754,9 @@
             display-name = "numpad";
             bindings = <
 &kp ESCAPE        &none                        &none                        &none                        &none                        &none                            &kp KP_NUMLOCK    &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE               &kp DE_ACUTE
-&kp TAB           &kp F13                      &kp F14                      &kp F15                      &kp F16                      &kp F17                          &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DE_MINUS               &kp DE_HASH
-&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                          &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT DE_PLUS  &kp LS(RIGHT_BRACKET)
-&kp LEFT_CONTROL  &none                        &kp F23                      &kp F24                      &none                        &none    &trans    &trans        &kp KP_NUMBER_0   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DE_EQUAL               &trans
+&kp TAB           &kp F13                      &kp F14                      &kp F15                      &kp F16                      &kp F17                          &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS               &kp DE_HASH
+&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                          &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &shmr RIGHT_SHIFT KP_PLUS  &trans
+&kp LEFT_CONTROL  &none                        &kp F23                      &kp F24                      &none                        &none    &trans    &trans        &kp KP_NUMBER_0   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL               &trans
                                                &trans                       &trans                       &trans                       &trans   &trans    &kp KP_ENTER  &kp SPACE         &kp KP_N0        &kp COMMA        &kp PERIOD
             >;
 

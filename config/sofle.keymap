@@ -516,6 +516,15 @@
             bindings = <&kp Q &kp U>;
             label = "MACRO_QU";
         };
+
+        macro_exit_and_space: macro_exit_and_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <8>;
+            bindings = <&to 0 &kp SPACE>;
+            label = "MACRO_EXIT_N_SPACE"
+        }
     };
 
     behaviors {
@@ -698,14 +707,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_UNDERSCORE>, <&to 0>;
+            bindings = <&kp DE_UNDERSCORE>, <&macro_exit_and_space>;
         };
 
         td_camel: td_camel {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sticky_shift LSHIFT>, <&to 0>;
+            bindings = <&sticky_shift LSHIFT>, <&macro_exit_and_space>;
         };
     };
 

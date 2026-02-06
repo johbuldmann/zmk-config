@@ -693,19 +693,19 @@
             continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z MINUS UNDERSCORE BACKSPACE DELETE LSHIFT RSHIFT SLASH QUESTION>;
             ignore-modifiers;
         };
-        
+
         td_snake: td_snake {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_UNDERSCORE>, <&to 0>; 
+            bindings = <&kp DE_UNDERSCORE>, <&to 0>;
         };
 
         td_camel: td_camel {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&to 0>;
+            bindings = <&sticky_shift LSHIFT>, <&to 0>;
         };
     };
 
@@ -723,9 +723,9 @@
             bindings = <
 &none           &kp N1               &kp N2           &kp N3    &kp N4             &kp N5                                             &kp N6                      &kp N7        &kp N8        &kp N9           &kp N0                         &kp DE_SZ
 &kp TAB         &kp Q                &kp W            &kp E     &kp R              &kp T                                              &mod_taptap_150 MINUS DE_Z  &kp U         &kp I         &kp O            &kp P                          &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &shml LEFT_SHIFT A   &ctrlml LCTRL S  &kp D     &smhlayertapL 5 F  &kp G                                              &kp H                       &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT DE_O_UMLAUT  &shmr RIGHT_SHIFT DE_A_UMLAUT
+&kp LEFT_SHIFT  &shml LEFT_SHIFT A   &ctrlml LCTRL S  &kp D     &smhlayertapL 6 F  &kp G                                              &kp H                       &kp J         &kp K         &ctrlmr RCTRL L  &shmr RIGHT_SHIFT DE_O_UMLAUT  &shmr RIGHT_SHIFT DE_A_UMLAUT
 &kp LCTRL       &shml LEFT_ALT DE_Y  &kp X            &kp C     &kp V              &smhlayertapFull 7 B  &none           &none        &smhlayertapFull 7 N        &kp M         &kp COMMA     &kp PERIOD       &shmr LEFT_ALT DE_MINUS        &shmr RIGHT_CONTROL DE_UNDERSCORE
-                                     &kp LGUI         &kp LALT  &lt 4 ESCAPE       &kp SPACE             &lt 6 ESCAPE    &lt 6 ENTER  &mo 5                       &lt 4 ESCAPE  &kp LEFT_ALT  &kp RALT
+                                     &kp LGUI         &kp LALT  &lt 5 ESCAPE       &kp SPACE             &lt 7 ESCAPE    &lt 7 ENTER  &mo 6                       &lt 5 ESCAPE  &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -740,7 +740,7 @@
 &kp TAB         &kp V                &kp G     &kp L     &mod_thorn_key 0 0  &sl 7                                   &kp DE_U_UMLAUT       &kp U              &kp O         &kp P     &kp DE_Z              &kp DE_A_UMLAUT
 &kp LEFT_SHIFT  &shml LEFT_SHIFT C   &kp S     &kp N     &smhlayertapL 4 T   &kp M                                   &kp K                 &kp I              &kp E         &kp A     &shmr RIGHT_SHIFT H   &shmr RIGHT_SHIFT DE_O_UMLAUT
 &kp LCTRL       &shml LEFT_ALT DE_X  &kp F     &kp W     &kp DE_D            &smhlayertapFull 6 B  &trans    &trans  &smhlayertapFull 6 J  &mod_y_you 0 DE_Y  &kp COMMA     &kp DOT   &shmr LEFT_ALT DE_SZ  &shmr RIGHT_CONTROL DE_UNDERSCORE
-                                     &kp LGUI  &kp LALT  &trans              &trans                &trans    &trans  &lt 4 R               &trans             &kp LEFT_ALT  &kp RALT
+                                     &kp LGUI  &kp LALT  &trans              &trans                &trans    &trans  &lt 6 R               &trans             &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings =
@@ -750,21 +750,21 @@
 
         snake_case_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_snake          &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &td_snake  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         camelCaseLayer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_camel      &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &td_camel  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 

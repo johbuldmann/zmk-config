@@ -693,6 +693,20 @@
             continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z MINUS UNDERSCORE BACKSPACE DELETE LSHIFT RSHIFT SLASH QUESTION>;
             ignore-modifiers;
         };
+        
+        td_snake: td_snake {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_UNDERSCORE>, <&to 0>; // 1x Tap = _, 2x Tap = Zurück zu Layer 0
+        };
+
+        td_pascal: td_pascal {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&to 0>;     // 1x Tap = Shift, 2x Tap = Zurück zu Layer 0
+        };
     };
 
     sensors: sensors {
@@ -725,7 +739,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans             &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &kp DE_UNDERSCORE  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &td_snake          &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -735,7 +749,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &sk LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &td_pascal      &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 

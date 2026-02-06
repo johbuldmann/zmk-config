@@ -294,7 +294,7 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-u
+
         combo_snake_case {
             bindings = <&pascal_word 1>;
             key-positions = <14 21>;

@@ -45,7 +45,7 @@
         combo_F24_minimize_Window {
             bindings = <&kp F24>;
             key-positions = <0 1>;
-            layers = <3 0 7 4 5>;
+            layers = <1 2 3 0 7 4 5>;
             timeout-ms = <50>;
             require-prior-idle-ms = <90>;
         };
@@ -53,7 +53,7 @@
         combo_CTRL_Z {
             bindings = <&kp LC(DE_Z)>;
             key-positions = <37 38>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 7 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -61,7 +61,7 @@
         combo_copy_cut {
             bindings = <&mt LC(X) LC(C)>;
             key-positions = <38 39>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 7 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -69,7 +69,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <39 40>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 7 4>;
             timeout-ms = <22>;
             require-prior-idle-ms = <100>;
         };
@@ -77,7 +77,7 @@
         combo_win_paste {
             bindings = <&kp LG(V)>;
             key-positions = <40 41>;
-            layers = <0 4>;
+            layers = <0 1 2 3 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -85,7 +85,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(DE_Y)>;
             key-positions = <37 39>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 7 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -93,7 +93,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 7 4 5>;
+            layers = <0 1 2 3 4 5 6 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -101,7 +101,7 @@
         combo_CTRL_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 7 4 5>;
+            layers = <0 1 2 3 4 5 6 7>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -109,7 +109,7 @@
         combo_Printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 7 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -117,7 +117,7 @@
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -125,7 +125,7 @@
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -133,7 +133,7 @@
         combo_Numword {
             bindings = <&caps_word>;
             key-positions = <25 34>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
@@ -141,7 +141,7 @@
         combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 47>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
         };
@@ -149,7 +149,7 @@
         combo_question {
             bindings = <&kp LS(MINUS)>;
             key-positions = <46 47>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 4 5 6 7 >;
             timeout-ms = <45>;
             require-prior-idle-ms = <100>;
         };
@@ -157,7 +157,7 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 4 5 6 7 >;
             timeout-ms = <45>;
             require-prior-idle-ms = <100>;
         };
@@ -165,15 +165,15 @@
         combo_Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
+            layers = <0 1 2 3 4 5 6 7>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 7 4 5>;
         };
 
         combo_Listary {
             bindings = <&kp LA(SPACE)>;
             key-positions = <27 28>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -183,7 +183,7 @@
             key-positions = <16 17>;
             timeout-ms = <35>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_em_dash2 {
@@ -191,7 +191,7 @@
             key-positions = <47 48 46>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_new_tab {
@@ -199,7 +199,7 @@
             key-positions = <16 15>;
             timeout-ms = <30>;
             require-prior-idle-ms = <300>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_ctrl_shift_v {
@@ -207,7 +207,7 @@
             key-positions = <41 39>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_Delete {
@@ -215,7 +215,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <150>;
-            layers = <0 7 4 5>;
+            layers = <0 1 2 3 4 5 6 7>;
         };
 
         combo_arrowa_right {
@@ -223,7 +223,7 @@
             key-positions = <48 49>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_Paste_withouta_formatting {
@@ -231,14 +231,14 @@
             key-positions = <41 39 40>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_change_audiodevice {
             bindings = <&kp LA(LS(LC(F14)))>;
             key-positions = <5 6>;
             timeout-ms = <40>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_Printscreen2 {
@@ -246,7 +246,7 @@
             key-positions = <4 5>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_CTRL_Z_2 {
@@ -254,7 +254,7 @@
             key-positions = <18 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3 4 5 6 7>;
         };
 
         combo_Menuekey {
@@ -262,13 +262,13 @@
             key-positions = <50 51>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 7 4>;
+            layers = <0 1 2 3>;
         };
 
         combo_p {
             bindings = <&macro_p>;
             key-positions = <41 40>;
-            layers = <7>;
+            layers = <8>;
         };
 
         combo_flowWindowChanger {
@@ -276,7 +276,7 @@
             key-positions = <27 26>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_escape {
@@ -284,7 +284,7 @@
             key-positions = <27 32>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_camelCase {
@@ -292,7 +292,7 @@
             key-positions = <26 33>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         combo_snake_case {
@@ -300,14 +300,14 @@
             key-positions = <14 21>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
     };
 
     macros {
         macro_Guillemets_open: macro_Guillemets_open {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -323,7 +323,7 @@
 
         macro_Guillemets_close: macro_Guillemets_close {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -339,7 +339,7 @@
 
         macro_select_word: select_word {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
@@ -355,7 +355,7 @@
 
         macro_en_dash: macro_en_dash {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -369,7 +369,7 @@
 
         macro_em_dash: macro_em_dash {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -383,7 +383,7 @@
 
         macro_arrow_right: macro_arrow_right {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -397,7 +397,7 @@
 
         macro_single_backtick: macro_single_backtick {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings = <&macro_tap>, <&kp LS(EQUAL) &kp SPACE>;
 
             label = "MACRO_SINGLE_BACKTICK";
@@ -405,7 +405,7 @@
 
         macro_triple_backtick: macro_tripple_backtick {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_tap>,
                 <&kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE>;
@@ -417,7 +417,7 @@
 
         macro_zirkumflex: macro_zirkumflex {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings = <&macro_tap>, <&kp GRAVE &kp SPACE>;
 
             label = "MACRO_ZIRKUMFLEX";
@@ -425,7 +425,7 @@
 
         macro_equals_0: macro_equals_0 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_tap>,
                 <&kp DE_EQUAL &kp SPACE &kp N0 &kp DE_SEMICOLON>;
@@ -435,7 +435,7 @@
 
         macro_equals_1: macro_equals_1 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings =
                 <&macro_tap>,
                 <&kp DE_EQUAL &kp SPACE &kp N1 &kp DE_SEMICOLON>;
@@ -447,7 +447,7 @@
 
         macro_p: macro_p {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             wait-ms = <6>;
             tap-ms = <8>;
             bindings = <&kp LS(L) &kp A &kp L &kp E &kp F &kp A &kp R &kp N &kp DE_PLUS &kp S &kp D &kp F &kp S &kp D &kp F>;
@@ -456,7 +456,7 @@
 
         macro_ch: macro_thorn_key {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp C &kp H>;
@@ -465,7 +465,7 @@
 
         macro_sch: macro_thorn_key_held {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp S &kp C &kp H>;
@@ -474,7 +474,7 @@
 
         macro_and: macro_and {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings = <&kp A &kp N &kp D>;
             label = "MACRO_AND";
             wait-ms = <5>;
@@ -483,7 +483,7 @@
 
         macro_you: macro_you {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings = <&kp DE_Y &kp O &kp U>;
             label = "MACRO_YOU";
             wait-ms = <5>;
@@ -492,7 +492,7 @@
 
         macro_email: macro_email {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             bindings = <&kp J &kp O &kp H &kp A &kp N &kp N &kp E &kp S &kp DE_AT &kp B &kp U &kp L &kp D &kp M &kp A &kp N &kp N &kp DOT &kp D &kp E>;
             label = "MACRO_EMAIL";
             wait-ms = <5>;
@@ -501,7 +501,7 @@
 
         macro_th: macro_th {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp T &kp H>;
@@ -510,7 +510,7 @@
 
         macro_qu: macro_qu {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp Q &kp U>;
@@ -696,14 +696,14 @@
         
         td_snake: td_snake {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             tapping-term-ms = <200>;
             bindings = <&kp DE_UNDERSCORE>, <&to 0>; // 1x Tap = _, 2x Tap = Zurück zu Layer 0
         };
 
         td_pascal: td_pascal {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <0 1 2 3>;
             tapping-term-ms = <200>;
             bindings = <&sk LSHIFT>, <&to 0>;     // 1x Tap = Shift, 2x Tap = Zurück zu Layer 0
         };

@@ -690,11 +690,7 @@
         pascal_word: pascal_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <
-A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
-                         MINUS UNDERSCORE BACKSPACE DELETE LSHIFT RSHIFT SLASH QUESTIO
-            >;
-
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z MINUS UNDERSCORE BACKSPACE DELETE LSHIFT RSHIFT SLASH QUESTION>;
             ignore-modifiers;
         };
     };

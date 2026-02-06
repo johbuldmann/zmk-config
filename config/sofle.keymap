@@ -523,7 +523,7 @@
             wait-ms = <5>;
             tap-ms = <8>;
             bindings = <&to 0 &kp SPACE>;
-            label = "MACRO_EXIT_N_SPACE"
+            label = "MACRO_EXIT_N_SPACE";
         };
     };
 

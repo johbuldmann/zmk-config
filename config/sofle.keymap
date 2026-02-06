@@ -307,7 +307,7 @@
     macros {
         macro_Guillemets_open: macro_Guillemets_open {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -323,7 +323,7 @@
 
         macro_Guillemets_close: macro_Guillemets_close {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -339,7 +339,7 @@
 
         macro_select_word: select_word {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
@@ -355,7 +355,7 @@
 
         macro_en_dash: macro_en_dash {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -369,7 +369,7 @@
 
         macro_em_dash: macro_em_dash {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -383,7 +383,7 @@
 
         macro_arrow_right: macro_arrow_right {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
@@ -397,7 +397,7 @@
 
         macro_single_backtick: macro_single_backtick {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LS(EQUAL) &kp SPACE>;
 
             label = "MACRO_SINGLE_BACKTICK";
@@ -405,7 +405,7 @@
 
         macro_triple_backtick: macro_tripple_backtick {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
                 <&kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE &kp LS(EQUAL) &kp SPACE>;
@@ -417,7 +417,7 @@
 
         macro_zirkumflex: macro_zirkumflex {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp GRAVE &kp SPACE>;
 
             label = "MACRO_ZIRKUMFLEX";
@@ -425,7 +425,7 @@
 
         macro_equals_0: macro_equals_0 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
                 <&kp DE_EQUAL &kp SPACE &kp N0 &kp DE_SEMICOLON>;
@@ -435,7 +435,7 @@
 
         macro_equals_1: macro_equals_1 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
                 <&kp DE_EQUAL &kp SPACE &kp N1 &kp DE_SEMICOLON>;
@@ -447,7 +447,7 @@
 
         macro_p: macro_p {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             wait-ms = <6>;
             tap-ms = <8>;
             bindings = <&kp LS(L) &kp A &kp L &kp E &kp F &kp A &kp R &kp N &kp DE_PLUS &kp S &kp D &kp F &kp S &kp D &kp F>;
@@ -456,7 +456,7 @@
 
         macro_ch: macro_thorn_key {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp C &kp H>;
@@ -465,7 +465,7 @@
 
         macro_sch: macro_thorn_key_held {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp S &kp C &kp H>;
@@ -474,7 +474,7 @@
 
         macro_and: macro_and {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings = <&kp A &kp N &kp D>;
             label = "MACRO_AND";
             wait-ms = <5>;
@@ -483,7 +483,7 @@
 
         macro_you: macro_you {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings = <&kp DE_Y &kp O &kp U>;
             label = "MACRO_YOU";
             wait-ms = <5>;
@@ -492,7 +492,7 @@
 
         macro_email: macro_email {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             bindings = <&kp J &kp O &kp H &kp A &kp N &kp N &kp E &kp S &kp DE_AT &kp B &kp U &kp L &kp D &kp M &kp A &kp N &kp N &kp DOT &kp D &kp E>;
             label = "MACRO_EMAIL";
             wait-ms = <5>;
@@ -501,7 +501,7 @@
 
         macro_th: macro_th {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp T &kp H>;
@@ -510,7 +510,7 @@
 
         macro_qu: macro_qu {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0 1 2 3>;
+            #binding-cells = <0>;
             wait-ms = <7>;
             tap-ms = <10>;
             bindings = <&kp Q &kp U>;

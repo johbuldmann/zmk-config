@@ -288,7 +288,7 @@
         };
 
         combo_camelCase {
-            bindings = <&pascal_word 2>;
+            bindings = <&pascal_word 3>;
             key-positions = <26 33>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -296,7 +296,7 @@
         };
 
         combo_snake_case {
-            bindings = <&pascal_word 1>;
+            bindings = <&pascal_word 2>;
             key-positions = <14 21>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;

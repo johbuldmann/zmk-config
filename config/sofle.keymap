@@ -828,7 +828,7 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp LC(LS(LA(F14)))  &none  &none  &none  &none       &kp KP_NUMLOCK
-&bt BT_CLR_ALL    &to 0         &to 0         &to 3         &to 7         &to 4                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&bt BT_CLR_ALL    &to 0         &to 1         &to 4         &to 5         &to 7                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
 &kp LA(CAPSLOCK)  &none         &none         &out OUT_BLE  &none         &out OUT_USB                    &none                &none  &none  &none  &none       &none
 &bootloader       &sys_reset    &none         &none         &none         &none         &trans    &trans  &none                &none  &none  &none  &sys_reset  &bootloader
                                 &none         &none         &none         &none         &none     &none   &none                &none  &none  &none

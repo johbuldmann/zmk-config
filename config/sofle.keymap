@@ -688,6 +688,19 @@
             flavor = "hold-preferred";
             require-prior-idle-ms = <125>;
         };
+
+        hrm_momentary_layer_r: hrm_momentary_layer_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_MOMENTARY_LAYER_R";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <0 1 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 2 3 4 5>;
+        };
     };
 
     sensors: sensors {
@@ -717,11 +730,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                      &kp N6                    &kp N7                                      &kp N8                             &kp N9                        &kp N0                          &kp MINUS
-&kp TAB         &kp V                         &kp G                      &kp L                        &mod_thorn_key 0 0             &sl 9                                       &kp DE_U_UMLAUT           &kp U                                       &kp O                              &kp P                         &kp DE_Z                        &kp DE_A_UMLAUT
-&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT C     &kp S                      &kp N                        &hrm_momentary_layer_l 4 T     &kp M                                       &kp K                     &kp I                                       &kp E                              &kp A                         &hrm_shift_r RIGHT_SHIFT H      &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT
-&kp LCTRL       &hrm_mods_left LEFT_GUI DE_X  &hrm_mods_left LEFT_ALT F  &hrm_mods_left LEFT_SHIFT W  &hrm_mods_left LEFT_CONTROL D  &hrm_momentary_layer 8 B  &trans    &trans  &hrm_momentary_layer 8 J  &hrm_mods_right RIGHT_CONTROL DE_Y          &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT DOT  &hrm_mods_right LEFT_GUI DE_SZ  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                              &kp LGUI                   &kp LALT                     &trans                         &trans                    &trans    &trans  &lt 6 R                   &momentary_layer_sticky_shif 5 RIGHT_SHIFT  &kp LEFT_ALT                       &kp RALT
+&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                      &kp N6                    &kp N7                              &kp N8                             &kp N9                        &kp N0                          &kp MINUS
+&kp TAB         &kp V                         &kp G                      &kp L                        &mod_thorn_key 0 0             &sl 9                                       &kp DE_U_UMLAUT           &kp U                               &kp O                              &kp P                         &kp DE_Z                        &kp DE_O_UMLAUT
+&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT C     &kp S                      &kp N                        &hrm_momentary_layer_l 4 T     &kp M                                       &kp K                     &kp I                               &kp E                              &kp A                         &hrm_shift_r RIGHT_SHIFT H      &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &hrm_mods_left LEFT_GUI DE_X  &hrm_mods_left LEFT_ALT F  &hrm_mods_left LEFT_SHIFT W  &hrm_mods_left LEFT_CONTROL D  &hrm_momentary_layer 8 B  &trans    &trans  &hrm_momentary_layer 8 J  &hrm_mods_right RIGHT_CONTROL DE_Y  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT DOT  &hrm_mods_right LEFT_GUI DE_SZ  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                              &kp LGUI                   &kp LALT                     &trans                         &trans                    &trans    &trans  &trans                    &hrm_momentary_layer_r 5 R          &kp LEFT_ALT                       &kp RALT
             >;
 
             sensor-bindings =

@@ -676,6 +676,18 @@
             tapping-term-ms = <200>;
             bindings = <&sticky_shift LSHIFT>, <&macro_exit_and_space>;
         };
+
+        momentary_layer_sticky_shif: momentary_layer_sticky_shif {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMENTARY_LAYER_STICKY_SHIF";
+            bindings = <&mo>, <&sticky_shift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "hold-preferred";
+            require-prior-idle-ms = <125>;
+        };
     };
 
     sensors: sensors {
@@ -690,11 +702,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                                 &kp N6                      &kp N7                           &kp N8                             &kp N9                           &kp N0                                &kp DE_SZ
-&kp TAB         &kp Q                         &kp W                      &kp E                        &kp R                          &kp T                                                  &mod_taptap_150 MINUS DE_Z  &kp U                            &kp I                              &kp O                            &kp P                                 &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT A     &kp S                      &kp D                        &kp F                          &kp G                                                  &kp H                       &kp J                            &kp K                              &kp L                            &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &hrm_mods_left LEFT_GUI DE_Y  &hrm_mods_left LEFT_ALT X  &hrm_mods_left LEFT_SHIFT C  &hrm_mods_left LEFT_CONTROL V  &hrm_momentary_layer 8 B  &none           &none        &hrm_momentary_layer 8 N    &hrm_mods_right RIGHT_CONTROL M  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &hrm_mods_right LEFT_GUI DE_MINUS     &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                              &kp LGUI                   &kp LALT                     &lt 5 ESCAPE                   &kp SPACE                 &lt 7 ESCAPE    &lt 7 ENTER  &mo 6                       &lt 5 ESCAPE                     &kp LEFT_ALT                       &kp RALT
+&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                                 &kp N6                                      &kp N7                           &kp N8                             &kp N9                           &kp N0                                &kp DE_SZ
+&kp TAB         &kp Q                         &kp W                      &kp E                        &kp R                          &kp T                                                  &mod_taptap_150 MINUS DE_Z                  &kp U                            &kp I                              &kp O                            &kp P                                 &kp DE_U_UMLAUT
+&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT A     &kp S                      &kp D                        &hrm_momentary_layer_l 6 F     &kp G                                                  &kp H                                       &kp J                            &kp K                              &kp L                            &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &hrm_mods_left LEFT_GUI DE_Y  &hrm_mods_left LEFT_ALT X  &hrm_mods_left LEFT_SHIFT C  &hrm_mods_left LEFT_CONTROL V  &hrm_momentary_layer 8 B  &none           &none        &hrm_momentary_layer 8 N                    &hrm_mods_right RIGHT_CONTROL M  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &hrm_mods_right LEFT_GUI DE_MINUS     &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                              &kp LGUI                   &kp LALT                     &lt 5 ESCAPE                   &kp SPACE                 &lt 7 ESCAPE    &lt 7 ENTER  &momentary_layer_sticky_shif 6 RIGHT_SHIFT  &lt 5 ESCAPE                     &kp LEFT_ALT                       &kp RALT
             >;
 
             sensor-bindings =
@@ -705,11 +717,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1                      &kp N2    &kp N3    &kp N4                      &kp N5                                      &kp N6                    &kp N7             &kp N8        &kp N9    &kp N0                       &kp MINUS
-&kp TAB         &kp V                       &kp G     &kp L     &mod_thorn_key 0 0          &sl 7                                       &kp DE_U_UMLAUT           &kp U              &kp O         &kp P     &kp DE_Z                     &kp DE_A_UMLAUT
-&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT C   &kp S     &kp N     &hrm_momentary_layer_l 4 T  &kp M                                       &kp K                     &kp I              &kp E         &kp A     &hrm_shift_r RIGHT_SHIFT H   &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT
-&kp LCTRL       &hrm_shift_l LEFT_ALT DE_X  &kp F     &kp W     &kp DE_D                    &hrm_momentary_layer 6 B  &trans    &trans  &hrm_momentary_layer 6 J  &mod_y_you 0 DE_Y  &kp COMMA     &kp DOT   &hrm_shift_r LEFT_ALT DE_SZ  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                            &kp LGUI  &kp LALT  &trans                      &trans                    &trans    &trans  &lt 6 R                   &trans             &kp LEFT_ALT  &kp RALT
+&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                      &kp N6                    &kp N7                                      &kp N8                             &kp N9                        &kp N0                          &kp MINUS
+&kp TAB         &kp V                         &kp G                      &kp L                        &mod_thorn_key 0 0             &sl 9                                       &kp DE_U_UMLAUT           &kp U                                       &kp O                              &kp P                         &kp DE_Z                        &kp DE_A_UMLAUT
+&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT C     &kp S                      &kp N                        &hrm_momentary_layer_l 4 T     &kp M                                       &kp K                     &kp I                                       &kp E                              &kp A                         &hrm_shift_r RIGHT_SHIFT H      &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT
+&kp LCTRL       &hrm_mods_left LEFT_GUI DE_X  &hrm_mods_left LEFT_ALT F  &hrm_mods_left LEFT_SHIFT W  &hrm_mods_left LEFT_CONTROL D  &hrm_momentary_layer 8 B  &trans    &trans  &hrm_momentary_layer 8 J  &hrm_mods_right RIGHT_CONTROL DE_Y          &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT DOT  &hrm_mods_right LEFT_GUI DE_SZ  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                              &kp LGUI                   &kp LALT                     &trans                         &trans                    &trans    &trans  &lt 6 R                   &momentary_layer_sticky_shif 5 RIGHT_SHIFT  &kp LEFT_ALT                       &kp RALT
             >;
 
             sensor-bindings =
@@ -743,7 +755,7 @@
 &kp ESC         &kp N1     &kp N2        &kp N3    &kp N4        &kp N5                       &kp N6                    &kp N7         &kp N8   &kp N9     &kp N0   &kp MINUS
 &kp TAB         &kp NUBS   &kp Q         &kp W     &kp E         &kp R                        &kp T                     &kp Y          &kp U    &kp I      &kp O    &kp P
 &kp LEFT_SHIFT  &kp LSHFT  &kp A         &kp S     &kp D         &kp F                        &kp G                     &kp H          &kp J    &kp K      &kp L    &mt RIGHT_SHIFT APOS
-&kp LCTRL       &kp LCTRL  &kp Z         &kp X     &kp C         &kp V      &trans    &trans  &hrm_momentary_layer 7 B  &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
+&kp LCTRL       &kp LCTRL  &kp Z         &kp X     &kp C         &kp V      &trans    &trans  &hrm_momentary_layer 8 B  &kp N          &kp M    &kp COMMA  &kp DOT  &kp MINUS
                            &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 4                     &kp BACKSPACE  &kp DEL  &kp RALT
             >;
 
@@ -770,11 +782,11 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-&kp ESCAPE        &kp DE_CARET                        &none                           &macro_single_backtick  &macro_triple_backtick  &none                          &none              &none                    &none                     &none             &none                                 &none
-&kp TAB           &mod_tapBackticSingle 0 RS(DE_SQT)  &mod_tapBackticTrippe 0 DE_DQT  &kp DE_LESS_THAN        &kp DE_GREATER_THAN     &kp PERCENT                    &macro_zirkumflex  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &kp DE_DOLLAR                         &kp DE_TILDE
-&kp LSHFT         &hrm_shift_l LEFT_SHIFT DE_EXCL     &kp DE_MINUS                    &kp DE_PLUS             &kp DE_EQUAL            &kp DE_HASH                    &kp DE_AMPERSAND   &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &hrm_shift_r RIGHT_SHIFT DE_QUESTION  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp DE_TILDE                        &kp DE_BACKSLASH                &kp DE_ASTERISK         &kp DE_SLASH            &kp DE_AT    &trans    &trans  &kp DE_PIPE        &kp DE_LEFT_BRACKET      &kp DE_RIGHT_BRACKET      &kp DE_PERIOD     &kp DE_UNDERSCORE                     &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                      &trans                          &trans                  &trans                  &trans       &trans    &trans  &trans             &trans                   &trans                    &trans
+&kp ESCAPE        &kp DE_CARET                        &none                           &macro_single_backtick  &macro_triple_backtick  &none                               &none                &none                    &none                     &none             &none              &none
+&kp TAB           &mod_tapBackticSingle 0 RS(DE_SQT)  &mod_tapBackticTrippe 0 DE_DQT  &kp DE_LESS_THAN        &kp DE_GREATER_THAN     &kp PERCENT                         &macro_zirkumflex    &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &kp DE_DOLLAR      &kp DE_TILDE
+&kp LSHFT         &kp DE_EXCL                         &kp DE_MINUS                    &kp DE_PLUS             &kp DE_EQUAL            &kp DE_AMPERSAND                    &kp DE_POUND         &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &kp DE_AT          &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp DE_TILDE                        &kp DE_BACKSLASH                &kp DE_ASTERISK         &kp DE_SLASH            &kp DE_PIPE       &trans    &trans  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET     &kp COMMA                 &kp DE_PERIOD     &kp DE_UNDERSCORE  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                                      &trans                          &trans                  &trans                  &trans            &trans    &trans  &trans               &trans                   &trans                    &trans
             >;
 
             sensor-bindings =
@@ -816,7 +828,7 @@
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp LC(LS(LA(F14)))  &none  &none  &none  &none       &kp KP_NUMLOCK
-&bt BT_CLR_ALL    &to 0         &to 0         &to 3         &to 7         &to 4                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
+&bt BT_CLR_ALL    &to 0         &to 1         &to 4         &to 5         &to 7                           &none                &none  &none  &none  &none       &kp LS(LA(LC(F12)))
 &kp LA(CAPSLOCK)  &none         &none         &out OUT_BLE  &none         &out OUT_USB                    &none                &none  &none  &none  &none       &none
 &bootloader       &sys_reset    &none         &none         &none         &none         &trans    &trans  &none                &none  &none  &none  &sys_reset  &bootloader
                                 &none         &none         &none         &none         &none     &none   &none                &none  &none  &none

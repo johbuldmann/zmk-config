@@ -93,7 +93,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -101,7 +101,7 @@
         combo_CTRL_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -141,7 +141,7 @@
         combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 47>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 6 5>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
         };
@@ -165,7 +165,7 @@
         combo_Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
         };
@@ -191,7 +191,7 @@
             key-positions = <47 48 46>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 6>;
         };
 
         combo_new_tab {
@@ -215,7 +215,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <150>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6>;
         };
 
         combo_arrowa_right {
@@ -254,7 +254,7 @@
             key-positions = <18 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 3 4 5 7 8>;
+            layers = <0 1 2 3 4 5 7 8 6>;
         };
 
         combo_Menuekey {
@@ -284,7 +284,7 @@
             key-positions = <27 32>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 6 5>;
         };
 
         combo_camelCase {
@@ -780,11 +780,11 @@
         Numpad_Layer {
             display-name = "numpad";
             bindings = <
-&kp ESCAPE        &none                        &none                        &none                        &none                        &none                            &kp KP_NUMLOCK    &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE                      &kp DE_ACUTE
-&kp TAB           &kp F13                      &kp F14                      &kp F15                      &kp F16                      &kp F17                          &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                      &kp DE_HASH
-&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                          &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hrm_shift_r RIGHT_SHIFT KP_PLUS  &trans
-&kp LEFT_CONTROL  &none                        &kp F23                      &kp F24                      &none                        &none    &trans    &trans        &kp KP_NUMBER_0   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL                      &trans
-                                               &trans                       &trans                       &trans                       &trans   &trans    &kp KP_ENTER  &kp SPACE         &kp KP_N0        &kp COMMA        &kp PERIOD
+&kp ESCAPE        &none                        &none                        &none                        &none                        &none                      &kp KP_NUMLOCK    &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE                      &kp DE_ACUTE
+&kp TAB           &kp F13                      &kp F14                      &kp F15                      &kp F16                      &kp F17                    &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                      &kp DE_HASH
+&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                    &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hrm_shift_r RIGHT_SHIFT KP_PLUS  &trans
+&kp LEFT_CONTROL  &none                        &kp F23                      &kp F24                      &none                        &none    &trans    &trans  &kp KP_NUMBER_0   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL                      &trans
+                                               &trans                       &trans                       &trans                       &trans   &trans    &trans  &kp SPACE         &kp KP_N0        &kp COMMA        &kp PERIOD
             >;
 
             sensor-bindings =
@@ -793,13 +793,13 @@
         };
 
         Number_layer {
-            display-name = "numpad";
+            display-name = "number";
             bindings = <
-&kp ESCAPE        &none     &none     &none      &none      &none                           &none      &none              &none                              &none                            &none         &none
-&kp TAB           &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                          &kp F6     &kp F7             &kp F8                             &kp F9                           &kp F10       &kp F11
-&kp LSHFT         &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                          &kp N6     &kp N7             &kp N8                             &kp N9                           &kp N0        &kp F12
-&kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none   &trans    &trans        &none      &kp RIGHT_CONTROL  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &kp LEFT_GUI  &trans
-                            &trans    &trans     &trans     &trans  &trans    &kp KP_ENTER  &kp SPACE  &trans             &trans                             &trans
+&kp ESCAPE        &none     &none     &none      &none      &none                     &none      &none              &none                              &none                            &none         &none
+&kp TAB           &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                    &kp F6     &kp F7             &kp F8                             &kp F9                           &kp F10       &kp F11
+&kp LSHFT         &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                    &kp N6     &kp N7             &kp N8                             &kp N9                           &kp N0        &kp F12
+&kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none   &trans    &trans  &none      &kp RIGHT_CONTROL  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &kp LEFT_GUI  &trans
+                            &trans    &trans     &trans     &trans  &trans    &trans  &kp SPACE  &trans             &trans                             &trans
             >;
 
             sensor-bindings =

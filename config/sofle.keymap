@@ -503,6 +503,12 @@
             bindings = <&to 0 &kp SPACE>;
             label = "MACRO_EXIT_N_SPACE";
         };
+
+        macro_pascal_start: macro_pascal_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sticky_shift LSHIFT &camel_case 3>; 
+        };
     };
 
     behaviors {

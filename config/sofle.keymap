@@ -284,7 +284,7 @@
             key-positions = <27 32>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
-            layers = <0 1 2 3 6 5>;
+            layers = <0 1 2 3 6 5 7 8>;
         };
 
         combo_camelCase {
@@ -298,6 +298,14 @@
         combo_snake_case {
             bindings = <&camel_case 2>;
             key-positions = <14 21>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
+            layers = <0 1 2 3>;
+        };
+
+        combo_PascalCase {
+            bindings = <&macro_pascal_start>;
+            key-positions = <38 47>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             layers = <0 1 2 3>;
@@ -507,7 +515,7 @@
         macro_pascal_start: macro_pascal_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sticky_shift LSHIFT &camel_case 3>; 
+            bindings = <&sticky_shift LSHIFT &camel_case 3>;
         };
     };
 

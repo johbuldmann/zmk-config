@@ -1,10 +1,16 @@
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 / {
-    // Der Listener muss auf der linken Seite (Zentrale) leben
+    /* Der Empfänger für die Daten von der rechten Seite */
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "okay";
-        device = <&glidepoint>; // Er lauscht auf das Gerät 'glidepoint'
+        device = <&glidepoint_split>; // Hört auf den Funk-Knoten
+    };
+
+    /* Wir definieren den Funk-Knoten auch hier, damit der Listener ihn findet */
+    glidepoint_split: glidepoint_split {
+        compatible = "zmk,input-split";
     };
 };

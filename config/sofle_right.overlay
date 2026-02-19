@@ -1,6 +1,15 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/ {
+    /* Der Sender: Er nimmt Daten von der Hardware und schickt sie per Funk */
+    glidepoint_split: glidepoint_split {
+        compatible = "zmk,input-split";
+        status = "okay";
+        device = <&glidepoint>; // Nimmt Daten von der echten Hardware
+    };
+};
+
 &pro_micro_i2c {
     status = "okay";
 

@@ -1,22 +1,10 @@
 #include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 / {
-    /* Ein einfacher Container ohne 'compatible' */
-    input_rel_split {
-        compatible = "zmk,input-split";
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        glidepoint_split: glidepoint_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
-
+    // Der Listener muss auf der linken Seite (Zentrale) leben
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "okay";
-        device = <&glidepoint_split>;
+        device = <&glidepoint>; // Er lauscht auf das Gerät 'glidepoint'
     };
 };

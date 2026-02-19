@@ -1,16 +1,5 @@
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
+#include "cirque.dtsi"
 
-/ {
-    /* Der Empfänger für die Daten von der rechten Seite */
-    glidepoint_listener: glidepoint_listener {
-        compatible = "zmk,input-listener";
-        status = "okay";
-        device = <&glidepoint_split>; // Hört auf den Funk-Knoten
-    };
-
-    /* Wir definieren den Funk-Knoten auch hier, damit der Listener ihn findet */
-    glidepoint_split: glidepoint_split {
-        compatible = "zmk,input-split";
-    };
+&glidepoint_listener {
+    status = "okay";
 };

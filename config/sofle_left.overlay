@@ -1,3 +1,17 @@
-&glidepoint_listener {
-    status = "okay";
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
+/ {
+    // Wir definieren hier den Empfänger für die Funk-Mausdaten
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "okay";
+        device = <&glidepoint_split>;
+    };
+
+    // Das Gegenstück zum Sender auf der rechten Seite
+    glidepoint_split: glidepoint_split {
+        compatible = "zmk,input-split";
+        status = "okay";
+    };
 };

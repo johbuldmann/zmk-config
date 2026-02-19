@@ -1,5 +1,9 @@
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include "cirque.dtsi"
 
 &glidepoint_split_listener {
     status = "okay";
+    /* Wir drehen das Signal erst hier, wenn es per Funk ankommt */
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_90 | INPUT_TRANSFORM_Y_INVERT)>;
 };

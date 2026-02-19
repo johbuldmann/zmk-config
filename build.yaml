@@ -16,6 +16,7 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
+#   add build trigger
 ---
 include:
   - board: nice_nano_v2

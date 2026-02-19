@@ -13,7 +13,7 @@
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>; 
-        sensitivity = "3x";
+        sensitivity = "4x";
         sleep;
     };
 };

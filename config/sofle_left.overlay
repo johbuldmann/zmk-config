@@ -2,8 +2,8 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
-    /* Wir brauchen einen Container für reg-Geräte */
-    split_inputs {
+    /* Ein einfacher Container ohne 'compatible' */
+    input_rel_split {
         compatible = "zmk,input-split";
         #address-cells = <1>;
         #size-cells = <0>;

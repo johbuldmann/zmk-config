@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
-    split_inputs {
+    input_rel_split {
         compatible = "zmk,input-split";
         #address-cells = <1>;
         #size-cells = <0>;

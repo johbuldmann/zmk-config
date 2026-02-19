@@ -4,8 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: geeksville
-      url-base: https://github.com/geeksville
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
+#   - name: geeksville
+#     url-base: https://github.com/geeksville
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,7 +17,10 @@ manifest:
       remote: urob
       revision: v0.3 # Passend zu ZMK v0.3
     - name: cirque-input-module
-      remote: geeksville
+      remote: petejohanson
       revision: main
+#    - name: cirque-input-module
+#      remote: geeksville
+#      revision: main
   self:
     path: config

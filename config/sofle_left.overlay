@@ -7,13 +7,13 @@
     input-processors = 
         <&zip_xy_transform 1>,
         <&zip_xy_scaler 3 1>,
-        <&zip_temp_layer 11 500>;
+        <&zip_temp_layer 11 300>;
 
     scroller {
         layers = <12>;                      // Dein Scroll-Layer Index
         input-processors = 
             <&zip_xy_transform 1>,         // Auch beim Scrollen 90° drehen!
             <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln
-            <&zip_scroll_scaler 1 4>;      // Scroll-Geschwindigkeit drosseln
+            <&zip_scroll_scaler 1 6>;      // Scroll-Geschwindigkeit drosseln
     };
 };

@@ -904,11 +904,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans        &trans        &trans          &trans            &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1        &kp F2        &mkp MCLK       &kp F4            &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &mkp RCLK       &mkp LCLK         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans        &trans          &trans            &mo 12  &trans    &mo 12  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans          &trans            &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &mkp MCLK       &kp F4            &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &mkp RCLK       &mkp LCLK         &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans        &trans          &mkp MB4          &mo 12  &mkp MB4    &mo 12  &trans  &trans  &trans  &trans
             >;
         };
 

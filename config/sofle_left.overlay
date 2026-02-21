@@ -4,12 +4,10 @@
 
 &glidepoint_split_listener {
     status = "okay";
-    /* 5 ist der numerische Wert für (INPUT_TRANSFORM_90 | INPUT_TRANSFORM_Y_INVERT) */
     input-processors = 
         <&zip_xy_transform 1>,
         <&zip_xy_scaler 3 1>,
-        <&zip_temp_layer MOUSE 500>,
+        <&zip_temp_layer 11 500>,
         <&zip_xy_to_scroll_mapper 12>,
-        /* Verlangsamt das Scrollen auf 1/4 der Geschwindigkeit für bessere Kontrolle */
         <&zip_scroll_scaler 1 4>;
 };

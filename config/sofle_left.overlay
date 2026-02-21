@@ -7,5 +7,5 @@
     input-processors = 
         <&zip_xy_transform 1>,
         <&zip_xy_scaler 3 1>,
-        <&zip_temp_layer 11 500>,
+        <&zip_temp_layer 11 500>;
 };

@@ -44,7 +44,7 @@
         status = "okay";
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; 
         sensitivity = "3x";
-        abs-rel-divisor = <2>; 
+        abs-rel-divisor = <4>; 
         x-invert;
         // y-invert;
         

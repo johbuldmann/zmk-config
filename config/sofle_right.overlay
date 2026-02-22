@@ -1,5 +1,5 @@
-#include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
 
 
 / {
@@ -8,6 +8,19 @@
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint>;
+
+        input-processors = 
+            <&zip_xy_transform 1>,
+            <&zip_xy_scaler 3 1>,
+            <&zip_temp_layer 11 300>;
+        
+        scroller {
+            layers = <12>;                      // Dein Scroll-Layer Index
+            input-processors = 
+                <&zip_xy_transform 1>,         // Auch beim Scrollen 90° drehen!
+                <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln
+                <&zip_scroll_scaler 1 6>;      // Scroll-Geschwindigkeit drosseln
+        };
     };
 };
 
@@ -21,18 +34,5 @@
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>; 
         sensitivity = "4x";
         sleep;
-        
-        input-processors = 
-        <&zip_xy_transform 1>,
-        <&zip_xy_scaler 3 1>,
-        <&zip_temp_layer 11 300>;
-        
-        scroller {
-            layers = <12>;                      // Dein Scroll-Layer Index
-            input-processors = 
-            <&zip_xy_transform 1>,         // Auch beim Scrollen 90° drehen!
-            <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln
-            <&zip_scroll_scaler 1 6>;      // Scroll-Geschwindigkeit drosseln
-        };
     };
 };

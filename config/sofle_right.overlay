@@ -3,6 +3,15 @@
 
 
 / {
+    /* 1. Definition des Touch-Prozessors */
+    input_processors {
+        touch_processor: touch_processor {
+            compatible = "zmk,input-processor-behaviors";
+            #input-processor-cells = <0>;
+            codes = <INPUT_BTN_TOUCH>;    // Reagiert auf Berührung
+            bindings = <&mo 11>;         // Aktiviert Layer 11 (dein TAP Layer)
+        };
+    };
     /* Dieser Listener sorgt dafür, dass die Daten vom Glidepoint 
        tatsächlich in Mausbewegungen umgewandelt werden */
     glidepoint_listener: glidepoint_listener {
@@ -12,7 +21,8 @@
         input-processors = 
             <&zip_xy_transform 1>,
             <&zip_xy_scaler 3 1>,
-            <&zip_temp_layer 11 300>;
+            <&touch_processor>; // Hier wird der Berührungs-Check eingebunden
+            // <&zip_temp_layer 11 300>;
         
         scroller {
             layers = <12>;                      // Dein Scroll-Layer Index
@@ -33,6 +43,9 @@
         status = "okay";
         dr-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH)>; 
         sensitivity = "4x";
+        abs-rel-divisor = <1>; 
+        x-invert;
+        y-invert;
 
         // Optional: turning this on enables very aggressive power saving, after 5 seconds with no touches
         // the trackpad will go to sleep.  It wakes up on touch, but there is a ~300ms delay.  Most users will find

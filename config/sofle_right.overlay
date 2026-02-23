@@ -18,7 +18,7 @@
             layers = <12>;                      // Dein Scroll-Layer Index
             input-processors = 
                 <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | 1)>,
-                <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln
+                <&zip_xy_to_scroll_mapper>;    // X/Y zu Scroll umwandeln
                 // <&zip_scroll_scaler 1 6>;      // Scroll-Geschwindigkeit drosseln
         };
     };

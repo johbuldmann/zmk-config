@@ -15,11 +15,11 @@
             <&zip_temp_layer 5 200>;    // mouse layer 5 and timeout 200ms
         
         scroller {
-            layers = <12>;                      // Scroll-Layer 
+            layers = <8 10 12>;                      // Scroll-layer und nav und number layer
             input-processors = 
                 <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | 1)>,
                 <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln
-                <&zip_scroll_scaler 3 4>;      // Scroll-Geschwindigkeit drosseln
+                <&zip_scroll_scaler 4 5>;      // Scroll-Geschwindigkeit drosseln
         };
     };
 };

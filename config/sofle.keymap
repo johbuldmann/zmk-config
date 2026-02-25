@@ -708,6 +708,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             flavor = "hold-preferred";
+            quick-tap-ms = <333>;
         };
 
         hrm_momentary_layer_r: hrm_momentary_layer_r {
@@ -730,7 +731,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <333>;
             require-prior-idle-ms = <120>;
             flavor = "balanced";
         };

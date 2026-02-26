@@ -703,10 +703,13 @@
         num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
+            continue-list = <
+DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
                 N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 
                 DE_DOT DE_COMMA DE_PLUS DE_MINUS DE_ASTRK DE_SLASH DE_EQUAL 
-                BSPC DEL LSHIFT RSHIFT DE_UNDERSCORE>;
+                BSPC DEL LSHIFT RSHIFT DE_UNDERSCOR
+            >;
+
             ignore-modifiers;
         };
 
@@ -859,11 +862,11 @@
         Number_layer {
             display-name = "number";
             bindings = <
-&kp ESCAPE        &none     &none     &none      &none      &none                     &none      &none              &none                              &none                            &none         &none
-&kp TAB           &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                    &kp F6     &kp F7             &kp F8                             &kp F9                           &kp F10       &kp F11
-&kp LSHFT         &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                    &kp N6     &kp N7             &kp N8                             &kp N9                           &kp N0        &kp F12
-&kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none   &trans    &trans  &none      &kp RIGHT_CONTROL  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &kp LEFT_GUI  &trans
-                            &trans    &trans     &trans     &trans  &trans    &trans  &kp SPACE  &trans             &trans                             &trans
+&kp ESCAPE        &none     &none     &none      &none      &none                     &none   &none              &none                              &none                            &none         &none
+&kp TAB           &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                    &kp F6  &kp F7             &kp F8                             &kp F9                           &kp F10       &kp F11
+&kp LSHFT         &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                    &kp N6  &kp N7             &kp N8                             &kp N9                           &kp N0        &kp F12
+&kp LEFT_CONTROL  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none   &trans    &trans  &none   &kp RIGHT_CONTROL  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &kp LEFT_GUI  &trans
+                            &trans    &trans     &trans     &trans  &trans    &trans  &trans  &trans             &trans                             &trans
             >;
 
             sensor-bindings =

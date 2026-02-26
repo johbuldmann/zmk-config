@@ -704,10 +704,10 @@
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <
-DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
+                DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
                 N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 
                 DE_DOT DE_COMMA DE_PLUS DE_MINUS DE_ASTRK DE_SLASH DE_EQUAL 
-                BSPC DEL LSHIFT RSHIFT DE_UNDERSCOR
+                BSPC DEL LSHIFT RSHIFT DE_UNDERSCORE
             >;
 
             ignore-modifiers;

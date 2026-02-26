@@ -707,9 +707,6 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            // Wir nutzen hier permissive-hold, damit schnelles Halten 
-            // sicher als Layer erkannt wird (wie wir vorhin besprochen haben)
-            permissive-hold;
             bindings = <&mo>, <&num_word>;
         };
 

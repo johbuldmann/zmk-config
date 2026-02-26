@@ -29,7 +29,7 @@
 
 #define QUICK_TAP_MS 175
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS SLASH QUESTION LSHIFT>; };
+&caps_word { continue-list = <DE_UNDERSCORE DE_MINUS DE_SLASH DE_QUESTION BACKSPACE DELETE LSHIFT>; };
 
 &left_encoder { steps = <60>; };
 
@@ -698,6 +698,19 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sticky_shift LSHIFT>, <&macro_exit_and_space>;
+        };
+
+        num_word: num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            // Wir nutzen die deutschen Bezeichnungen für die Klarheit
+            continue-list = <
+                DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
+                N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 
+                DE_DOT DE_COMMA DE_PLUS DE_MINUS DE_ASTRK DE_SLASH DE_EQUAL 
+                BSPC DEL LSHIFT RSHIFT DE_UNDERSCORE
+            >;
+            ignore-modifiers;
         };
 
         momentary_layer_sticky_shif: momentary_layer_sticky_shif {

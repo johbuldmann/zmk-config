@@ -106,7 +106,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        combo_Printscreen {
+        combo_Printscreen1 {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
             layers = <0 1 3 4 5 10 6>;

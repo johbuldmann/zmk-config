@@ -703,13 +703,16 @@
         num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
+
             // Wir nutzen die deutschen Bezeichnungen für die Klarheit
+
             continue-list = <
                 DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
                 N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 
                 DE_DOT DE_COMMA DE_PLUS DE_MINUS DE_ASTRK DE_SLASH DE_EQUAL 
                 BSPC DEL LSHIFT RSHIFT DE_UNDERSCORE
             >;
+
             ignore-modifiers;
         };
 
@@ -766,7 +769,7 @@
 &kp TAB         &kp Q                         &kp W                      &kp E                        &kp R                          &kp T                                                         &mod_taptap_150 MINUS DE_Z                  &kp U                            &kp I                              &kp O                            &kp P                                 &kp DE_U_UMLAUT
 &kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT A     &kp S                      &kp D                        &hrm_momentary_layer_l 9 F     &kp G                                                         &kp H                                       &kp J                            &kp K                              &kp L                            &hrm_shift_r RIGHT_SHIFT DE_O_UMLAUT  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
 &kp LCTRL       &hrm_mods_left LEFT_GUI DE_Y  &hrm_mods_left LEFT_ALT X  &hrm_mods_left LEFT_SHIFT C  &hrm_mods_left LEFT_CONTROL V  &hrm_momentary_layer 11 B      &none            &none         &hrm_momentary_layer 11 N                   &hrm_mods_right RIGHT_CONTROL M  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT PERIOD  &hrm_mods_right LEFT_GUI DE_MINUS     &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                              &kp LGUI                   &kp LALT                     &lt 7 ESCAPE                   &layer_tap_prior_idle 8 SPACE  &lt 10 ESCAPE    &lt 10 ENTER  &momentary_layer_sticky_shif 9 RIGHT_SHIFT  &lt 7 ESCAPE                     &kp LEFT_ALT                       &kp RALT
+                                              &kp LGUI                   &kp LALT                     &lt 7 ESCAPE                   &layer_tap_prior_idle 8 SPACE  &lt 10 ESCAPE    &lt 10 ENTER  &momentary_layer_sticky_shif 9 RIGHT_SHIFT  &num_word                        &kp LEFT_ALT                       &kp RALT
             >;
 
             sensor-bindings =

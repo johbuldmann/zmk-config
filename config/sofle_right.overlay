@@ -12,7 +12,7 @@
         input-processors = 
             <&zip_xy_transform 1>,
             <&zip_xy_scaler 3 1>,
-            <&zip_temp_layer 5 200>;    // mouse layer 5 and timeout 200ms
+            <&zip_temp_layer 5 300>;    // mouse layer 5 and timeout setting
         
         scroller {
             layers = <8 10 12>;                      // Scroll-layer und nav und number layer

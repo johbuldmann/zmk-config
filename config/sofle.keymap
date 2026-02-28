@@ -825,9 +825,7 @@
                                                                 &kp LGUI                   &kp LALT                     &lt 7 ESCAPE                   &kp SPACE                  &lt 10 ESCAPE    &lt 10 ENTER  &momentary_layer_sticky_shif 9 RIGHT_SHIFT  &smart_num 8 8                   &kp LEFT_ALT                       &kp RALT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp F21 F20>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Siggboy_Layer {

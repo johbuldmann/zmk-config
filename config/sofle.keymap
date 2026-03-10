@@ -728,20 +728,37 @@
             ignore-modifiers;
         };
 
-        td_snake: td_snake {
-            compatible = "zmk,behavior-tap-dance";
+        ht_snake: ht_snake {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp DE_UNDERSCORE>, <&macro_exit_and_space>;
+            bindings = <&macro_exit_and_space &kp DE_UNDERSCORE>;
         };
 
-        td_camel: td_camel {
-            compatible = "zmk,behavior-tap-dance";
+        // Camel Case: Tap = Sticky Shift, Hold = Exit Macro
+        ht_camel: ht_camel {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&sticky_shift LSHIFT>, <&macro_exit_and_space>;
+            bindings = <&macro_exit_and_space &sk LSHIFT>;
         };
 
+        /* td_snake: td_snake { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <200>; */
+        /*     bindings = <&kp DE_UNDERSCORE>, <&macro_exit_and_space>; */
+        /* }; */
+        /**/
+        /* td_camel: td_camel { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <200>; */
+        /*     bindings = <&sticky_shift LSHIFT>, <&macro_exit_and_space>; */
+        /* }; */
+        /**/
         // Hold: Momentary Layer | Tap: Num Word
 
         smart_num: smart_num {
@@ -864,7 +881,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_snake  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ht_snake  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -874,7 +891,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_camel  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ht_camel  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 

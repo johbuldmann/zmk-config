@@ -728,6 +728,26 @@
             ignore-modifiers;
         };
 
+        th_snake: th_snake {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_SNAKE_EXIT";
+            bindings = <&macro_exit_and_space>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        th_camel: th_camel {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_CAMEL_EXIT";
+            bindings = <&macro_exit_and_space>, <&sticky_shift LSHIFT>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
         td_snake: td_snake {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;

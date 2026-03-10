@@ -756,13 +756,7 @@
         num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <
-                DE_N1 DE_N2 DE_N3 DE_N4 DE_N5 DE_N6 DE_N7 DE_N8 DE_N9 DE_N0 
-                N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 
-                DE_DOT DE_COMMA DE_PLUS DE_MINUS DE_ASTRK DE_SLASH DE_EQUAL 
-                BSPC DEL LSHIFT RSHIFT DE_UNDERSCORE
-            >;
-
+            continue-list = <>;
             ignore-modifiers;
         };
 
@@ -945,7 +939,7 @@
 &kp ESCAPE        &none                                         &none                       &none                         &none                           &none                     &none                         &none                             &none                           &none                    &none                        &none
 &kp TAB           &kp F1                                        &kp F2                      &kp F3                        &kp F4                          &kp F5                    &kp F6                        &kp F7                            &kp F8                          &kp F9                   &kp F10                      &kp F11
 &kp LSHFT         &hrm_mods_left_short_tappingterm LEFT_GUI N1  &hrm_mods_left LEFT_ALT N2  &hrm_mods_left LEFT_SHIFT N3  &hrm_mods_left LEFT_CONTROL N4  &kp N5                    &kp N6                        &hrm_mods_right RIGHT_CONTROL N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right LALT N9  &hrm_mods_right LEFT_GUI N0  &kp F12
-&kp LEFT_CONTROL  &kp DE_MINUS                                  &kp DE_PLUS                 &kp DE_ASTRK                  &kp DE_SLASH                    &none   &trans    &trans  &none                         &none                             &kp COMMA                       &kp DOT                  &none                        &trans
+&kp LEFT_CONTROL  &kp DE_MINUS                                  &kp DE_PLUS                 &kp DE_ASTRK                  &kp DE_SLASH                    &none   &trans    &trans  &none                         &kp SPACE                         &kp COMMA                       &kp DOT                  &none                        &trans
                                                                 &trans                      &trans                        &trans                          &trans  &trans    &trans  &hrm_momentary_layer 7 SPACE  &trans                            &trans                          &trans
             >;
 

@@ -289,7 +289,7 @@
         };
 
         combo_camelCase {
-            bindings = <&camel_case 3>;
+            bindings = <&camel_case 4>;
             key-positions = <26 33>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -297,7 +297,7 @@
         };
 
         combo_snake_case {
-            bindings = <&camel_case 2>;
+            bindings = <&camel_case 3>;
             key-positions = <14 21>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -564,7 +564,7 @@
         macro_pascal_start: macro_pascal_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sticky_shift LSHIFT &camel_case 3>;
+            bindings = <&sk LSHIFT &camel_case 4>;
         };
     };
 
@@ -732,20 +732,18 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_SNAKE_EXIT";
             bindings = <&macro_exit_and_space>, <&kp>;
-
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
         };
 
         th_camel: th_camel {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_CAMEL_EXIT";
-            bindings = <&macro_exit_and_space>, <&sticky_shift LSHIFT>;
-
+            bindings = <&macro_exit_and_space>, <&sk>;
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
         };
 
         td_snake: td_snake {
@@ -884,7 +882,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_snake  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &th_snake 0 DE_UNDERSCORE  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -894,7 +892,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &td_camel  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &th_camel 0 LSHIFT  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 

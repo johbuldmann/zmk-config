@@ -932,11 +932,11 @@
         Number_layer {
             display-name = "number";
             bindings = <
-&kp ESCAPE        &none                          &none                           &none                         &none         &none                     &none      &none   &none                           &none                             &none                        &none
-&kp TAB           &kp F1                         &kp F2                          &kp F3                        &kp F4        &kp F5                    &kp F6     &kp F7  &kp F8                          &kp F9                            &kp F10                      &kp F11
-&kp LSHFT         &hrm_mods_left LEFT_ALT N1     &hrm_mods_left LEFT_CONTROL N2  &hrm_mods_left LEFT_SHIFT N3  &kp N4        &kp N5                    &kp N6     &kp N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right RIGHT_CONTROL N9  &hrm_mods_right LEFT_ALT N0  &kp F12
-&kp LEFT_CONTROL  &mod_taptap_150 LGUI DE_MINUS  &kp DE_PLUS                     &kp DE_ASTRK                  &kp DE_SLASH  &none   &trans    &trans  &none      &none   &kp COMMA                       &kp DOT                           &kp LEFT_GUI                 &trans
-                                                 &trans                          &trans                        &trans        &trans  &trans    &trans  &kp SPACE  &trans  &trans                          &trans
+&kp ESCAPE        &none                          &none                           &none                         &none         &none                     &none                         &none   &none                           &none                             &none                        &none
+&kp TAB           &kp F1                         &kp F2                          &kp F3                        &kp F4        &kp F5                    &kp F6                        &kp F7  &kp F8                          &kp F9                            &kp F10                      &kp F11
+&kp LSHFT         &hrm_mods_left LEFT_ALT N1     &hrm_mods_left LEFT_CONTROL N2  &hrm_mods_left LEFT_SHIFT N3  &kp N4        &kp N5                    &kp N6                        &kp N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right RIGHT_CONTROL N9  &hrm_mods_right LEFT_ALT N0  &kp F12
+&kp LEFT_CONTROL  &mod_taptap_150 LGUI DE_MINUS  &kp DE_PLUS                     &kp DE_ASTRK                  &kp DE_SLASH  &none   &trans    &trans  &none                         &none   &kp COMMA                       &kp DOT                           &kp LEFT_GUI                 &trans
+                                                 &trans                          &trans                        &trans        &trans  &trans    &trans  &hrm_momentary_layer 7 SPACE  &trans  &trans                          &trans
             >;
 
             sensor-bindings =

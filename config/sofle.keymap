@@ -564,7 +564,7 @@
         macro_pascal_start: macro_pascal_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT &camel_case 4>;
+            bindings = <&sticky_shift LSHIFT &camel_case 4>;
         };
     };
 
@@ -740,7 +740,7 @@
         th_camel: th_camel {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_CAMEL_EXIT";
-            bindings = <&macro_exit_and_space>, <&sk>;
+            bindings = <&macro_exit_and_space>, <&sticky_shift>;
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;

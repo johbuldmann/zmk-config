@@ -842,11 +842,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1                        &kp N2                     &kp N3                       &kp N4                         &kp N5                                       &kp N6                     &kp N7                              &kp N8                             &kp N9                        &kp N0                          &kp DE_SZ
-&kp TAB         &kp V                         &kp G                      &kp L                        &mod_thorn_key 0 0             &sl 2                                        &kp DE_U_UMLAUT            &kp U                               &kp O                              &kp P                         &kp DE_Z                        &kp DE_O_UMLAUT
-&kp LEFT_SHIFT  &hrm_shift_l LEFT_SHIFT C     &kp S                      &kp N                        &hrm_momentary_layer_l 7 T     &kp M                                        &kp K                      &kp I                               &kp E                              &kp A                         &hrm_shift_r RIGHT_SHIFT H      &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &hrm_mods_left LEFT_GUI DE_X  &hrm_mods_left LEFT_ALT F  &hrm_mods_left LEFT_SHIFT W  &hrm_mods_left LEFT_CONTROL D  &hrm_momentary_layer 11 B  &trans    &trans  &hrm_momentary_layer 11 J  &hrm_mods_right RIGHT_CONTROL DE_Y  &hrm_mods_right RIGHT_SHIFT COMMA  &hrm_mods_right LEFT_ALT DOT  &hrm_mods_right LEFT_GUI DE_SZ  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                              &trans                     &trans                       &trans                         &trans                     &trans    &trans  &trans                     &hrm_momentary_layer_r 9 R          &trans                             &trans
+&kp ESC         &kp N1                                       &kp N2                     &kp N3                     &kp N4                         &kp N5                                       &kp N6                     &kp N7                           &kp N8                      &kp N9                      &kp N0                      &kp DE_SZ
+&kp TAB         &kp V                                        &kp G                      &kp L                      &mod_thorn_key 0 0             &sl 2                                        &kp DE_U_UMLAUT            &kp U                            &kp O                       &kp P                       &kp DE_Z                    &kp DE_O_UMLAUT
+&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI C  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT N  &hrm_mods_left LEFT_CONTROL T  &kp M                                        &kp K                      &hrm_mods_right RIGHT_CONTROL I  &hrm_shift_r RIGHT_SHIFT E  &hrm_mods_right LEFT_ALT A  &hrm_mods_right LEFT_GUI H  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &kp DE_X                                     &kp F                      &kp W                      &kp D                          &hrm_momentary_layer 11 B  &trans    &trans  &hrm_momentary_layer 11 J  &kp DE_Y                         &kp COMMA                   &kp DOT                     &kp DE_SZ                   &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                                             &trans                     &trans                     &trans                         &trans                     &trans    &trans  &trans                     &hrm_momentary_layer_r 9 R       &trans                      &trans
             >;
 
             sensor-bindings =
@@ -886,11 +886,11 @@
 
         MOUSE {
             bindings = <
-&trans  &trans        &trans            &trans          &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &kp F1        &kp F2            &mkp MCLK       &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &kp LALT      &kp LEFT_CONTROL  &mkp RCLK       &mkp LCLK         &mkp MB4                    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_WIN  &kp LEFT_ALT      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans    &trans  &trans     &trans     &trans  &trans  &trans  &trans
-                      &trans            &trans          &trans            &mo 12    &trans    &mo 12  &mkp RCLK  &trans     &trans  &trans
+&trans  &trans        &trans        &trans          &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &mkp MCLK       &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &none         &none         &mkp RCLK       &mkp LCLK         &mkp MB4                    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans    &trans  &trans     &trans     &trans  &trans  &trans  &trans
+                      &trans        &trans          &trans            &mo 12    &trans    &mo 12  &mkp RCLK  &trans     &trans  &trans
             >;
         };
 
@@ -942,11 +942,11 @@
         Number_layer {
             display-name = "number";
             bindings = <
-&kp ESCAPE        &none                          &none                           &none                         &none         &none                     &none                         &none   &none                           &none                             &none                        &none
-&kp TAB           &kp F1                         &kp F2                          &kp F3                        &kp F4        &kp F5                    &kp F6                        &kp F7  &kp F8                          &kp F9                            &kp F10                      &kp F11
-&kp LSHFT         &hrm_mods_left LEFT_ALT N1     &hrm_mods_left LEFT_CONTROL N2  &hrm_mods_left LEFT_SHIFT N3  &kp N4        &kp N5                    &kp N6                        &kp N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right RIGHT_CONTROL N9  &hrm_mods_right LEFT_ALT N0  &kp F12
-&kp LEFT_CONTROL  &mod_taptap_150 LGUI DE_MINUS  &kp DE_PLUS                     &kp DE_ASTRK                  &kp DE_SLASH  &none   &trans    &trans  &none                         &none   &kp COMMA                       &kp DOT                           &kp LEFT_GUI                 &trans
-                                                 &trans                          &trans                        &trans        &trans  &trans    &trans  &hrm_momentary_layer 7 SPACE  &trans  &trans                          &trans
+&kp ESCAPE        &none                                         &none                       &none                         &none                           &none                     &none                         &none                             &none                           &none                    &none                        &none
+&kp TAB           &kp F1                                        &kp F2                      &kp F3                        &kp F4                          &kp F5                    &kp F6                        &kp F7                            &kp F8                          &kp F9                   &kp F10                      &kp F11
+&kp LSHFT         &hrm_mods_left_short_tappingterm LEFT_GUI N1  &hrm_mods_left LEFT_ALT N2  &hrm_mods_left LEFT_SHIFT N3  &hrm_mods_left LEFT_CONTROL N4  &kp N5                    &kp N6                        &hrm_mods_right RIGHT_CONTROL N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right LALT N9  &hrm_mods_right LEFT_GUI N0  &kp F12
+&kp LEFT_CONTROL  &kp DE_MINUS                                  &kp DE_PLUS                 &kp DE_ASTRK                  &kp DE_SLASH                    &none   &trans    &trans  &none                         &none                             &kp COMMA                       &kp DOT                  &none                        &trans
+                                                                &trans                      &trans                        &trans                          &trans  &trans    &trans  &hrm_momentary_layer 7 SPACE  &trans                            &trans                          &trans
             >;
 
             sensor-bindings =

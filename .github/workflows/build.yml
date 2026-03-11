@@ -2,4 +2,9 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # Manche reusablen Workflows erlauben die Übergabe von Umgebungsvariablen
+      # Falls das nicht hilft, ist das ZMK-Team am Zug, ihren Workflow zu updaten.
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

@@ -251,7 +251,7 @@
         };
 
         combo_CTRL_Z_2 {
-            bindings = <&kp LC(Y)>;
+            bindings = <&kp LC(DE_Z)>;
             key-positions = <18 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
@@ -732,6 +732,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_SNAKE_EXIT";
             bindings = <&macro_exit_and_space>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
@@ -741,6 +742,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_CAMEL_EXIT";
             bindings = <&macro_exit_and_space>, <&sticky_shift>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
@@ -878,20 +880,20 @@
 
         snake_case_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &th_snake 0 DE_UNDERSCORE  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         camelCaseLayer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &th_camel 0 LSHIFT  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -978,7 +980,7 @@
 
             bindings = <
 &kp ESCAPE        &kp F1        &kp F2       &kp F3                                 &kp F4                            &kp F5                                                &kp F6              &kp F7          &kp F8              &kp F9               &kp F10        &kp F11
-&kp TAB           &kp LA(TAB)   &kp LG(TAB)  &mod_taptap_150 LG(LC(LEFT_ARROW)) F1  &mod_taptap_150 LC(LG(RIGHT)) F2  &kp F4                                                &kp HOME            &none           &macro_select_word  &kp END              &none          &kp F12
+&kp TAB           &kp LA(TAB)   &kp LG(TAB)  &mod_taptap_150 LG(LC(LEFT_ARROW)) F1  &mod_taptap_150 LC(LG(RIGHT)) F2  &kp F4                                                &none               &kp HOME        &macro_select_word  &kp END              &none          &kp F12
 &kp LEFT_SHIFT    &kp LC(A)     &kp ESCAPE   &kp BACKSPACE                          &kp DEL                           &none                                                 &kp LEFT            &kp DOWN        &kp UP_ARROW        &kp RIGHT            &kp LS(ENTER)  &none
 &kp LEFT_CONTROL  &kp LC(DE_Z)  &kp LC(X)    &kp LC(C)                              &kp LC(V)                         &mod_taptap_150 LS(LC(V)) LG(V)  &trans       &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN   &kp PAGE_UP         &kp LC(RIGHT_ARROW)  &kp LEFT_GUI   &kp RIGHT_CONTROL
                                 &trans       &trans                                 &trans                            &trans                           &kp ENTER    &trans  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT

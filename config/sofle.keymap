@@ -361,7 +361,7 @@
         };
 
         combo_number_layer {
-            bindings = <&smart_num 9 0>;
+            bindings = <&smart_num 9 9>;
             key-positions = <28 29>;
         };
     };

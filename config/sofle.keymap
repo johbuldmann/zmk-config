@@ -917,7 +917,7 @@
         MOUSE {
             bindings = <
 &trans  &trans        &trans        &trans          &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &kp F1        &kp F2        &mkp MCLK       &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &mkp MCLK       &trans            &trans                      &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &mkp RCLK       &mkp LCLK         &mkp MB4                    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans    &trans  &trans     &trans     &trans  &trans  &trans  &trans
                       &trans        &trans          &trans            &mo 11    &mo 11    &mo 11  &mkp RCLK  &trans     &trans  &trans

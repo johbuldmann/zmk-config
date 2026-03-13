@@ -361,12 +361,12 @@
         };
 
         combo_number_layer {
-            bindings = <&smart_num 10 9>;
+            bindings = <&smart_num 10 10>;
             key-positions = <28 29>;
         };
 
         combo_lefthand_number {
-            bindings = <&smart_num 10 9>;
+            bindings = <&smart_num 10 109>;
             key-positions = <53 54>;
         };
     };
@@ -863,7 +863,7 @@
 &kp TAB         &kp Q                                        &kp W                      &kp E                      &kp R                          &kp T                                                        &mod_taptap_150 MINUS DE_Z                  &kp U                            &kp I                       &kp O                       &kp P                                   &kp DE_U_UMLAUT
 &kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D  &hrm_mods_left LEFT_CONTROL F  &hrm_momentary_layer_l 7 G                                   &hrm_momentary_layer_r 7 H                  &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K  &hrm_mods_right LEFT_ALT L  &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
 &kp LCTRL       &kp DE_Y                                     &kp X                      &kp C                      &kp V                          &hrm_momentary_layer 12 B   &none           &none            &hrm_momentary_layer 12 N                   &kp M                            &kp COMMA                   &kp DOT                     &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                             &kp LGUI                   &kp LALT                   &lt 8 ESCAPE                   &kp SPACE                   &lt 11 ENTER    &smart_num 11 9  &momentary_layer_sticky_shif 7 RIGHT_SHIFT  &smart_num 9 9                   &kp K_CONTEXT_MENU          &kp RALT
+                                                             &kp LGUI                   &kp LALT                   &lt 8 ESCAPE                   &kp SPACE                   &lt 11 ENTER    &smart_num 11 10  &momentary_layer_sticky_shif 7 RIGHT_SHIFT &smart_num 10 10                 &kp K_CONTEXT_MENU          &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

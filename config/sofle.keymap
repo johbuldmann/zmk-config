@@ -285,8 +285,8 @@
         combo_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <27 32>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <55>;
+            require-prior-idle-ms = <120>;
             layers = <0 1 3 4 5 9 8 7 11>;
         };
 
@@ -895,7 +895,7 @@
 &kp ESC         &kp N1                                       &kp N2                     &kp N3                     &kp N4                         &kp N5                                          &kp N6                      &kp N7                           &kp N8                      &kp N9                      &kp N0                      &kp DE_SZ
 &kp TAB         &kp V                                        &kp G                      &kp L                      &mod_thorn_key 0 0             &sl 2                                           &kp DE_U_UMLAUT             &kp U                            &kp O                       &kp P                       &kp DE_Z                    &kp DE_O_UMLAUT
 &kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI C  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT N  &hrm_mods_left LEFT_CONTROL T  &hrm_momentary_layer_l 7 M                      &hrm_momentary_layer_r 7 K  &hrm_mods_right RIGHT_CONTROL I  &hrm_shift_r RIGHT_SHIFT E  &hrm_mods_right LEFT_ALT A  &hrm_mods_right LEFT_GUI H  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &kp DE_X                                     &kp F                      &kp W                      &hrm_momentary_layer_l 7 D     &hrm_momentary_layer 12 B   &trans    &trans    &hrm_momentary_layer 12 J   &mod_y_you 0 Y                   &kp COMMA                   &kp DOT                     &kp DE_SZ                   &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+&kp LCTRL       &kp DE_X                                     &kp F                      &kp W                      &hrm_momentary_layer_l 7 D     &hrm_momentary_layer 12 B   &trans    &trans    &hrm_momentary_layer 12 J   &mod_y_you 0 DE_Y                &kp COMMA                   &kp DOT                     &kp DE_SZ                   &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
                                                              &trans                     &trans                     &trans                         &trans                      &trans    &lt 11 R  &trans                      &trans                           &trans                      &trans
             >;
 

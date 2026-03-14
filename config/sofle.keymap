@@ -31,6 +31,8 @@
 
 &caps_word { continue-list = <DE_UNDERSCORE DE_MINUS DE_SLASH DE_QUESTION BACKSPACE DELETE LSHIFT>; };
 
+&sl { ignore-modifiers; };
+
 &left_encoder { steps = <60>; };
 
 &right_encoder { steps = <60>; };
@@ -576,6 +578,15 @@
             #binding-cells = <0>;
             bindings = <&sticky_shift LSHIFT &camel_case 4>;
         };
+
+        macro_Qu_capitalized: macro_Qu_capitalized {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <7>;
+            tap-ms = <10>;
+            bindings = <&kp LS(Q) &kp U>;
+            label = "MACRO_QU_CAPITALIZED";
+        };
     };
 
     behaviors {
@@ -845,6 +856,15 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
+
+        mod_qu_Qu: mod_qu_Qu {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_QU_QU";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&macro_Qu_capitalized>, <&macro_qu>;
+        };
     };
 
     sensors: sensors {
@@ -872,11 +892,11 @@
         Siggboy_Layer {
             display-name = "siggboy";
             bindings = <
-&kp ESC         &kp N1                                       &kp N2                     &kp N3                     &kp N4                         &kp N5                                         &kp N6                     &kp N7                           &kp N8                      &kp N9                      &kp N0                      &kp DE_SZ
-&kp TAB         &kp V                                        &kp G                      &kp L                      &mod_thorn_key 0 0             &sl 2                                          &kp DE_U_UMLAUT            &kp U                            &kp O                       &kp P                       &kp DE_Z                    &kp DE_O_UMLAUT
-&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI C  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT N  &hrm_mods_left LEFT_CONTROL T  &kp M                                          &kp K                      &hrm_mods_right RIGHT_CONTROL I  &hrm_shift_r RIGHT_SHIFT E  &hrm_mods_right LEFT_ALT A  &hrm_mods_right LEFT_GUI H  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &kp DE_X                                     &kp F                      &kp W                      &hrm_momentary_layer_l 7 V     &hrm_momentary_layer 12 B  &trans    &trans    &hrm_momentary_layer 12 J  &hrm_momentary_layer_r 7 M       &kp COMMA                   &kp DOT                     &kp DE_SZ                   &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                             &trans                     &trans                     &trans                         &trans                     &trans    &lt 11 R  &trans                     &trans                           &trans                      &trans
+&kp ESC         &kp N1                                       &kp N2                     &kp N3                     &kp N4                         &kp N5                                          &kp N6                      &kp N7                           &kp N8                      &kp N9                      &kp N0                      &kp DE_SZ
+&kp TAB         &kp V                                        &kp G                      &kp L                      &mod_thorn_key 0 0             &sl 2                                           &kp DE_U_UMLAUT             &kp U                            &kp O                       &kp P                       &kp DE_Z                    &kp DE_O_UMLAUT
+&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI C  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT N  &hrm_mods_left LEFT_CONTROL T  &hrm_momentary_layer_l 7 M                      &hrm_momentary_layer_r 7 K  &hrm_mods_right RIGHT_CONTROL I  &hrm_shift_r RIGHT_SHIFT E  &hrm_mods_right LEFT_ALT A  &hrm_mods_right LEFT_GUI H  &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &kp DE_X                                     &kp F                      &kp W                      &hrm_momentary_layer_l 7 D     &hrm_momentary_layer 12 B   &trans    &trans    &hrm_momentary_layer 12 J   &mod_y_you 0 Y                   &kp COMMA                   &kp DOT                     &kp DE_SZ                   &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                                             &trans                     &trans                     &trans                         &trans                      &trans    &lt 11 R  &trans                      &trans                           &trans                      &trans
             >;
 
             sensor-bindings =
@@ -886,11 +906,11 @@
 
         Siggboy_2nd_alpha {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &trans           &trans           &trans           &trans    &trans
-&trans  &trans  &trans  &trans  &macro_th  &trans                    &trans  &kp DE_U_UMLAUT  &kp DE_O_UMLAUT  &macro_qu        &kp DE_Q  &trans
-&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &kp DE_N0        &kp DE_N1        &kp DE_A_UMLAUT  &trans    &trans
-&trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &macro_you       &trans           &trans           &trans    &trans
-                &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans           &trans           &trans
+&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &trans                                       &trans                                       &trans                                       &trans                         &trans
+&trans  &trans  &trans  &trans  &macro_th  &trans                    &trans  &mod_taptap_150 LS(DE_U_UMLAUT) DE_U_UMLAUT  &mod_taptap_150 LS(DE_O_UMLAUT) DE_O_UMLAUT  &mod_qu_Qu 0 0                               &mod_taptap_150 LS(DE_Q) DE_Q  &trans
+&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &kp DE_N0                                    &kp DE_N1                                    &mod_taptap_150 LS(DE_A_UMLAUT) DE_A_UMLAUT  &trans                         &trans
+&trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &macro_you                                   &trans                                       &trans                                       &trans                         &trans
+                &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans                                       &trans                                       &trans
             >;
         };
 
@@ -942,11 +962,11 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-&kp ESCAPE        &kp DE_CARET                        &none                             &macro_single_backtick_grave  &macro_triple_backtick  &none                                           &none              &none                    &none                     &none             &none                   &none
-&kp TAB           &mod_tapBackticSingle 0 RS(DE_SQT)  &mod_tapBackticTrippe 0 DE_MINUS  &kp DE_LESS_THAN              &kp DE_GREATER_THAN     &kp PERCENT                                     &macro_zirkumflex  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &mt DE_GRAVE DE_DOLLAR  &mt DE_GRAVE DE_ACUTE
-&kp LSHFT         &kp DE_EXCL                         &kp DE_ASTERISK                   &kp DE_SLASH                  &kp DE_EQUAL            &kp DE_AMPERSAND                                &kp DE_POUND       &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &kp DE_DOUBLE_QUOTES    &kp DE_BACKSLASH
-&kp LEFT_CONTROL  &kp DE_TILDE                        &kp DE_PLUS                       &kp DE_LEFT_BRACKET           &kp DE_RIGHT_BRACKET    &kp DE_PIPE                   &trans    &trans  &kp DE_AT          &kp DE_DOLLAR            &kp COMMA                 &kp DE_PERIOD     &kp DE_UNDERSCORE       &macro_arrow_right
-                                                      &trans                            &trans                        &trans                  &hrm_momentary_layer 9 SPACE  &trans    &trans  &trans             &trans                   &trans                    &trans
+&kp ESCAPE        &kp DE_CARET                  &none                             &macro_single_backtick_grave  &macro_triple_backtick  &none                                           &none              &none                    &none                     &none             &none                   &none
+&kp TAB           &macro_single_backtick_grave  &mod_tapBackticTrippe 0 DE_MINUS  &kp DE_LESS_THAN              &kp DE_GREATER_THAN     &kp PERCENT                                     &macro_zirkumflex  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &mt DE_GRAVE DE_DOLLAR  &mt DE_GRAVE DE_ACUTE
+&kp LSHFT         &kp DE_EXCL                   &kp DE_ASTERISK                   &kp DE_SLASH                  &kp DE_EQUAL            &kp DE_AMPERSAND                                &kp DE_POUND       &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &kp DE_DOUBLE_QUOTES    &kp DE_BACKSLASH
+&kp LEFT_CONTROL  &kp DE_TILDE                  &kp DE_PLUS                       &kp DE_LEFT_BRACKET           &kp DE_RIGHT_BRACKET    &kp DE_PIPE                   &trans    &trans  &kp DE_AT          &kp DE_UNDERSCORE        &kp COMMA                 &kp DE_PERIOD     &kp DE_SINGLE_QUOTE     &macro_arrow_right
+                                                &trans                            &trans                        &trans                  &hrm_momentary_layer 9 SPACE  &trans    &trans  &trans             &trans                   &trans                    &trans
             >;
 
             sensor-bindings =

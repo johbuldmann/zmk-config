@@ -291,7 +291,7 @@
         };
 
         combo_numlayer {
-            bindings = <&smart_num 9 0>;
+            bindings = <&num_word 9>;
             key-positions = <26 33>;
             timeout-ms = <50>;
             require-prior-idle-ms = <120>;

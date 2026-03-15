@@ -290,25 +290,17 @@
             layers = <0 1 3 4 5 9 8 7 11>;
         };
 
-        combo_camelCase {
-            bindings = <&camel_case 4>;
+        combo_numlayer {
+            bindings = <&smart_num 9 0>;
             key-positions = <26 33>;
             timeout-ms = <50>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             layers = <0 1 3 4 5>;
         };
 
         combo_snake_case {
             bindings = <&camel_case 3>;
             key-positions = <14 21>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <150>;
-            layers = <0 1 3 4 5>;
-        };
-
-        combo_PascalCase {
-            bindings = <&macro_pascal_start>;
-            key-positions = <38 47>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             layers = <0 1 3 4 5>;
@@ -322,54 +314,9 @@
             layers = <1 3 4 5 0 11 6 8>;
         };
 
-        combo_printscreen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <41 29>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5 6>;
-        };
-
-        combo_ctrl_printscreen {
-            bindings = <&kp LC(PRINTSCREEN)>;
-            key-positions = <40 28>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5 6>;
-        };
-
-        combo_shift_printscreen {
-            bindings = <&kp LS(PRINTSCREEN)>;
-            key-positions = <39 27>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5 6>;
-        };
-
-        combo_alt_printscreen {
-            bindings = <&kp LA(PRINTSCREEN)>;
-            key-positions = <38 26>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 5 6>;
-        };
-
-        combo_numlayer {
-            bindings = <&mo 9>;
-            key-positions = <53 56>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <120>;
-            layers = <0 1 3 4 5 9 8 7 11>;
-        };
-
-        combo_number_layer {
+        combo_number_layer_left {
             bindings = <&smart_num 10 10>;
             key-positions = <28 29>;
-        };
-
-        combo_lefthand_number {
-            bindings = <&smart_num 10 10>;
-            key-positions = <53 54>;
         };
     };
 
@@ -1052,11 +999,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &out OUT_USB    &out OUT_BLE  &none         &none         &none         &kp KP_NUMLOCK
-&bt BT_CLR_ALL    &to 0         &to 1         &to 6         &to 8         &to 11                                  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LS(LA(LC(F12)))
-&kp LA(CAPSLOCK)  &none         &none         &none         &none         &none                                   &bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none         &none
-&bootloader       &sys_reset    &none         &none         &none         &none             &trans        &trans  &none           &none         &none         &none         &sys_reset    &bootloader
-                                &none         &none         &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none   &none           &none         &none         &none
+&bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1         &bt BT_SEL 2         &bt BT_SEL 3         &bt BT_SEL 4                            &out OUT_USB    &out OUT_BLE  &none         &none         &none         &kp KP_NUMLOCK
+&bt BT_CLR_ALL    &to 0            &to 1                &to 6                &to 8                &to 11                                  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LS(LA(LC(F12)))
+&kp LA(CAPSLOCK)  &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LS(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &none                                   &bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none         &none
+&bootloader       &sys_reset       &none                &none                &none                &none             &trans        &trans  &none           &none         &none         &none         &sys_reset    &bootloader
+                                   &none                &none                &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT    &none   &none           &none         &none         &none
             >;
 
             sensor-bindings =

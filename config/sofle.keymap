@@ -939,11 +939,11 @@
         symbol_layer {
             display-name = "symbol";
             bindings = <
-&kp ESCAPE        &kp DE_CARET                  &none                             &macro_single_backtick_grave  &macro_triple_backtick  &none                                           &none              &none                    &none                     &none             &none                 &none
-&kp TAB           &macro_single_backtick_grave  &mod_tapBackticTrippe 0 DE_MINUS  &kp DE_LESS_THAN              &kp DE_GREATER_THAN     &kp PERCENT                                     &macro_zirkumflex  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &kp DE_DOLLAR         &mt DE_GRAVE DE_ACUTE
-&kp LSHFT         &kp DE_EXCL                   &kp DE_ASTERISK                   &kp DE_SLASH                  &kp DE_EQUAL            &kp DE_AMPERSAND                                &kp DE_POUND       &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &kp DE_DOUBLE_QUOTES  &kp DE_SINGLE_QUOTE
-&kp LEFT_CONTROL  &kp DE_TILDE                  &kp DE_PLUS                       &kp DE_LEFT_BRACKET           &kp DE_RIGHT_BRACKET    &kp DE_PIPE                   &trans    &trans  &kp DE_AT          &kp DE_UNDERSCORE        &kp COMMA                 &kp DE_PERIOD     &kp DE_BACKSLASH      &macro_arrow_right
-                                                &trans                            &trans                        &trans                  &hrm_momentary_layer 5 SPACE  &trans    &trans  &trans             &trans                   &trans                    &trans
+&kp ESCAPE        &kp DE_CARET                  &none                             &macro_single_backtick_grave  &macro_triple_backtick  &none                                            &none              &none                    &none                     &none             &none                 &none
+&kp TAB           &macro_single_backtick_grave  &mod_tapBackticTrippe 0 DE_MINUS  &kp DE_LESS_THAN              &kp DE_GREATER_THAN     &kp PERCENT                                      &macro_zirkumflex  &kp DE_LEFT_BRACE        &kp DE_RIGHT_BRACE        &kp DE_COLON      &kp DE_DOLLAR         &mt DE_GRAVE DE_ACUTE
+&kp LSHFT         &kp DE_EXCL                   &kp DE_ASTERISK                   &kp DE_SLASH                  &kp DE_EQUAL            &kp DE_AMPERSAND                                 &kp DE_POUND       &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_SEMICOLON  &kp DE_DOUBLE_QUOTES  &kp DE_SINGLE_QUOTE
+&kp LEFT_CONTROL  &kp DE_TILDE                  &kp DE_PLUS                       &kp DE_LEFT_BRACKET           &kp DE_RIGHT_BRACKET    &kp DE_PIPE                    &trans    &trans  &kp DE_AT          &kp DE_UNDERSCORE        &kp COMMA                 &kp DE_PERIOD     &kp DE_BACKSLASH      &macro_arrow_right
+                                                &trans                            &trans                        &trans                  &hrm_momentary_layer 13 SPACE  &trans    &trans  &trans             &trans                   &trans                    &trans
             >;
 
             sensor-bindings =
@@ -1011,14 +1011,19 @@
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
-        SCROLL {
+        number_layer_duplicate {
+            display-name = "number";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1  &kp F2  &trans  &kp F4  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE        &none                                         &none                       &none                         &none                           &none                        &none                         &none                             &none                           &none                    &none                        &none
+&kp TAB           &kp F1                                        &kp F2                      &kp F3                        &kp F4                          &kp F5                       &kp F6                        &kp F7                            &kp F8                          &kp F9                   &kp F10                      &kp F11
+&kp LSHFT         &hrm_mods_left_short_tappingterm LEFT_GUI N1  &hrm_mods_left LEFT_ALT N2  &hrm_mods_left LEFT_SHIFT N3  &hrm_mods_left LEFT_CONTROL N4  &kp N5                       &kp N6                        &hrm_mods_right RIGHT_CONTROL N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right LALT N9  &hrm_mods_right LEFT_GUI N0  &kp F12
+&kp LEFT_CONTROL  &kp DE_MINUS                                  &kp DE_PLUS                 &kp DE_ASTERISK               &kp DE_SLASH                    &kp N0  &trans    &trans     &tog 5                        &mod_taptap_150 J SPACE           &mod_taptap_150 K COMMA         &kp DOT                  &none                        &trans
+                                                                &trans                      &trans                        &trans                          &trans  &trans    &kp ENTER  &hrm_momentary_layer 9 SPACE  &trans                            &trans                          &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };
 };

@@ -545,10 +545,12 @@
         };
 
         macro_unstick_mods: macro_unstick_mods {
+            label = "MACRO_UNSTICK_MODS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>;
-            label = "MACRO_UNSTICK_MODS";
+            wait-ms = <16>;
+            tap-ms = <20>;
+            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
     };
 

@@ -48,7 +48,7 @@
         combo_F24_minimize_Window {
             bindings = <&kp F24>;
             key-positions = <0 1>;
-            layers = <1 3 4 7 0 11 8 10 6 5>;
+            layers = <1 3 4 7 0 11 8 10 6 5 13>;
             timeout-ms = <50>;
             require-prior-idle-ms = <90>;
         };
@@ -96,7 +96,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 1 3 4 7 8 10 9 11 5>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -104,7 +104,7 @@
         combo_CTRL_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 1 3 4 7 8 10 9 11 5>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -144,7 +144,7 @@
         combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 47>;
-            layers = <0 1 3 4 7 5 10>;
+            layers = <0 1 3 4 7 5 13 10>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
         };
@@ -168,7 +168,7 @@
         combo_Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
-            layers = <0 1 3 4 7 8 10 9 11 5>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
         };
@@ -194,7 +194,7 @@
             key-positions = <47 48 46>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 3 4 7 5>;
+            layers = <0 1 3 4 7 5 13>;
         };
 
         combo_new_tab {
@@ -218,7 +218,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <150>;
-            layers = <0 1 3 4 7 8 10 9 11 5>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13>;
         };
 
         combo_arrowa_right {

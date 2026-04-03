@@ -574,7 +574,7 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick-tap-ms = <270>;
+            quick-tap-ms = <230>;
             flavor = "balanced";
             hold-trigger-key-positions = <54 53 52 51 50 36 37 38 39 40 41 29 4 5 16 28 27 15 3 2 14 26 25 24 12 13 0 1 17>;
             require-prior-idle-ms = <60>;

@@ -317,7 +317,7 @@
         combo_number_layer_left {
             bindings = <&smart_num 6 6>;
             key-positions = <28 29>;
-            layers = <6>;
+            layers = <6 0 1>;
             timeout-ms = <50>;
             require-prior-idle-ms = <80>;
         };
@@ -559,6 +559,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_SHIFT_L";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <175>;
@@ -572,6 +573,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_SHIFT_R";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <230>;
@@ -640,6 +642,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_MODS_LEFT";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <175>;
@@ -653,6 +656,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_MODS_RIGHT";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <280>;

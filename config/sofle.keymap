@@ -830,6 +830,17 @@
             tapping-term-ms = <150>;
             bindings = <&macro_Qu_capitalized>, <&macro_qu>;
         };
+
+        momentary_layer_adjust: momentary_layer_adjust {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMENTARY_LAYER_ADJUST";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+        };
     };
 
     sensors: sensors {
@@ -844,11 +855,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&kp ESC         &kp N1                                       &kp N2                     &kp N3                      &kp N4                         &kp N5                                                       &kp N6                                      &kp N7                           &kp N8                      &kp N9                      &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
-&kp TAB         &kp Q                                        &kp W                      &hrm_momentary_layer_l 9 E  &kp R                          &kp T                                                        &mod_taptap_150 MINUS DE_Z                  &kp U                            &hrm_momentary_layer_r 9 I  &kp O                       &kp P                                   &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D   &hrm_mods_left LEFT_CONTROL F  &hrm_momentary_layer_l 9 G                                   &kp H                                       &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K  &hrm_mods_right LEFT_ALT L  &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &kp DE_Y                                     &kp X                      &kp C                       &kp V                          &hrm_momentary_layer 12 B   &none           &none            &hrm_momentary_layer 12 N                   &kp M                            &kp COMMA                   &kp DOT                     &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                             &kp LGUI                   &kp LALT                    &lt 10 ESCAPE                  &kp SPACE                   &lt 11 ENTER    &smart_num 11 5  &momentary_layer_sticky_shif 9 RIGHT_SHIFT  &smart_num 5 5                   &kp K_CONTEXT_MENU          &kp RALT
+&kp ESC         &kp N1                                       &kp N2                     &kp N3                      &kp N4                         &kp N5                                                         &kp N6                                      &kp N7                           &kp N8                      &kp N9                      &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
+&kp TAB         &kp Q                                        &kp W                      &hrm_momentary_layer_l 9 E  &kp R                          &kp T                                                          &mod_taptap_150 MINUS DE_Z                  &kp U                            &hrm_momentary_layer_r 9 I  &kp O                       &kp P                                   &kp DE_U_UMLAUT
+&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D   &hrm_mods_left LEFT_CONTROL F  &hrm_momentary_layer_l 9 G                                     &kp H                                       &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K  &hrm_mods_right LEFT_ALT L  &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL       &kp DE_Y                                     &kp X                      &kp C                       &kp V                          &momentary_layer_adjust 12 B  &none           &none            &momentary_layer_adjust 12 N                &kp M                            &kp COMMA                   &kp DOT                     &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                                             &kp LGUI                   &kp LALT                    &lt 10 ESCAPE                  &kp SPACE                     &lt 11 ENTER    &smart_num 11 5  &momentary_layer_sticky_shif 9 RIGHT_SHIFT  &smart_num 5 5                   &kp K_CONTEXT_MENU          &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

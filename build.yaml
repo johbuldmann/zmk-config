@@ -25,5 +25,4 @@ include:
   - board: nice_nano_v2
     shield: sofle_right
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-  - board: nice_nano_v2
-    shield: settings_reset
+    snippet: zmk-usb-logging

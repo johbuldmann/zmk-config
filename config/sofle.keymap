@@ -199,7 +199,7 @@
 
         combo_new_tab {
             bindings = <&kp LC(T)>;
-            key-positions = <16 15 14 13>;
+            key-positions = <16 15>;
             timeout-ms = <30>;
             require-prior-idle-ms = <300>;
             layers = <0 1 3 4 7>;
@@ -338,7 +338,7 @@
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <15 16>;
+            key-positions = <15 16 13 14>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
             layers = <0 1 3 4 7 8 10 9 11 5 13 2 6 12>;

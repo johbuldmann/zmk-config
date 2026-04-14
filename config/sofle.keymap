@@ -343,6 +343,14 @@
             require-prior-idle-ms = <70>;
             layers = <0 1 3 4 7 8 10 9 11 5 13 2 6 12>;
         };
+
+        combo_Shift_Enter {
+            bindings = <&kp LS(ENTER)>;
+            key-positions = <31 30>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <70>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13 2 6 12>;
+        };
     };
 
     macros {

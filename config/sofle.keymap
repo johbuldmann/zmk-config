@@ -493,15 +493,6 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>;
         };
 
-        // ≈ Ungefähr (Alt+247 - OEM Code Page)
-        macro_approx: macro_approx {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <7>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N2 &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>;
-        };
-
         // NBSP: Geschütztes Leerzeichen (Alt+0160)
         macro_nbsp: macro_nbsp {
             compatible = "zmk,behavior-macro";

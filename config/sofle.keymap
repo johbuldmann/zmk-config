@@ -361,7 +361,7 @@
         };
 
         combo_Listary {
-            bindings = <&kp LA(F17)>;
+            bindings = <&kp F17>;
             key-positions = <28 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <40>;

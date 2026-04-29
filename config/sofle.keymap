@@ -290,14 +290,6 @@
             layers = <0 1 3 4 7 5 10 9 11 2 6 13>;
         };
 
-        combo_numlayer {
-            bindings = <&num_word 5>;
-            key-positions = <26 33>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <120>;
-            layers = <0 1 3 4 7>;
-        };
-
         combo_snake_case {
             bindings = <&camel_case 3>;
             key-positions = <>;
@@ -349,7 +341,7 @@
             key-positions = <28 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 3 4 7 8 10 9 11 5 13 2 6 12>;
+            layers = <0 1 3 4 7 8 10 9 5 13 2 6 12>;
         };
 
         combo_f24_universal_key_2 {
@@ -366,6 +358,22 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <40>;
             layers = <11>;
+        };
+
+        combo_+f24_universal_key_navl {
+            bindings = <&kp LS(F24)>;
+            key-positions = <28 27>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <70>;
+            layers = <11>;
+        };
+
+        combo_+f24_universal_key_3 {
+            bindings = <&kp LS(F24)>;
+            key-positions = <28 30>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <70>;
+            layers = <0 1 3 4 7 8 10 9 11 5 13 2 6 12>;
         };
     };
 

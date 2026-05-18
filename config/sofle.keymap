@@ -307,9 +307,9 @@
         };
 
         combo_number_layer_left {
-            bindings = <&smart_num 7 6>;
+            bindings = <&tog 7>;
             key-positions = <38 39>;
-            layers = <7 0 1 2>;
+            layers = <0 1 2>;
             timeout-ms = <50>;
             require-prior-idle-ms = <80>;
         };
@@ -1134,7 +1134,7 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&mod_taaap F23 ESC  &kp N1                                       &kp N2                     &kp N3                       &kp N4                                &kp N5                                                         &kp N6                                       &kp N7                           &kp N8                              &kp N9                        &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
+&mod_taaap F20 ESC  &kp N1                                       &kp N2                     &kp N3                       &kp N4                                &kp N5                                                         &kp N6                                       &kp N7                           &kp N8                              &kp N9                        &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
 &kp TAB             &kp Q                                        &kp W                      &hrm_momentary_layer_l 10 E  &kp R                                 &kp T                                                          &mod_taptap_150 MINUS DE_Z                   &kp U                            &hrm_momentary_layer_r 10 I         &kp O                         &kp P                                   &kp DE_U_UMLAUT
 &kp LEFT_SHIFT      &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D    &hrm_mods_left LEFT_CONTROL F         &hrm_momentary_layer_l 10 G                                    &kp H                                        &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K          &hrm_mods_right LEFT_ALT L    &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
 &kp LCTRL           &kp DE_Y                                     &kp X                      &kp C                        &kp V                                 &momentary_layer_adjust 13 B  &none           &none            &momentary_layer_adjust 13 N                 &kp M                            &mod_taptap_150 DE_SEMICOLON COMMA  &mod_taptap_150 DE_COLON DOT  &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
@@ -1224,7 +1224,7 @@
 &kp TAB           &kp N6        &kp N7       &kp N8           &kp N9        &kp N0                                          &kp F6                         &kp F7                            &kp F8                          &kp F9                   &kp F10                      &kp F11
 &kp LSHFT         &kp N1        &kp N2       &kp N3           &kp N4        &kp N5                                          &kp N6                         &hrm_mods_right RIGHT_CONTROL N7  &hrm_mods_right RIGHT_SHIFT N8  &hrm_mods_right LALT N9  &hrm_mods_right LEFT_GUI N0  &kp F12
 &kp LEFT_CONTROL  &kp DE_MINUS  &kp DE_PLUS  &kp DE_ASTERISK  &kp DE_SLASH  &mod_taptap_150 DOT COMMA  &trans    &trans     &tog 7                         &mod_taptap_150 J SPACE           &mod_taptap_150 K COMMA         &kp DOT                  &none                        &trans
-                                &trans       &trans           &trans        &trans                     &trans    &kp ENTER  &hrm_momentary_layer 10 SPACE  &trans                            &trans                          &trans
+                                &trans       &trans           &tog 7        &trans                     &trans    &kp ENTER  &hrm_momentary_layer 10 SPACE  &trans                            &trans                          &trans
             >;
 
             sensor-bindings =
@@ -1276,8 +1276,8 @@
             display-name = "numpad";
             bindings = <
 &kp ESCAPE        &none                        &none                        &none                        &none                        &none                              &kp KP_NUMLOCK    &none            &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp DE_GRAVE                      &kp DE_ACUTE
-&kp TAB           &kp LC(LS(F18))              &kp LS(F19)                  &kp LS(LC(F20))              &kp LS(LC(F21))              &kp LS(LC(F22))                    &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                      &kp DE_HASH
-&kp LSHFT         &mod_taptap_150 LS(F18) F18  &mod_taptap_150 LS(F19) F19  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                            &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hrm_shift_r RIGHT_SHIFT KP_PLUS  &trans
+&kp TAB           &kp LC(LS(F15))              &kp LS(F16)                  &kp LS(LC(F17))              &kp LS(LC(F18))              &kp LS(LC(F19))                    &kp DE_COLON      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                      &kp DE_HASH
+&kp LSHFT         &mod_taptap_150 LS(F15) F15  &mod_taptap_150 LS(F16) F16  &mod_taptap_150 LS(F20) F20  &mod_taptap_150 LS(F21) F21  &kp F22                            &kp DE_SEMICOLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &hrm_shift_r RIGHT_SHIFT KP_PLUS  &trans
 &kp LEFT_CONTROL  &kp LC(F18)                  &kp LC(F19)                  &kp LC(F20)                  &kp LC(F21)                  &kp LC(F22)      &trans    &trans  &kp KP_NUMBER_0   &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL                      &trans
                                                &trans                       &trans                       &trans                       &trans           &trans    &trans  &kp SPACE         &kp KP_N0        &kp COMMA        &kp PERIOD
             >;

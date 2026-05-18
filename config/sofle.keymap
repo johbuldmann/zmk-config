@@ -1322,7 +1322,7 @@
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1         &bt BT_SEL 2         &bt BT_SEL 3         &bt BT_SEL 4                            &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &bt BT_CLR_ALL  &none         &kp KP_NUMLOCK
 &bt BT_CLR_ALL    &to 0            &to 1                &to 2                &to 9                &to 12                                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &kp LS(LA(LC(F12)))
-&kp LA(CAPSLOCK)  &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LS(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &none                                   &kp LS(F15)   &kp LS(F15)   &kp F15       &kp LC(F15)     &none         &none
+&kp LA(CAPSLOCK)  &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LS(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &none                                   &kp LS(F14)   &kp LS(F14)   &kp F14       &kp LC(F15)     &none         &none
 &bootloader       &sys_reset       &none                &none                &none                &none             &trans        &trans  &none         &none         &none         &none           &sys_reset    &bootloader
                                    &none                &none                &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT    &none   &none         &none         &none         &none
             >;

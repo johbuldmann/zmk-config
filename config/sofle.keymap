@@ -329,7 +329,7 @@
         };
 
         combo_Shift_Enter {
-            bindings = <&kp ENTER>;
+            bindings = <&mod_taptap_150 LC(ENTER) LS(ENTER)>;
             key-positions = <31 30>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;

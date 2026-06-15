@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: kbrd-space
+      url-base: https://github.com/kbrd-space
 #   - name: geeksville
 #     url-base: https://github.com/geeksville
   projects:
@@ -16,6 +18,9 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
       revision: v0.3 # Passend zu ZMK v0.3
+    - name: zmk-anti-idle
+      remote: kbrd-space
+      revision: main
     - name: cirque-input-module
       remote: petejohanson
       revision: main

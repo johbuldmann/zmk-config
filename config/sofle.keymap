@@ -816,10 +816,11 @@
         
         anti_idle {
         compatible = "zmk,anti-idle-generic";
-        interval-ms = <60000>;                      // Alle 60 Sekunden aktiv werden
-        bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>;   // Schiebt die Maus kurz runter und hoch
-        tap_ms = <10>;                              // Sehr kurze Bewegung, damit es nicht nervt
-        wait_ms = <50>;                             // Pause zwischen Runter und Hoch
+        interval-ms = <15000>;                      // Alle 60 Sekunden aktiv werden
+        // bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>;   // Schiebt die Maus kurz runter und hoch
+        bindings = <&mmv MOVE_RIGHT>;
+        tap_ms = <200>;                              // Sehr kurze Bewegung, damit es nicht nervt
+        wait_ms = <0>;                             // Pause zwischen Runter und Hoch
         };
     };
 

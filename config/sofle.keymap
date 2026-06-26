@@ -4,14 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <behaviors/anti_idle_mode.dtsi>
+#include <dt-bindings/anti_idle_mode.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/anti_idle_mode.dtsi>
-#include <dt-bindings/anti_idle_mode.h>
-
 
 #ifndef KEYMAP_DRAWER
 
@@ -813,13 +812,13 @@
             tap-ms = <20>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
-        
+
         anti_idle {
-        compatible = "zmk,anti-idle-generic";
-        interval-ms = <15000>;                      // Alle 60 Sekunden aktiv werden
-        bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>;   // Schiebt die Maus kurz runter und hoch
-        tap_ms = <100>;                              // Sehr kurze Bewegung, damit es nicht nervt
-        wait_ms = <200>;                             // Pause zwischen Runter und Hoch
+            compatible = "zmk,anti-idle-generic";
+            interval-ms = <15000>;                      // Alle 60 Sekunden aktiv werden
+            bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>;   // Schiebt die Maus kurz runter und hoch
+            tap_ms = <100>;                              // Sehr kurze Bewegung, damit es nicht nervt
+            wait_ms = <200>;                             // Pause zwischen Runter und Hoch
         };
     };
 
@@ -1131,6 +1130,16 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        layer_repeat: layer_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_REPEAT";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <160>;
+        };
     };
 
     sensors: sensors {
@@ -1145,11 +1154,11 @@
         QWERTZ_Layer {
             display-name = "qwertz";
             bindings = <
-&mod_taaap LC(F20) ESC  &kp N1                                       &kp N2                     &kp N3                       &kp N4                         &kp N5                                                         &kp N6                                       &kp N7                           &kp N8                              &kp N9                        &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
-&kp TAB                 &kp Q                                        &kp W                      &hrm_momentary_layer_l 10 E  &kp R                          &kp T                                                          &mod_taptap_150 MINUS DE_Z                   &kp U                            &hrm_momentary_layer_r 10 I         &kp O                         &kp P                                   &kp DE_U_UMLAUT
-&kp LEFT_SHIFT          &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D    &hrm_mods_left LEFT_CONTROL F  &mod_taaap LC(ENTER) G                                         &mod_taaap ENTER H                           &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K          &hrm_mods_right LEFT_ALT L    &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL               &kp DE_Y                                     &kp X                      &kp C                        &kp V                          &momentary_layer_adjust 13 B  &none           &none            &momentary_layer_adjust 13 N                 &kp M                            &mod_taptap_150 DE_SEMICOLON COMMA  &mod_taptap_150 DE_COLON DOT  &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                                     &kp LGUI                   &kp LALT                     &lt 11 F23                     &kp SPACE                     &lt 12 ENTER    &smart_num 12 6  &momentary_layer_sticky_shif 10 RIGHT_SHIFT  &smart_num 6 6                   &kp K_CONTEXT_MENU                  &kp RALT
+&mod_taaap LC(F20) ESC  &kp N1                                       &kp N2                     &kp N3                       &kp N4                         &kp N5                                                               &kp N6                                       &kp N7                           &kp N8                              &kp N9                        &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
+&kp TAB                 &kp Q                                        &kp W                      &hrm_momentary_layer_l 10 E  &kp R                          &kp T                                                                &mod_taptap_150 MINUS DE_Z                   &kp U                            &hrm_momentary_layer_r 10 I         &kp O                         &kp P                                   &kp DE_U_UMLAUT
+&kp LEFT_SHIFT          &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D    &hrm_mods_left LEFT_CONTROL F  &mod_taaap LC(ENTER) G                                               &mod_taaap ENTER H                           &hrm_mods_right RIGHT_CONTROL J  &hrm_shift_r RIGHT_SHIFT K          &hrm_mods_right LEFT_ALT L    &hrm_mods_right LEFT_GUI DE_O_UMLAUT    &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
+&kp LCTRL               &kp DE_Y                                     &kp X                      &kp C                        &kp V                          &momentary_layer_adjust 13 B  &none                 &none            &momentary_layer_adjust 13 N                 &kp M                            &mod_taptap_150 DE_SEMICOLON COMMA  &mod_taptap_150 DE_COLON DOT  &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
+                                                                     &kp LGUI                   &kp LALT                     &lt 11 F23                     &kp SPACE                     &layer_repeat 12 0    &smart_num 12 6  &momentary_layer_sticky_shif 10 RIGHT_SHIFT  &smart_num 6 6                   &kp K_CONTEXT_MENU                  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -1334,7 +1343,7 @@
 &bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1         &bt BT_SEL 2         &bt BT_SEL 3         &bt BT_SEL 4                            &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &bt BT_CLR_ALL  &none         &kp KP_NUMLOCK
 &bt BT_CLR_ALL    &to 0            &to 1                &to 2                &to 9                &to 12                                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &kp LS(LA(LC(F12)))
 &kp LA(CAPSLOCK)  &kp PRINTSCREEN  &kp LA(PRINTSCREEN)  &kp LS(PRINTSCREEN)  &kp LC(PRINTSCREEN)  &none                                   &kp LS(F14)   &kp LS(F14)   &kp F14       &kp LC(F15)     &none         &none
-&bootloader       &sys_reset       &none                &aim AIM_ON          &aim AIM_OFF        &none             &trans        &trans  &none         &none         &none         &none           &sys_reset    &bootloader
+&bootloader       &sys_reset       &none                &aim AIM_ON          &aim AIM_OFF         &none             &trans        &trans  &none         &none         &none         &none           &sys_reset    &bootloader
                                    &none                &none                &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT    &none   &none         &none         &none         &none
             >;
 

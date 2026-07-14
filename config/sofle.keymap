@@ -175,8 +175,8 @@
             require-prior-idle-ms = <70>;
         };
 
-        combo_Raycast {
-            bindings = <&mod_taptap_150 LA(W) LA(SPACE)>;
+        combo_listary_new {
+            bindings = <&kp F22>;
             key-positions = <28 29>;
             layers = <0 1 2 4 5 8>;
             timeout-ms = <30>;
@@ -204,14 +204,6 @@
             key-positions = <16 15>;
             timeout-ms = <30>;
             require-prior-idle-ms = <300>;
-            layers = <0 1 2 4 5 8>;
-        };
-
-        combo_ctrl_shift_v {
-            bindings = <&kp LS(LC(V))>;
-            key-positions = <>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
             layers = <0 1 2 4 5 8>;
         };
 
@@ -276,14 +268,6 @@
             layers = <13>;
         };
 
-        combo_flowWindowChanger {
-            bindings = <&kp LA(W)>;
-            key-positions = <27 26 25 28>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <100>;
-            layers = <0 1 2 4 5 8>;
-        };
-
         combo_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <27 32>;
@@ -338,8 +322,8 @@
             layers = <0 1 2 4 5 8 9 11 10 12 6 14 3 7 13>;
         };
 
-        combo_f24_universal_key {
-            bindings = <&mod_taptap_150 LS(F24) F24>;
+        combo_raycast {
+            bindings = <&kp LA(SPACE)>;
             key-positions = <28 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
@@ -352,22 +336,6 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
             layers = <0 1 2 4 5 8 9 11 10 12 6 14 3 7 13>;
-        };
-
-        combo_Listary {
-            bindings = <&kp F22>;
-            key-positions = <28 29>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <40>;
-            layers = <12>;
-        };
-
-        combo_+f24_universal_key_navl {
-            bindings = <&kp LS(F24)>;
-            key-positions = <28 27>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <70>;
-            layers = <12>;
         };
 
         combo_+f24_universal_key_3 {

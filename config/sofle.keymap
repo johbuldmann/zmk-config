@@ -1167,9 +1167,7 @@
                                                              &trans                     &trans                       &trans                         &trans                       &trans    &lt 12 R  &trans                       &trans                           &trans                       &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp F21 F20>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Siggboy_2nd_alpha {
@@ -1227,9 +1225,7 @@
                                 &trans       &trans           &tog 7        &trans                     &trans    &kp ENTER  &MOMENTARY_LAYER_TOGGLE 10 7  &trans                            &trans                          &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         MOUSE {
@@ -1252,9 +1248,7 @@
                            &kp LEFT_GUI  &kp LALT  &kp LEFT_ALT  &kp SPACE  &trans    &trans  &mo 9                      &kp BACKSPACE  &kp DEL  &kp RALT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp F21 F20>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         symbol_layer {
@@ -1267,9 +1261,7 @@
                                                                                     &trans                            &trans                                &trans                     &hrm_momentary_layer 14 SPACE  &trans    &trans  &trans             &trans                   &trans                    &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Numpad_Layer {
@@ -1282,9 +1274,7 @@
                                                &trans                       &trans                       &trans                       &trans           &trans    &trans  &kp SPACE         &kp KP_N0        &kp COMMA        &kp PERIOD
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Navigation_Layer {
@@ -1305,9 +1295,7 @@
                                 &trans       &trans                                     &trans                                &trans                           &kp ENTER    &kp ENTER  &kp SPACE           &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Adjust_Layer {
@@ -1327,9 +1315,7 @@
                                    &none                &none                &kp C_PREV           &kp C_PLAY_PAUSE  &kp C_NEXT    &none   &none         &none         &none         &none
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         number_layer_duplicate {
@@ -1342,9 +1328,7 @@
                                                                 &trans                      &trans                        &trans                          &trans  &trans    &kp ENTER  &hrm_momentary_layer 10 SPACE  &trans                            &trans                          &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };

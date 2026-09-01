@@ -31,6 +31,11 @@
 
 #define QUICK_TAP_MS 175
 
+// Ebenengruppen fuer Combos -- hier pflegen, nicht in den 37 Combos einzeln
+#define LAYERS_ALL   0 1 2 3 4 5 6 7 8 9 10 11 12   // inkl. Game (7)
+#define LAYERS_MOST  0 1 2 3 4 5 6 8 9 10 11 12     // ohne Game
+#define LAYERS_WRITE 0 1 2 3                        // nur Schreibebenen
+
 
 &sl { ignore-modifiers; };
 
@@ -49,7 +54,7 @@
         combo_F24_minimize_Window {
             bindings = <&kp LC(F24)>;
             key-positions = <0 1>;
-            layers = <0 1 2 6 10 7 9 5 4 12>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <50>;
             require-prior-idle-ms = <90>;
         };
@@ -57,7 +62,7 @@
         combo_CTRL_Z {
             bindings = <&kp LC(DE_Z)>;
             key-positions = <>;
-            layers = <0 1 2 6 10 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -65,7 +70,7 @@
         combo_copy_cut {
             bindings = <&mt LC(X) LC(C)>;
             key-positions = <>;
-            layers = <0 1 2 6 10 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -73,7 +78,7 @@
         combo_CTRL_V {
             bindings = <&kp LC(V)>;
             key-positions = <>;
-            layers = <0 1 2 6 10 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <22>;
             require-prior-idle-ms = <100>;
         };
@@ -81,7 +86,7 @@
         combo_win_paste {
             bindings = <&mod_taptap_150 LS(LC(V)) LG(V)>;
             key-positions = <>;
-            layers = <0 1 2 6 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -89,7 +94,7 @@
         combo_CTRL_Y {
             bindings = <&kp LC(DE_Y)>;
             key-positions = <>;
-            layers = <0 1 2 6 10 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -97,7 +102,7 @@
         combo_CTRL_Backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
-            layers = <0 1 2 6 7 9 8 10 4 12>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -105,7 +110,7 @@
         combo_CTRL_Delete {
             bindings = <&kp LC(DELETE)>;
             key-positions = <20 21>;
-            layers = <0 1 2 6 7 9 8 10 4 12>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <25>;
             require-prior-idle-ms = <100>;
         };
@@ -113,7 +118,7 @@
         combo_Printscreen1 {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <10 11>;
-            layers = <0 1 2 6 10 7>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -121,7 +126,7 @@
         combo_Guillemets_open {
             bindings = <&macro_Guillemets_open>;
             key-positions = <1 2>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_WRITE>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -129,7 +134,7 @@
         combo_Guillemets_close {
             bindings = <&macro_Guillemets_close>;
             key-positions = <2 3>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_WRITE>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -137,7 +142,7 @@
         combo_capsword {
             bindings = <&caps_word_al 1>;
             key-positions = <25 34>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_WRITE>;
             timeout-ms = <65>;
             require-prior-idle-ms = <150>;
         };
@@ -145,7 +150,7 @@
         combo_en_dash2 {
             bindings = <&macro_en_dash>;
             key-positions = <48 47>;
-            layers = <0 1 2 6 4 12 9>;
+            layers = <LAYERS_WRITE>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
         };
@@ -153,7 +158,7 @@
         combo_question {
             bindings = <&kp DE_QUESTION>;
             key-positions = <46 47>;
-            layers = <0 1 2 6 7 9 8 10 4 12>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <50>;
             require-prior-idle-ms = <75>;
         };
@@ -161,7 +166,7 @@
         combo_exclamation {
             bindings = <&kp EXCLAMATION>;
             key-positions = <46 45>;
-            layers = <0 1 2 6 7 9 8 10 4 12>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <45>;
             require-prior-idle-ms = <100>;
         };
@@ -169,7 +174,7 @@
         combo_Backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
-            layers = <0 1 2 6 7 9 8 10 4 12 3 5 11>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
         };
@@ -177,7 +182,7 @@
         combo_listary_new {
             bindings = <&kp F22>;
             key-positions = <28 29>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
         };
@@ -187,7 +192,7 @@
             key-positions = <16 17>;
             timeout-ms = <35>;
             require-prior-idle-ms = <300>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_em_dash2 {
@@ -195,7 +200,7 @@
             key-positions = <47 48 46>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6 4 12>;
+            layers = <LAYERS_WRITE>;
         };
 
         combo_new_tab {
@@ -203,7 +208,7 @@
             key-positions = <16 15>;
             timeout-ms = <30>;
             require-prior-idle-ms = <300>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_Delete {
@@ -211,7 +216,7 @@
             key-positions = <32 33>;
             timeout-ms = <25>;
             require-prior-idle-ms = <150>;
-            layers = <0 1 2 6 7 9 8 10 4 12>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_arrowa_right {
@@ -219,7 +224,7 @@
             key-positions = <48 49>;
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_WRITE>;
         };
 
         combo_Paste_withouta_formatting {
@@ -227,14 +232,14 @@
             key-positions = <>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_change_audiodevice {
             bindings = <&kp LA(LS(LC(F14)))>;
             key-positions = <5 6>;
             timeout-ms = <40>;
-            layers = <0 1 2>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_Printscreen2 {
@@ -242,7 +247,7 @@
             key-positions = <4 5>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_CTRL_Z_2 {
@@ -250,7 +255,7 @@
             key-positions = <18 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6 7 9 8 10 4>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_Menuekey {
@@ -258,7 +263,7 @@
             key-positions = <50 51>;
             timeout-ms = <30>;
             require-prior-idle-ms = <100>;
-            layers = <0 1 2 6>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_p {
@@ -272,7 +277,7 @@
             key-positions = <27 32>;
             timeout-ms = <55>;
             require-prior-idle-ms = <120>;
-            layers = <0 1 2 6 4 9 8 10 3 5 12>;
+            layers = <LAYERS_ALL>;
         };
 
         combo_F24_minimize_Window_2 {
@@ -280,13 +285,13 @@
             key-positions = <15 14>;
             timeout-ms = <22>;
             require-prior-idle-ms = <150>;
-            layers = <2 6 0 10 7 9>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_number_layer_left {
             bindings = <&tog 5>;
             key-positions = <38 39>;
-            layers = <0 1 2>;
+            layers = <LAYERS_WRITE>;
             timeout-ms = <50>;
             require-prior-idle-ms = <80>;
         };
@@ -302,7 +307,7 @@
             key-positions = <26 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 2 6 7 9 8 10 4 12 3 5 11>;
+            layers = <LAYERS_ALL>;
         };
 
         combo_Shift_Enter {
@@ -310,7 +315,7 @@
             key-positions = <31 30>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 2 6 7 9 8 10 4 12 3 5 11>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_raycast {
@@ -318,7 +323,7 @@
             key-positions = <28 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 2 6 7 9 8 4 12 3 5 11>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_f24_universal_key_2 {
@@ -326,7 +331,7 @@
             key-positions = <28 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 2 6 7 9 8 10 4 12 3 5 11>;
+            layers = <LAYERS_MOST>;
         };
 
         combo_+f24_universal_key_3 {
@@ -334,7 +339,7 @@
             key-positions = <28 30>;
             timeout-ms = <30>;
             require-prior-idle-ms = <70>;
-            layers = <0 1 2 6 7 9 8 10 4 12 3 5 11>;
+            layers = <LAYERS_MOST>;
         };
     };
 

@@ -31,7 +31,6 @@
 
 #define QUICK_TAP_MS 175
 
-&caps_word { continue-list = <DE_UNDERSCORE DE_MINUS DE_SLASH DE_QUESTION BACKSPACE DELETE LSHIFT>; };
 
 &sl { ignore-modifiers; };
 
@@ -136,7 +135,7 @@
         };
 
         combo_capsword {
-            bindings = <&caps_word>;
+            bindings = <&caps_word_al 1>;
             key-positions = <25 34>;
             layers = <0 1 2 4 5 8>;
             timeout-ms = <65>;
@@ -1008,6 +1007,32 @@
             ignore-modifiers;
         };
 
+        // Caps Word als Auto-Layer: Exit per Tap auf die One-Shot-Shift-Position
+        caps_word_al: caps_word_al {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                DE_A_UMLAUT DE_O_UMLAUT DE_U_UMLAUT DE_SZ
+                N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+                DE_MINUS DE_UNDERSCORE BSPC DEL
+            >;
+
+            ignore-modifiers;
+        };
+
+        // Hold: Momentary Layer | Tap: Caps Word beenden
+        momentary_layer_caps_exit: momentary_layer_caps_exit {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMENTARY_LAYER_CAPS_EXIT";
+            bindings = <&mo>, <&caps_word_al>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            quick-tap-ms = <333>;
+        };
+
         momentary_layer_sticky_shif: momentary_layer_sticky_shif {
             compatible = "zmk,behavior-hold-tap";
             label = "MOMENTARY_LAYER_STICKY_SHIF";
@@ -1144,14 +1169,14 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        ETNI_Layout {
-            display-name = "etny_layout";
+        capsword_layer {
+            display-name = "capsword";
             bindings = <
-&kp ESC         &kp N1                                       &kp N2                     &kp N3                       &kp N4                         &kp N5                                                         &kp N6                                       &kp N7                           &kp N8                              &kp N9                        &mod_taptap_150 LC(ENTER) N0            &mod_taptap_150 LA(F23) LS(F23)
-&kp TAB         &kp Q                                        &kp W                      &hrm_momentary_layer_l 10 E  &kp F                          &kp P                                                          &mod_taptap_150 MINUS DE_Z                   &kp U                            &hrm_momentary_layer_r 10 I         &kp O                         &kp DE_O_UMLAUT                         &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &hrm_mods_left_short_tappingterm LEFT_GUI A  &hrm_mods_left LEFT_ALT S  &hrm_shift_l LEFT_SHIFT D    &hrm_mods_left LEFT_CONTROL T  &hrm_momentary_layer_l 10 G                                    &kp H                                        &hrm_mods_right RIGHT_CONTROL N  &hrm_shift_r RIGHT_SHIFT K          &hrm_mods_right LEFT_ALT L    &hrm_mods_right LEFT_GUI R              &hrm_shift_r RIGHT_SHIFT DE_A_UMLAUT
-&kp LCTRL       &kp DE_Y                                     &kp X                      &kp C                        &kp V                          &momentary_layer_adjust 13 B  &none           &none            &momentary_layer_adjust 13 J                 &kp M                            &mod_taptap_150 DE_SEMICOLON COMMA  &mod_taptap_150 DE_COLON DOT  &mod_taptap_150 DE_UNDERSCORE DE_MINUS  &hrm_shift_r RIGHT_CONTROL DE_UNDERSCORE
-                                                             &kp LGUI                   &kp LALT                     &lt 11 ESCAPE                  &kp SPACE                     &lt 12 ENTER    &smart_num 12 6  &momentary_layer_sticky_shif 10 RIGHT_SHIFT  &smart_num 6 6                   &kp K_CONTEXT_MENU                  &kp RALT
+&trans  &trans            &trans            &trans                              &trans            &trans                                                       &trans             &trans            &trans                              &trans            &trans                              &trans
+&trans  &kp LS(Q)         &kp LS(W)         &hrm_momentary_layer_l 10 LS(E)     &kp LS(R)         &kp LS(T)                                                    &kp LS(DE_Z)       &kp LS(U)         &hrm_momentary_layer_r 10 LS(I)     &kp LS(O)         &kp LS(P)                           &kp LS(DE_U_UMLAUT)
+&trans  &kp LS(A)         &kp LS(S)         &kp LS(D)                           &kp LS(F)         &mod_taaap ENTER LS(G)                                       &mod_taaap ENTER LS(H)  &kp LS(J)    &kp LS(K)                           &kp LS(L)         &kp LS(DE_O_UMLAUT)                 &kp LS(DE_A_UMLAUT)
+&trans  &kp LS(DE_Y)      &kp LS(X)         &kp LS(C)                           &kp LS(V)         &momentary_layer_adjust 13 LS(B)  &none      &none          &momentary_layer_adjust 13 LS(N)  &kp LS(M)  &trans                     &trans            &trans                              &trans
+                          &trans            &trans                              &trans            &trans                            &trans     &trans         &momentary_layer_caps_exit 10 1  &trans            &trans                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

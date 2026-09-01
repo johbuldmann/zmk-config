@@ -12,10 +12,10 @@
         input-processors = 
             <&zip_xy_transform 1>,
             <&zip_xy_scaler 3 1>,
-            <&zip_temp_layer 8 300>;    // mouse layer 5 and timeout setting
+            <&zip_temp_layer 6 300>;    // mouse layer 6 and timeout setting
         
         scroller {
-            layers = <12>;                      // Scroll-layer und nav und number layer -> 2026-05-10 11:01 jetzt nur noch auf der Nav Layer? ist das korrekt?
+            layers = <10>;                      // Scroll-layer und nav und number layer -> 2026-05-10 11:01 jetzt nur noch auf der Nav Layer? ist das korrekt?
             input-processors = 
                 <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | 1)>,
                 <&zip_xy_to_scroll_mapper>,    // X/Y zu Scroll umwandeln

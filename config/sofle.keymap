@@ -356,8 +356,8 @@
                 <&kp LEFT_ALT>;
 
             label = "MACRO_GUILLEMETS_OPEN";
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
         };
 
         macro_Guillemets_close: macro_Guillemets_close {
@@ -372,8 +372,8 @@
                 <&kp LEFT_ALT>;
 
             label = "MACRO_GUILLEMETS_CLOSE";
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
         };
 
         // 1: Deutsch Anführungszeichen unten „ (Alt+0132)
@@ -381,8 +381,8 @@
         macro_de_quote_open: macro_de_quote_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -397,8 +397,8 @@
         macro_de_quote_close: macro_de_quote_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -413,8 +413,8 @@
         macro_fr_guillemet_open: macro_fr_guillemet_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -429,8 +429,8 @@
         macro_fr_guillemet_close: macro_fr_guillemet_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -445,8 +445,8 @@
         macro_bullet: macro_bullet {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -461,8 +461,8 @@
         macro_ellipsis: macro_ellipsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -477,8 +477,8 @@
         macro_plusminus: macro_plusminus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -493,8 +493,8 @@
         macro_approx: macro_approx {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -509,8 +509,8 @@
         macro_apostrophe: macro_apostrophe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -525,8 +525,8 @@
         macro_mult: macro_mult {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -541,8 +541,8 @@
         macro_div: macro_div {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -557,8 +557,8 @@
         macro_nbsp: macro_nbsp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
@@ -575,8 +575,8 @@
         macro_nnbsp: macro_nnbsp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <20>;
+            wait-ms = <7>;
+            tap-ms = <10>;
             bindings =
                 <&macro_press>,
                 <&kp LALT>,
